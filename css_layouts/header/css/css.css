@@ -1,0 +1,104 @@
+/*reset*/
+body {
+	font-size: 16px;
+	font-family: tahoma, arial, 'Times New Roman', sans-serif;
+}
+
+body,
+h1 {
+	margin: 0;
+}
+a {
+	text-decoration: none;
+}
+.clearFix:after {
+	display: block;
+	clear: both;
+	content: '';
+}
+.clearFix {
+	zoom: 1;
+}
+
+#header {
+	width: 100%;
+	height: 140px;
+	background: lightblue;
+}
+/*
+
+1、设置logo为左浮动，位于项目的头部的左侧
+2、设置padding-left跟padding-top以保持其跟左侧、顶部的距离
+ */
+#header .logo {
+	float: left;
+	padding-left: 32px;
+	padding-top: 22px;
+}
+/*1、设置logo下的<a>标签的元素类型为block，并给于宽=logo图的width；
+2、设置padding-top=logo图的height；
+3、设置背景图的路径
+4、设置overflow: hidden;将超出的内容隐藏
+*/
+.logo a {
+	display: block;
+	overflow: hidden;
+	width: 177px;
+	height: 0;
+	padding-top: 86px;
+	background: url(../images/logo.png) no-repeat;
+}
+/* 1、左侧的两行都为右浮动
+2、与右侧有40px的距离
+
+ */
+.headerRmsg {
+	float: right;
+	margin-right: 40px;
+}
+
+/*为保证两行都是同时右对齐，设置text-align:right,即右对齐
+
+*/
+.headerMsg {
+	margin: 20px 0 20px;
+	text-align: right;
+}
+/*1、设置元素类型，因为一般inline元素不包裹block类型元素，<a>设置成inline-blcok/
+2、span用以放置图标
+3、给<a>margin-left保持一定的距离
+*/
+.headerMsg a {
+	display: inline-block;
+/* 	float: left; */
+	margin-left: 40px;
+	font-size: 14px;
+	color: #fff;
+}
+/*
+1、设置span元素类型，以便设置width，height放置图标
+2、设置margin-left使得图标与文字间有间距
+3、设置图标路径
+ */
+.headerMsg span {
+	display: inline-block;	
+	width: 16px;
+	height: 16px;
+	margin-right: 8px;
+	background: url(../images/so.jpg) no-repeat -4px -5px;
+	vertical-align: top;
+}
+/*为保证右对齐，设置float：right*/
+.headerNav {
+	float: right;
+}
+
+.headerNav a {
+	padding: 0 20px;
+	color: #fff;
+}
+/*hover时白底黑字*/
+.headerNav a:hover {
+	background: #fff;
+	color: #000;
+}
