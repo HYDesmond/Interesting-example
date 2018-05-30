@@ -1,0 +1,102 @@
+/*table*/
+.tableBg {
+	height: 1000px;
+	background: url(../images/tableBg.png) no-repeat top center;
+}
+.tableBg .warp {
+	position: relative;
+	padding-top: 164px;
+}
+.tableBg  .tableTitle {
+	padding-top: 100px;
+	margin-bottom: 52px;
+	background: url(../images/logoTitle.png) no-repeat center -83px;
+}
+.tableBox {
+	position: relative;
+	width: 860px;
+	padding: 0 220px 0;
+	margin: 0 auto 57px;
+}
+.tableOpacityBg {
+	width: 860px;
+	height: 530px;
+	margin: 0 auto;
+	background: #ce73af;
+	opacity: .5;
+	filter: alpha(opacity=50);
+}
+.tableBox table {
+	position: absolute;
+	top: 10px;
+	left: 250px;
+	width: 796px;
+	height: 436px;
+}
+.tableBox th {
+	height: 40px;
+	font-size: 16px;
+	color: #fff;
+	font-weight: normal;
+}
+.tableThDate {
+	width: 140px;
+}
+.tableThTime {
+	width: 168px;
+}
+.tableBox td {
+	background: #fff;
+	text-align: center;
+}
+.tableBox .Mon,
+.tableBox .Tue,
+.tableBox .Wen,
+.tableBox .Thu,
+.tableBox .Fri,
+.tableBox .week {
+	height: 81px;
+	background: url(../images/sprite.png) no-repeat 0 -132px;
+}
+.tableBox .Tue {
+	background-position: 0 -216px;
+}
+.tableBox .Wen {
+	background-position: 0 -299px;
+}
+.tableBox .Thu {
+	background-position: 0 -382px;
+}
+.tableBox .Fri {
+	height: 56px;
+	background-position: 0 -465px;
+}
+.tableBox .week {
+	height: 56px;
+	background-position: 0 -523px;
+}
+.tableContent {
+	padding-left: 80px;
+	text-align: left;
+}
+.tableBg p {
+	height: 40px;
+	font-size: 20px;
+	line-height: 40px;
+	color: #fff;
+	text-align: center;
+}
+.webBtn {
+	display: inline-block;
+	margin-left: 20px;
+	width: 240px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	border-radius: 20px;
+	background-color: #fff;
+}
+.webBtn:hover {
+	background-color: #d7e7f6;
+	color:#2f88cd;
+}

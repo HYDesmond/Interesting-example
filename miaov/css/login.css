@@ -1,0 +1,144 @@
+/*login*/
+.loginBg {
+	width: 100%;
+	height: 1000px;
+	background: url(../images/loginBanner.png) no-repeat top center;
+}
+.loginPage{
+	padding-top: 185px;
+	text-align: center;
+}
+.loginTitle{
+	height: 0px;
+	overflow: hidden;
+	padding-top: 102px;
+	background: url(../images/logoTitle.png) no-repeat center -225px;
+	vertical-align: top;
+	margin-bottom: 102px;
+}
+.iptBox {
+	padding-bottom:10px;
+}
+/*.teacherTitle {
+	background: url(../images/logoTitle.png) no-repeat center -373px;
+	margin-bottom: 0px;
+}*/
+.iptLogin {
+	position: relative;
+	float: left;
+	width: 324px;
+	padding: 49px 38px 59px;
+	background: #fff;
+	box-shadow: 2px 2px 6px #333;
+}
+.iptLogin p {
+	padding-top: 78px;
+	padding-bottom: 8px;
+	font-size: 20px;
+	line-height: 76px;
+	color: #333;
+	text-align: center;
+	background: url(../images/smallSprite.png) no-repeat center -615px;
+}
+.ipt {
+	height: 24px;
+	margin-bottom: 10px;
+	padding :11px 0 11px 35px;
+	border-bottom: 2px solid #c1c8cb;
+	text-align: left;
+	background: url(../images/smallSprite.png) no-repeat;
+}
+.iptInput {
+	height: 24px;
+	line-height: 24px;
+	background: none;
+}
+.iptLogin .passwordIcon {
+	background: url(../images/smallSprite.png) no-repeat 0px -48px;
+}
+.remenber {
+	padding-top: 23px;
+	padding-bottom: 48px;
+}
+.remenber label {
+	float: left;
+	font-size: 14px;
+	line-height: 20px;
+	vertical-align: middle;
+}
+.remenberPassword {
+	display: block;
+	padding-left: 36px;
+	font-size: 14px;
+	line-height: 20px;
+	background: url(../images/smallSprite.png) no-repeat 0 -96px;
+}
+.reL input {
+	display: none;
+}
+.reL input:checked+span {
+	color: red;
+	background-position: 0 -126px;
+}
+.reL a {
+	float: right;
+	color: #e15671;
+}
+.loginBtn,
+.registerBtn {
+	display: block;
+	width: 210px;
+	height: 55px;
+	margin: 0 auto;
+	font-size: 20px;
+	line-height: 48px;
+	text-align: center;
+	color: #fff;
+	background: url(../images/smallSprite.png) no-repeat 0 -156px;
+}
+.registerBtn {
+	margin-top:44px;
+}
+.register {
+	position: relative;
+	float: right;
+	padding: 0px 38px 59px 39px;
+	width: 722px;
+	background: #fff;
+	box-shadow: 2px 2px 6px #333;
+}
+.inps {
+	float: left;
+	width: 323px;
+}
+.ipsT {
+	float: right;
+}
+.register p {
+	margin-bottom: 14px;
+	font-size: 20px;
+	line-height: 84px;
+	text-align: center;
+}
+.inpsItem {
+	padding: 20px 0;
+	margin-bottom: 4px;
+	border-bottom: 1px solid #c1c8cb;
+	text-align: left;
+}
+.inpsItem span {
+	float: left;
+	font-size: 14px;
+	line-height: 24px;
+}
+.inpsItem input {
+	float: left;
+	height: 22px;
+	line-height: 22px;
+}
+.inpsItem textarea {
+	display: block;
+	width: 317px;
+	height: 66px;
+	border:none;
+}

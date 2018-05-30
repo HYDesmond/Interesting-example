@@ -1,0 +1,13 @@
+.headerNav .navLbg:hover {
+	background: url(../images/nav.gif) no-repeat;
+}
+.headerNav .navLbg:hover .navRbg {
+	background: url(../images/nav.gif) no-repeat right 0;
+}
+.inpsItem input {
+	border: 0;
+}
+.inpsItem textarea {
+	border: 0;
+	overflow: auto;
+}

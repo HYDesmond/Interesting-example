@@ -1,0 +1,151 @@
+/*teach*/
+.teacherBg {
+	padding-bottom:131px;
+	background:url(../images/teacherBanner.png) no-repeat top center;
+}
+.teacherPage {
+	padding-top: 185px;
+	text-align: center;
+}
+.teacherTitle {
+	height: 0px;
+	overflow: hidden;
+	padding-top: 102px;
+	background: url(../images/logoTitle.png) no-repeat center -373px;
+	vertical-align: top;
+}
+.teacherPage ul {
+	padding-top:23px;
+}
+.teacherPage li {
+	float: left;
+	margin-right: 20px;
+	padding-top:75px;
+	width: 310px;
+}
+.teacherPage ul {
+	margin-right: -20px;
+}
+.imgBox {
+	text-align: center;
+}
+.tName {
+	display: block;
+	width: 96px;
+	height: 28px;
+	margin: 22px auto 0;
+	border: 2px solid #fff;
+	border-radius: 14px;
+	line-height: 28px;
+	color: #fff;
+	text-align: center;
+}
+.tName:hover {
+	background: #fff;
+	color:#68347c;
+}
+.joinUs {
+	height: 416px;
+	border-bottom:1px solid #dce7eb;
+	background: #f4fbfe;
+}
+.joinUs h3 {
+	font-size: 36px;
+	line-height: 136px;
+	color: #333;
+	text-align: center;
+}
+.joinList li {
+	position: relative;
+	float: left;
+	margin-right: -1px;
+	width: 198px;
+	height: 228px;
+	border: 1px solid #dce7eb;
+	text-align: center;
+}
+.joinList a {
+	position: relative;
+	display: block;
+	width: 170px;
+	height: 102px;
+	padding: 67px 14px 59px;
+	background: url(../images/sprite.png) no-repeat -160px -112px;
+}
+.joinList a:hover {
+	z-index: 3;
+	box-shadow: 0 0 10px #a38cbb;
+}
+.joinList .quarters {
+	padding-bottom: 18px;
+	font-size: 24px;
+	line-height: 24px;
+	color: #e15671;
+}
+.joinList span {
+	display: block;
+	line-height: 30px;
+	color: #7e7f80;
+}
+.joinList .recruitTeacher:hover {
+	background-position: -368px -112px;
+}
+.joinList .recruitConsultant {
+	background-position: -160px -350px;
+}
+.joinList .recruitConsultant:hover {
+	background-position: -368px -350px;
+}
+.joinList .recruitService {
+	background-position: -160px -588px;
+}
+.joinList .recruitService:hover {
+	background-position: -368px -588px;
+}
+.joinList .recruitProscenium {
+	background-position: -160px -828px;
+}
+.joinList .recruitProscenium:hover {
+	background-position: -368px -828px;
+}
+.joinList .recruitAdviser {
+	background-position: -160px -1066px;
+}
+.joinList .recruitAdviser:hover {
+	background-position: -368px -1066px;
+}
+
+
+.joinList a:hover span {
+	color: #fff;
+}
+.joinList {
+	width: 1300px;
+	position: relative;
+}
+.service {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 240px;
+	height: 167px;
+	padding: 63px 32px 0;
+	font-size: 14px;
+	line-height: 28px;
+	color: #fff;
+	background-color: #4d99e2;
+}
+.servicePeople {
+	position: absolute;
+	top: -53px;
+	left: 50%;
+	margin-left: -53px;
+	width: 106px;
+	height: 106px;
+}
+.serviceTime {
+	margin-top: 4px;
+	font-size: 16px;
+	line-height: 52px;
+	color: rgba(255,255,255,.5);
+}

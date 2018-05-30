@@ -1,0 +1,476 @@
+/*banner*/
+#indexBanner {
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+#indexBanner ul {
+	overflow: hidden;
+	width: 200%;
+}
+#indexBanner li {
+	float: left;
+	width: 50%;
+}
+#indexBanner li a {
+	display: block;
+	height: 796px;	
+}
+#indexBanner .itemForesight a {
+	background: url(../images/banner2.png) no-repeat center #62499a;
+}
+#indexBanner li a {
+	display: block;
+}
+#indexBanner img {
+	width: 100%;
+	min-width:1200px;
+}
+/*lesson*/
+#courseIntro {
+	background-color: #f4fbfe;
+}
+.lesson {
+	padding-top: 50px;
+	padding-bottom: 33px;
+}
+.lesson ul {
+	margin-right: -33px;
+}
+.lessonDetail{
+	position: relative;
+}
+.lesson li {
+	position: relative;
+	float: left;
+	width: 220px;
+	margin-right: 33px;
+	padding: 52px 40px 30px;
+	box-shadow: 0 0 8px #ccc;
+	text-align: center;
+	color: #fff;
+	background: #ea6767;
+	box-shadow: 2px 2px 8px #ea6767;
+}
+.lesson .coalitionA a:hover {
+	color:#ea6767;
+	background-color:#fff;
+}
+.lesson .basicCourse {
+	background-color: #66bae5;
+	box-shadow: 2px 2px 8px #66bae5;
+}
+.lesson .basicCourse a:hover {
+	color: #66bae5;
+	background-color: #fff;
+}
+.lesson .seniorCourse {
+	background-color: #ce73af;
+	box-shadow: 2px 2px 8px #ce73af;
+}
+.lesson .seniorCourse a:hover {
+	color: #ce73af;
+	background-color: #fff;
+}
+.lesson .coalitionB {
+	background-color: #87bc5e;
+	box-shadow: 2px 2px 8px #87bc5e;
+
+}
+.lesson .coalitionB a:hover {
+	color: #87bc5e;
+	background-color: #fff;
+}
+.pop{
+	position: absolute;
+	top: 16px;
+	left: 50%;
+	width: 143px;
+	height: 26px;
+	margin-left: -72px;
+	border-radius: 14px;
+	border: 2px solid rgba(255,255,255,.4);
+	font-size: 18px;
+	line-height: 26px;
+	text-align: center;
+}
+.coalitionA .lessonTitle,
+.coalitionB .lessonTitle {
+	padding-top: 25px;
+	font: 30px/39px "微软雅黑";
+}
+.coalitionA p,
+.coalitionB p {
+	font-size: 16px;
+	line-height: 32px;
+}
+.basicCourse .lessonTitle,
+.seniorCourse .lessonTitle {
+	font: 26px/48px "微软雅黑";
+}
+.lesson .lessonDetail strong {
+	display: block;
+	overflow: hidden;
+	width: 220px;
+	height: 0;
+	margin: 32px 0 20px;
+	padding-top: 98px;
+	font-size: 16px;
+	color: #fff; 
+	background: url(../images/sprite.png) no-repeat -585px  0;
+}
+.basicCourse .lessonDetail strong {
+	background-position: -96px 0;
+}
+.seniorCourse .lessonDetail strong {
+	background-position: -333px 0;
+}
+.lesson .lessonDetail p {
+	margin-bottom: 30px;
+	font-size: 14px;
+	line-height: 26px;
+	text-align: left;
+}
+.lessonDetail  span {
+	display: block;
+	font-size: 18px;
+	text-align: center;
+}
+.lesson .lessonDetail a {
+	display: block;
+	margin: 0 auto;
+	width: 200px;
+	height: 42px;
+	border: 2px solid #fff;
+	border-radius: 22px;
+	font-size: 24px;
+	line-height: 42px;
+	text-align: center;
+	color: #fff;
+	background: none;
+	cursor: pointer;
+}
+/*ad*/
+.ad {
+	padding-bottom: 46px;
+	text-align: center;
+}
+.ad h3 {
+	font-size: 36px;
+	line-height: 77px;
+	color: #000;
+}
+.ad .adTxt {
+	font-size: 20px;
+	line-height: 40px;
+	color: #666;
+}
+.ad .adEnlist {
+	position: relative;
+	padding-top: 19px;
+}
+.adEnlist span {
+	font-size: 20px;
+	line-height: 44px;
+	color: #e15671;
+}
+.adEnlist a {
+	display: inline-block;
+	width: 200px;
+	height: 46px;
+	border-radius: 24px;
+	margin-left: 30px;
+	font-size: 20px;
+	line-height: 46px;
+	color: #fff;
+	background-color: #e15671;
+	box-shadow: 2px 2px 8px #e15671;
+}
+
+/*student work*/
+.studentWork h3 {
+	padding-top: 13px;
+	font-size: 36px;
+	line-height: 115px;
+	text-align: center;
+	font-weight: normal;
+}
+.workList li {
+	position: relative;
+	float: left;
+	width: 325px;
+	height: 325px;
+}
+.workList .shadow {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 325px;
+	height: 100px;
+	background: url(../images/shadow.png) repeat-x;
+}
+.workList .workTxt {
+	position: absolute;
+	bottom: 0;
+	left: 15px;
+	width: 310px;
+	z-index: 3;
+}
+.workTxt .designation {
+	float: left;
+}
+.workTxt .comment {
+	position: relative;
+	float: right;
+}
+.workTxt span {
+	font-size: 18px;
+	line-height: 48px;
+	color: #fff;
+}
+.workTxt em {
+	display: inline-block;
+	padding-left: 24px;
+	margin-right: 15px;
+	font-size: 14px;
+	line-height: 48px;
+	vertical-align: bottom;
+	color: #fff;
+	background: url(../images/smallSprite.png) no-repeat 0 -209px;
+}
+.workTxt .workZan {
+	background-position:0 -257px;
+}
+.hoverDiv {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;	
+	width: 325px;
+	height: 325px;
+}
+.opcityBox {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 325px;
+	height: 325px;
+	background-color: #e46166;
+	box-shadow: 2px 2px 8px #352728;
+	opacity: .90;
+	filter: alpha(opacity=90);
+}
+.hoverDiv p {
+	position: absolute;
+	padding: 32px 25px 0;
+	font-size: 14px;
+	line-height: 24px;
+	color: #fff;
+}
+.workList li:hover {
+	z-index: 9;
+}
+.workList li:hover .hoverDiv {
+	display: block;
+}
+
+.workPage {
+	padding: 40px 0 50px;
+	text-align: center;
+}
+.workPage span{
+	display: inline-block;
+	vertical-align: middle;
+}
+.workPage .omit{
+	width: 36px;
+	height: 36px;
+	background: url(../images/sprite.png) no-repeat 0 -915px;
+}
+.workPage ul {
+	display: inline-block;
+	margin: 0 auto;
+}
+.workPage li {
+	float: left;
+}
+.workPage li span {
+	line-height: 33px;
+}
+.workPage a {
+	width: 34px;
+	height: 34px;
+	margin: 0 5px;
+	border: 1px solid #dce7eb;
+	border-radius: 50%;
+	font-size: 16px;
+	line-height: 34px;
+	text-align: center;
+	color: #333;
+}
+.workPage a {
+	display: block;
+}
+.workPage .workPagePrev a {
+	background: url(../images/sprite.png) no-repeat 0 -50px;
+}
+.workPage .workPageNext a {
+	background: url(../images/sprite.png) no-repeat 0 -86px;
+}
+.workPage a:hover {
+	background-color: #e15671;
+	border-color: #e15671;
+	box-shadow: 0 2px 4px #e15671;
+	color: #fff;
+}
+.workPage .workPagePrev a:hover {
+	background-position: -36px -50px;
+}
+.workPage .workPageNext a:hover {
+	background-position: -36px -86px;
+}
+
+/*teach*/
+.teacherBanner {
+	width: 100%;
+	height: 1000px;
+	background: url(../images/teacherBanner.png) no-repeat center;
+}
+.teacher,
+.vip {
+	padding-top: 10px;
+	background: #53accc;
+}
+.vip {
+	padding-top: 13px;
+}
+.teacher {
+	padding-bottom: 30px;
+}
+.teacher h3,
+.vip h3 {
+	font-size: 36px;
+	text-align: center;
+	color: #fff;
+	font-weight: normal;
+}
+.vip h3 {
+	line-height: 109px;
+}
+.teacher h3{
+	line-height: 114px;
+}
+.teacher h3 span {
+	display: inline-block;
+}
+.teacher h3 a {
+	display: inline-block;
+	width: 96px;
+	height: 30px;
+	margin-left: 20px;
+	border: 2px solid #fff;
+	border-radius: 16px;
+	font-size: 18px;
+	line-height: 30px;
+	text-align: center;
+	vertical-align: middle;
+	color: #fff;
+	font-weight: normal;
+}
+.teacher h3 em{
+	display: inline-block;
+	width: 17px;
+	height: 14px;
+	margin-left: 2px;
+	background: url(../images/sprite.png) no-repeat -69px -6px;
+	vertical-align: middle;
+}
+.teacherPage ul {
+	margin-right: -20px;
+}
+.teacher .teacherList {
+	margin-right:-80px;
+}
+.teacher .teacherList .item,
+.teacherPage ul li {
+	float: left;
+	margin-right: 34px;
+	width: 310px;
+}
+.imgBox {
+	padding-right: 12px;
+	text-align: center;
+}
+.tName {
+	display: block;
+	width: 96px;
+	height: 28px;
+	margin: 22px auto 0;
+	border: 2px solid #fff;
+	border-radius: 14px;
+	font-size: 20px;
+	line-height: 28px;
+	text-align: center;
+	color: #fff;
+}
+.tName:hover{
+	color:#000;
+	background:#fff;
+}
+.teacher .item ul {
+	margin-top: 15px;
+	padding-right: 35px;
+	border-right: 1px dashed #fff;	
+}
+.teacher .lastItem ul {
+	border: none;
+}
+.teacher .item li {
+	margin-bottom: 16px;
+	padding-left: 13px;
+	font-size: 14px;
+	line-height: 20px;
+	color: #fff;
+	background: url(../images/circle.png) no-repeat 0 8px;
+}
+/*vip*/
+.vip {
+	height: 244px;
+	background-color: #aed97b;
+}
+.vip ul {
+	margin-right: -44px;
+}
+.vip li {
+	position: relative;
+	float: left;
+}
+.vip p {
+	width: 250px;
+	font-size: 18px;
+	line-height: 30px;
+	color: #fff;
+	background: url(../images/smallSprite.png) no-repeat 0 -315px;
+}
+.vipListVF p {
+	width: 250px;
+	padding: 16px 47px 13px 98px;
+}
+.vipListPublic p {
+	width: 290px;
+	padding: 0 57px 0 98px;
+	background-position: 0 -415px;
+}
+.vipListRecruit p {
+	width: 365px;
+	padding: 6px 0px 0 100px;
+	background-position:0 -515px;
+}
+
+.vipListPublic p {
+	width: 290px;
+}
+.vipListRecruit p {
+	width: 362px;
+	padding-right: 0;
+}
