@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title></title>
+	<style>
+		h1 p  {
+			display: inline-block;
+			font: 16px normal;
+
+		}
+		h1 p span {
+			background: #eee;
+			border-radius: 50%;
+		}
+	</style>
+	<script type="text/javascript" src="vue.js"></script>
+</head>
+<body>
+	<div id="myShoppingCart">
+		<h1>{{name}}的购物车
+			<p>清单总数<span>{{items.length}}</span></p>
+			<p>未采购数<span>{{count}}</span></p>
+		</h1>
+		<div>
+			<!--双向绑定数据，对应data下的text-->
+			<input type="text" v-model="text">
+			<!-- //添加操作 -->
+			<button v-on:click="addList(text)">添加</button>
+		</div>
+		<table>
+			<thead>
+				<tr>
+					<th>清单名称</th>
+					<th>已采购</th>
+					<th>状态</th>
+					<th>删除</th>
+				</tr>
+			</thead>
+			<tbody>
+			<!-- 遍历items，让其所有分别在td展示出来 -->
+				<tr v-for="(item, index) in items">
+					<!--展示清单名称，对应items下的action-->
+					<td>{{item.action}}</td>
+					<!--用checkbox显示是否选中，逻辑对应items下的state(v-model),另外需要进行对count进行绑定，选中的未采购数相应变化（减少）-->
+					<td ><input type="checkbox" v-model="item.state" v-on:click="myCount()"></td>
+					<!--设置状态，对应items.stated的值，可以再进行完善，如显示为，'已添加'-->
+					<td>{{item.state}}</td>
+					<!--需要进行相应的采草-->
+					<td><button v-on:click="del(index)">删除</button></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	
+	
+	<script>
+/*	Vue.component('todo-item',{
+		props: ['todo'],
+		template: '<li>{{todo.text}}</li>'
+	})*/
+	//新建new Vue
+	var app = new Vue({
+		//绑定#myShoppingCart
+		el: '#myShoppingCart',
+		//数据逻辑，购物车的对应操作都是通过data的数据操作进行
+		data: {
+			//对应23行的{{name}}
+			name: 'Desmond',
+			//购物车的状态，清单数据
+			items: [
+				{
+					action: 'iPhone7',
+					state: false
+				},
+				{
+					action: 'iPhone7 Plus',
+					state: false
+				},
+				{
+					action: 'Samsung Note9',
+					state: false
+				},
+				{
+					action: '一加6',
+					state: false
+				}	
+			],
+			//对应28行input的数据，v-model进行双向绑定
+			text: '',
+			//对应未采购数
+			count: 0
+		},
+		//生命周期特点，可以简单理解为“页面加载完后”。这里‘当页面加载完’后，进行计数统计
+		mounted: function() {
+			this.myCount()
+		},
+		methods: {
+			//添加方法，传input.value进去，因为双向绑定了，即为text
+			addList: function(text) {
+				//当为空值时，不进行任何操作
+				if(this.text == '') return;
+				//只进行数据操作，将数据添加进data内
+				this.items.push({action: text, state: true});
+				//每次执行完后，需要对input清空
+				this.text = '';
+				//并对count进行操作，当TRUE不变化，false时则+1
+				this.myCount();
+			},
+			myCount: function(){
+				var _this = this;
+				_this.count = 0;
+				//对当前所有items进行遍历
+				this.items.forEach(function(el, index){
+					if(!el.state) _this.count++
+				})
+			},
+			del: function(index){
+				//仅进行数据操作，删除当前的数据
+				this.items.splice(index,1)
+			}
+
+		}
+	})
+	//①当前难点，this的使用
+	//②需要注意，这里的‘,’需要注意；另外跟jq以及我们常使用js不太一样，只进行数据操作
+	</script>
+</body>
+</html>
