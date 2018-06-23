@@ -4,3 +4,13 @@
 <hr>
 
 [一些头部常用的样式](https://hydesmond.github.io/InterestingExample/cssLayouts/header/index.html)
+
+## 基于vue的一些简单页面
+
+- [购物车](https://hydesmond.github.io/InterestingExample/Vue_learning/shoppingcart.html)
+
+- [购物车2](https://hydesmond.github.io/InterestingExample/Vue_learning/shopping.html)
+
+- [todo](https://hydesmond.github.io/InterestingExample/Vue_learning/3.todo-1.html)
+
+
