@@ -16,3 +16,7 @@
 ## 点餐系统
   
   [点餐系统](https://hydesmond.github.io/InterestingExample/Vue_learning/Pos/index.html)
+  
+  ## H5交互型简历
+  
+  [简历](https://hydesmond.github.io/InterestingExample/resume/index.html)
