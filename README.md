@@ -13,6 +13,6 @@
 
 - [todo](https://hydesmond.github.io/InterestingExample/Vue_learning/todo/3.todo-1.html)
 
-## 基于vue的一些简单页面
+## 点餐系统
   
-  [todo](https://hydesmond.github.io/InterestingExample/Vue_learning/Pos/index.html)
+  [点餐系统](https://hydesmond.github.io/InterestingExample/Vue_learning/Pos/index.html)
