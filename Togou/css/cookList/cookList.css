@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+.clear:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#wrap {
+  width: 100%;
+  height: 100%;
+  background-size: 100%;
+}
+#nav {
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+}
+#navBg {
+  width: 100%;
+}
+#title {
+  position: absolute;
+  color: white;
+  left: 50%;
+  top: 50%;
+}
+#back {
+  position: absolute;
+  width: 3.0666666666666664%;
+  left: 3.733333333333334%;
+  top: 23.809523809523807%;
+}
+#cookList {
+  height: 86.86244204018547%;
+  width: 92%;
+  padding: 13.137557959814528% 4% 0 4%;
+}
+#cookList li {
+  width: 100%;
+  height: 20.236087689713322%;
+  position: relative;
+  margin-bottom: 1.545595054095827%;
+  border: 1px solid #a9a9a9;
+  overflow: hidden;
+}
+.cookImg {
+  width: 40.14492753623188%;
+  height: 100%;
+  position: relative;
+}
+.cookImg img {
+  height: 100%;
+  width: 100%;
+  background: #d9d9d9;
+}
+.disc {
+  width: 56.94950345650419%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 40.14492753623188%;
+  background: white;
+  border-left: 1px solid #a9a9a9;
+  padding-left: 4.600484261501211%;
+}
+#cookList h5 {
+  color: #6e6e6e;
+}
+.heater {
+  width: 97.09443099273608%;
+  position: absolute;
+}
+.heater img {
+  width: 9%;
+  margin-right: 3.389830508474576%;
+}
+.tag {
+  width: 100%;
+  position: absolute;
+}
+.tag span {
+  color: #c1c1c1;
+  margin-right: 9.200968523002421%;
+}
+.time span {
+  color: #b0b0b0;
+  position: absolute;
+  bottom: 6.25%;
+}
+.time img {
+  position: absolute;
+  width: 9.685230024213075%;
+  bottom: 6.25%;
+  right: 8.333333333333332%;
+}
+.markOn {
+  display: none;
+}
+.markOff {
+  display: block;
+}
+@media screen and (max-width: 360px) {
+  #title {
+    font-size: 14px;
+  }
+  #cookList h5 {
+    font-size: 14px;
+    line-height: 28px;
+  }
+  .time span,
+  .tag span {
+    font-size: 12px;
+  }
+  .heater {
+    top: 30.833333333333336%;
+  }
+  .tag {
+    top: 50%;
+  }
+}
+@media screen and (min-width: 360px) and (max-width: 420px) {
+  #title {
+    font-size: 18px;
+  }
+  #cookList h5 {
+    font-size: 14px;
+    line-height: 36px;
+  }
+  .time span,
+  .tag span {
+    font-size: 12px;
+  }
+  .heater {
+    top: 35%;
+  }
+  .tag {
+    top: 55.833333333333336%;
+  }
+}
+@media screen and (min-width: 420px) and (max-width: 480px) {
+  #title {
+    font-size: 22px;
+  }
+  #cookList h5 {
+    font-size: 14px;
+    line-height: 44px;
+  }
+  .time span,
+  .tag span {
+    font-size: 12px;
+  }
+  .heater {
+    top: 35%;
+  }
+  .tag {
+    top: 58.333333333333336%;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 640px) {
+  #title {
+    font-size: 26px;
+  }
+  #cookList h5 {
+    font-size: 16px;
+    line-height: 52px;
+  }
+  .time span,
+  .tag span {
+    font-size: 14px;
+  }
+  .heater {
+    top: 35%;
+  }
+  .tag {
+    top: 58.333333333333336%;
+  }
+}
+@media screen and (min-width: 640px) and (max-width: 780px) {
+  #title {
+    font-size: 32px;
+  }
+  #cookList h5 {
+    font-size: 18px;
+    line-height: 60px;
+  }
+  .time span,
+  .tag span {
+    font-size: 16px;
+  }
+  .heater {
+    top: 35%;
+  }
+  .tag {
+    top: 60.83333333333333%;
+  }
+}
+@media screen and (min-width: 780px) {
+  #title {
+    font-size: 38px;
+  }
+  #cookList h5 {
+    font-size: 30px;
+    line-height: 60px;
+  }
+  .time span,
+  .tag span {
+    font-size: 18px;
+  }
+  .heater {
+    top: 35%;
+  }
+  .tag {
+    top: 62.5%;
+  }
+}
+/*# sourceMappingURL=cookList.css.map */

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/friend_share/friend_share.css" />
+
+		<style type="text/css">
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			
+			html,
+			body {
+				width: 100%;
+				height: 100%;
+			}
+			
+			#warp {
+				width: 100%;
+				height: 100%;
+				position: relative;
+			}
+			
+			.heads {
+				width: 100%;
+				height: 6.3369397217928904%;
+			}
+		</style>
+	</head>
+
+	<body bgcolor="#f3f4f6">
+		<div id="warp">
+			<div class="heads">
+
+			</div>
+			<div class="head" style="z-index: 100;position: fixed;">
+				<img src="img/fximg/导航栏bg.png" style="position: absolute; width: 100%;top: 0%;" />
+				<img src="img/fximg/left.png" id="top" />
+				<img src="img/fximg/left2.png" id="top2" style="display: none;" />
+				<img src="img/fximg/righ2.png" id="top4" />
+				<img src="img/fximg/right.png" id="top5" style="display: none;" />
+				<div class="ss">
+					<img src="img/fximg/iconfont-sousuo.png" style="width: 100%;" />
+				</div>
+			</div>
+			<div id="by" style="width: 100%;height: 100%;">
+				
+			</div>
+
+			<div class="foot">
+				<ul>
+					<li><a href="index.html"><img src="img/fximg/homelogo.png" />主页</a></li>
+					<li><a href="mall.html"><img src="img/indexImg/malllogo.png" />商城</a></li>
+					<li><a href="select.html"><img src="img/indexImg/selectlogo2.png" />选菜</a></li>
+					<li><a href="friend_share.html"><img src="img/fximg/foundlogo.png" />发现</a></li>
+					<li><a href="mynews.html"><img src="img/indexImg/mylogo.png" />我的</a></li>
+				</ul>
+			</div>
+			<div id="sp" style="display: none;">
+				<div class="tr1" style="overflow: hidden;">
+					<img src="img/fximg/photo-1441850605338-1b0b5a22e7b9.png" style="width: 100%;" />
+				</div>
+				<div class="tr2" style="overflow: hidden;">
+					<img src="img/fximg/photo-1453724936208-079feb78717b.png" style="width: 100%;top: -10%;" />
+
+				</div>
+				<div class="tr1" style="overflow: hidden;">
+					<img src="img/fximg/photo-1441850605338-1b0b5a22e7b9.png" style="width: 100%;" />
+				</div>
+			</div>
+		</div>
+		</div>
+
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var warp = document.getElementById('warp')
+			var qz1 = document.getElementById('top');
+			var qz2 = document.getElementById('top2');
+			var qz3 = document.getElementById('top4');
+			var qz4 = document.getElementById('top5');
+			var bol = true;
+			var zy = document.getElementsByClassName('zy')[0];
+			var sc = document.getElementsByClassName('sc')[0];
+			var xc = document.getElementsByClassName('xc')[0];
+			var fx = document.getElementsByClassName('fx')[0];
+			var wd = document.getElementsByClassName('wd')[0];
+			var img1 = document.getElementById('img1');
+			var img2 = document.getElementById('img2');
+			var img3 = document.getElementById('img3');
+			var img4 = document.getElementById('img4');
+			var img5 = document.getElementById('img5');
+			var img6 = document.getElementById('img6');
+			//			var body = document.getElementById('by');
+			var body1 = document.getElementById('body1');
+			var sp = document.getElementById('sp');
+			var zhan = document.getElementsByClassName('icon-z');
+			qz2.onclick = function() {
+				qz1.style.display = "block";
+				qz2.style.display = "none";
+				qz3.style.display = "block";
+				qz4.style.display = "none"
+				sp.style.display = "none"
+				by.style.display = "block"
+				bol = true;
+			}
+			qz3.onclick = function() {
+				qz1.style.display = "none";
+				qz2.style.display = "block";
+				qz3.style.display = "none";
+				qz4.style.display = "block"
+				by.style.display = "none"
+				sp.style.display = "block"
+				bol = false;
+			}
+
+			var sp = document.getElementById('sp');
+
+			var by = document.getElementById('by')
+
+			ajax();
+			document.onscroll = function() {
+				var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+				var body = by.getElementsByClassName('body');
+				//			console.log(body[0].offsetHeight);
+				//			console.log(body[0].offsetHeight*body.length , scrollTop+document.documentElement.clientHeight);
+				//			by.style.height = document.documentElement.clientHeight + scrollTop +"px";
+//				if(body[0].offsetHeight * body.length < scrollTop + document.documentElement.clientHeight) {
+					ajax();
+//				}
+			}
+
+			function ajax() {
+				
+				$.ajax({
+
+					type: "get", //提交方式
+
+					url: "php/circle.php", //发送到后台的地址
+
+					data: "", //发送给后台的数据
+					dataType: "json", //数据类型
+
+					success: function(res) {
+						//请求成功了 后台返回了数据：res
+						for(var i = 0; i < res.length; i++) {
+							var ring = document.createElement('div');
+							var seek = document.createElement('div');
+							var imgt = document.createElement('img');
+							var sculpture = document.createElement('div');
+							var imgx = document.createElement('img');
+							var so = document.createElement('div');
+							var imgso = document.createElement('img');
+							var tex = document.createElement('div');
+							var pname = document.createElement('p');
+							var pnei = document.createElement('p');
+							var iconz = document.createElement('div');
+							var imgz = document.createElement('img');
+							var iconp = document.createElement('div');
+							var imgp = document.createElement('img');
+							var icond = document.createElement('div');
+							var imgd = document.createElement('img');
+							var username = document.createElement('p');
+							var a = document.createElement('a');
+							ring.className = 'body';
+							seek.className = 'tu';
+							sculpture.className = 'tx';
+							so.className = 'so';
+							tex.className = 'text';
+							pname.className = 'content';
+							pnei.className = 'news';
+							iconz.className = 'icon-z';
+							iconz.info = res[i%res.length];
+							iconp.className = 'icon-p';
+							icond.className = 'icon-d';
+							username.className='username';
+							imgt.src = res[i % res.length].photo;
+							imgx.src = res[i % res.length].userimg;
+							imgso.src = 'img/fximg/sc.png';
+							imgz.src = 'img/fximg/iconfont-xin.png';
+							imgp.src = 'img/fximg/iconfont-iconfontpinglun.png';
+							imgd.src = 'img/fximg/iconfont-gengduo(1).png';
+							a.href='myfriend.html';
+							by.appendChild(ring);
+							ring.appendChild(seek);
+							ring.appendChild(sculpture);
+							ring.appendChild(so);
+							ring.appendChild(tex);
+							ring.appendChild(iconz);
+							ring.appendChild(iconp);
+							ring.appendChild(icond);
+							ring.appendChild(username);
+							seek.appendChild(imgt);
+							sculpture.appendChild(imgx);
+							so.appendChild(imgso);
+							icond.appendChild(a)
+							iconz.appendChild(imgz);
+							iconp.appendChild(imgp);
+							a.appendChild(imgd);
+							//				box.appendChild(imgs);
+							tex.appendChild(pname);
+							tex.appendChild(pnei);
+							pname.innerText = '水果拼盘'
+							pnei.innerText = '深夜做好的水果拼盘，第一次做，多多指点'
+							pname.style.color = '#373737';
+							pnei.style.color = '#a0a0a0';
+							imgz.style.width = '100%';
+							username.innerHTML=res[i % res.length].username;
+							//				} else {
+							//					var box = document.createElement('div');
+							//					var imgs = document.createElement('img');
+							//					box.className = 'box';
+							//					imgs.style.width = '100%';
+							//					imgs.src = 'img/fximg/photo-1441850605338-1b0b5a22e7b9.png'
+							//					sp.appendChild(box);
+							//					box.appendChild(imgs);
+							
+						}
+						
+						
+						for(var i = 0; i < zhan.length; i++) {
+								zhan[i].bol = true;
+								zhan[i].onclick = function() {
+									if(this.bol) {
+										this.innerHTML = '<img src="img/fximg/zhan.png" style="width: 100%;"/>'
+										this.bol = false;
+									} else {
+										this.innerHTML = '<img src="img/fximg/iconfont-xin.png" style="width: 100%;"/>';
+										this.bol = true;
+									}
+									
+									
+									window.location.href = 'admire.html?userImg='+this.info.userimg+'&userName='+encodeURI(this.info.username);
+								
+								}
+							}
+//					var zan = document.getElementsByClassName('body');
+//					console.log(zan.length);
+//					for(var i=0; i < zan.length; i++){
+//						
+//					}
+					},
+				});
+				
+			}
+			
+		</script>
+	</body>
+
+</html>

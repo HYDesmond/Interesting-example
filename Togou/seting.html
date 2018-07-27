@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/seting/seting.css" />
+		<script type="text/javascript">
+			//sArgName表示要获取哪个参数的值 
+			function getQueryString(name) {
+				var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+				var r = window.location.search.substr(1).match(reg);
+				if(r != null) return unescape(r[2]);
+				return null;
+			}
+		</script>
+	</head>
+
+	<body>
+		<div class="setingwarp">
+			<div class="setinghead">
+				<img src="img/setingimg/return.png" />
+				<span>设置</span>
+			</div>
+			<img src="img/setingimg/shadow.png" />
+			<div class="shadow"> </div>
+			<div class="seting_all">
+				<ul>
+					<li class="helpcenter_index">
+						<img src="img/setingimg/help.png" />
+						<span>快速帮助中心</span>
+						<img src="img/setingimg/enter.png" />
+					</li>
+					<li>
+						<img src="img/setingimg/opinion.png" />
+						<span>意见反馈</span>
+						<img src="img/setingimg/enter.png" />
+					</li>
+					<li>
+						<img src="img/setingimg/clean.png" />
+						<span>清除缓存</span>
+						<img src="img/setingimg/enter.png" />
+					</li>
+					<img src="img/setingimg/splitline.png" />
+					<li>
+						<img src="img/setingimg/update.png" />
+						<span>版本更新</span>
+						<img src="img/setingimg/enter.png" />
+					</li>
+					<li>
+						<img src="img/setingimg/about.png" />
+						<span>关于我们</span>
+						<img src="img/setingimg//enter.png" />
+					</li>
+				</ul>
+			</div>
+			<div class="outbtn">
+				退出
+			</div>
+		</div>
+
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+		$.ajax({
+				type: "post",
+				url: "php/mynews.php",
+				dataType: "json",
+				data: {
+					id: getQueryString("id")
+				},
+				success: function(json) {
+					console.log(json);
+					$(".setinghead>img").click(function(){
+						location.href = "mynews.html?id=" + json[0].id;
+					})
+					$(".helpcenter_index").click(function(){
+						location.href="helpcenter.html?id="+json[0].id;
+					})
+				},
+				async: true
+			});
+		</script>
+	</body>
+
+</html>

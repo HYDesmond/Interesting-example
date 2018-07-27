@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/receipt/receiot.css" />
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			.main-info {
+				height: 0.88rem;
+				padding-bottom: 0.24rem;
+			}
+			
+			.fund-info {
+				position: relative;
+				font-weight: normal;
+				padding: 0.2rem 0;
+				padding-right: 1.7rem;
+				padding-left: 0.23rem;
+				font-size: 0.32rem;
+				line-height: 1;
+			}
+			
+			body {
+				max-width: 6.4rem;
+				margin: 0 auto;
+			}
+			
+			body * {
+				max-width: 6.4rem;
+			}
+			#warp{
+				width: 6.4rem;
+				height: 100%;
+			}
+		</style>
+		<script src="js/adaptive.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			// 设计图宽度
+			window['adaptive'].desinWidth = 640;
+			// body 字体大小 会将body字体大小设置为 baseFont / 100 + 'rem'  750的设计图一般设置为28,640的设计图一般设置为24
+			window['adaptive'].baseFont = 24;
+			/*
+			// 显示最大宽度 可选
+			window['adaptive'].maxWidth = 480;
+			// rem值改变后执行方法 可选
+			window['adaptive'].setRemCallback = function () {
+			    alert(1)
+			}
+			// scaleType 1:iphone andriod下viewport均无缩放 2:iphone下viewport有缩放,andriod没有 3:iphone andriod下viewport均有缩放; 默认值为1
+			window['adaptive'].scaleType = 1;
+			*/
+			// 初始化
+			window['adaptive'].init();
+		</script>
+	</head>
+
+	<body bgcolor="#f3f4f6">
+		<div id="warp">
+			
+		
+		<div class="head">
+			<a href="gr.html">
+			<img src="img/imgr/1.png" />
+			</a>
+			<p>设置发票信息</p>
+			<span>发票须知</span>
+		</div>
+		<div id="top">
+			<p>发票类型</p>
+			<div id="bht">
+				<div class="pge1">纸质发票</div>
+				<div class="pge2">电子发票</div>
+				<div  style="color: #c0c0c0;border: 1px solid #c0c0c0;">增值税发票</div>
+			</div>
+		</div>
+
+		<div id="chest">
+			<p>发票抬头</p>
+			<div class="push">
+
+			</div>
+			<span>个人</span>
+			<div class="push2">
+
+			</div>
+			<span>单位</span>
+		</div>
+		
+		<!--<div id="spr">
+			
+		</div>-->
+		
+		<div id="body">
+			<p>发票内容</p>
+		</div>
+
+		<div id="box">
+			<p class="tex">非图书商品</p>
+			<div class="line">
+				<div class="button">
+				</div>
+				<p>明细</p>
+			</div>
+			<div class="line">
+				<div class="button2">
+				</div>
+				<p>耗材</p>
+			</div>
+			<div class="line">
+				<div class="button3">
+				</div>
+				<p>办公用品（附购清单）</p>
+			</div>
+			<div class="line">
+				<div class="button4">
+				</div>
+				<p>电脑配件</p>
+			</div>
+
+		</div>
+		<div id="botton">
+			<a href="gr.html" style="text-decoration:none;">
+				<div id="foot">
+			确定
+		</div>
+		</a>
+	</div>
+	
+	
+		</div>
+	<script type="text/javascript">
+			var bol = true;
+			var pge1 = document.getElementsByClassName('pge1')[0];
+			var pge2 = document.getElementsByClassName('pge2')[0];
+			var push = document.getElementsByClassName('push')[0];
+			var push2 = document.getElementsByClassName('push2')[0];
+			var bht = document.getElementsByClassName('button')[0];
+			var bht2 = document.getElementsByClassName('button2')[0];
+			var bht3 = document.getElementsByClassName('button3')[0];
+			var bht4 = document.getElementsByClassName('button4')[0];
+				pge1.onclick = function() {
+						pge1.style.color='#e73046';
+						pge2.style.color='#242426';
+						pge1.style.borderColor='red';
+						pge2.style.borderColor='#242426';
+				}
+			pge1.addEventListener('touchstart', function () {
+			pge1.style.backgroundColor='gainsboro';
+		});
+		pge2.addEventListener('touchstart', function () {
+			pge2.style.backgroundColor='gainsboro';
+		});
+//				pge1.tu=function  () {
+//						pge1.style.backgroundColor='gray';
+//				}
+					pge1.onmouseup=function  () {
+						pge1.style.backgroundColor='white';
+					}
+					pge2.onmousedown=function  () {
+						pge2.style.backgroundColor='gray';
+				}
+					pge2.onmouseup=function  () {
+						pge2.style.backgroundColor='white';
+					}
+				
+				pge2.onclick = function() {
+						pge1.style.color='#242426';
+						pge2.style.color='#e73046';
+						pge2.style.borderColor='red';
+						pge1.style.borderColor='#242426';
+				}
+				push.onclick = function() {
+						push.style.backgroundColor='red';
+						push2.style.backgroundColor='white';
+						
+				}
+				push2.onclick = function() {
+						push.style.backgroundColor='white';
+						push2.style.backgroundColor='red';
+						
+				}
+				bht.onclick = function  () {
+					bht.style.backgroundColor='red';
+					bht2.style.backgroundColor='';
+					bht3.style.backgroundColor='';
+					bht4.style.backgroundColor='';
+				}
+				bht2.onclick = function  () {
+					bht.style.backgroundColor='';
+					bht2.style.backgroundColor='red';
+					bht3.style.backgroundColor='';
+					bht4.style.backgroundColor='';
+				}
+				bht3.onclick = function  () {
+					bht.style.backgroundColor='';
+					bht2.style.backgroundColor='';
+					bht3.style.backgroundColor='red';
+					bht4.style.backgroundColor='';
+				}
+				bht4.onclick = function  () {
+					bht.style.backgroundColor='';
+					bht2.style.backgroundColor='';
+					bht3.style.backgroundColor='';
+					bht4.style.backgroundColor='red';
+				}
+				
+	</script>
+	</body>
+
+</html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/select/select.css" />
+		<link rel="stylesheet" type="text/css" href="css/mui.css" />
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
+	</head>
+
+	<body>
+		<div class="warp">
+			<!--<div class="refurbish"></div>-->
+			<div class="head">
+				<!--头部-->
+				<div class="search">
+					<!--搜索-->
+					<a href="search.html">
+						<div><img src="img/indexImg/magnifier.png" /><input type="text" id="" value="" placeholder="输入菜品名称" disabled="disabled" class="search_inp" /></div>
+					</a>
+				</div>
+
+				<div class="move">
+					<!--更多可做菜品-->
+					<img src="img/selectImg/move.png" />
+				</div>
+			</div>
+			<div class="vegetable">
+				<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<!--数据列表-->
+						<ul class="mui-table-view mui-table-view-chevron" id="ve_warp"></ul>
+					</div>
+				</div>
+			</div>
+			<div class="select_thing_warp">
+				<div class="cook">
+					<p>32种可做菜品</p>
+					<input type="button" name="" id="see" value="查看" />
+				</div>
+				<div class="swiper-container">
+					<ul class="swiper-wrapper"></ul>
+				</div>
+			</div>
+		</div>
+		<div class="foot">
+			<ul>
+				<li>
+					<a href="index.html"><img src="img/indexImg/homelogo2.png" />主页</a>
+				</li>
+				<li>
+					<a href="mall.html"><img src="img/indexImg/malllogo.png" />商城</a>
+				</li>
+				<li>
+					<a href="select.html"><img src="img/indexImg/selectlogo.png" />选菜</a>
+				</li>
+				<li>
+					<a href="friend_share.html"><img src="img/indexImg/foundlogo.png" />发现</a>
+				</li>
+				<li>
+					<a href="mynews.html"><img src="img/indexImg/mylogo.png" />我的</a>
+				</li>
+			</ul>
+		</div>
+		</div>
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var vegetable = document.getElementsByClassName("vegetable")[0];
+			var foot_top = document.getElementsByClassName("foot")[0].offsetTop;
+			vegetable.style.height = foot_top - vegetable.offsetTop + "px";
+
+			var food_li = document.getElementById("ve_warp").getElementsByTagName("li");
+			var down_update = false;
+			var i;
+			var cancel = document.getElementsByClassName("cancel");
+			mui.init({
+				pullRefresh: {
+					container: '#pullrefresh',
+					down: { //下拉刷新
+						auto: true, //可选,默认false.自动下拉刷新一次
+						contentdown: "下拉可以刷新", //可选，在下拉可刷新状态时，下拉刷新控件上显示的标题内容
+						contentover: "释放立即刷新", //可选，在释放可刷新状态时，下拉刷新控件上显示的标题内容
+						contentrefresh: "正在刷新...", //可选，正在刷新状态时，下拉刷新控件上显示的标题内容
+						callback: pulldownRefresh
+					},
+					up: { //上拉加载
+						//auto:true,//可选,默认false.自动上拉加载一次
+						contentrefresh: '正在加载...',
+						contentnomore: '没有更多数据了', //可选，请求完毕若没有更多数据时显示的提醒内容；
+						callback: pullupRefresh
+					}
+				}
+			});
+
+			/*
+			 * 下拉刷新具体业务实现
+			 */
+			function pulldownRefresh() {
+				setTimeout(function() {
+					var table = document.getElementsByClassName("mui-table-view")[0];
+					var cells = document.getElementsByClassName('.mui - table - view - cell');
+					//模拟数据
+					if(down_update == false) {
+						for(var i = cells.length, len = 27; i < len; i++) {
+							var li = document.createElement('li');
+							//						li.className = 'mui - table - view - cell';
+							li.innerHTML = '<p>樱桃番茄</p><img src="img/selectImg/v1.png" class="img" />';
+							//下拉刷新，新纪录插到最前面；
+							table.insertBefore(li, table.firstChild);
+						}
+						down_update = true;
+					} else {
+						for(i = cells.length, len = i; i < len; i++) {
+							var li = document.createElement('li');
+							//						li.className = 'mui - table - view - cell';
+							li.innerHTML = '<p>樱桃番茄</p><img src="img/selectImg/v1.png" class="img" />';
+							//下拉刷新，新纪录插到最前面；
+							table.insertBefore(li, table.firstChild);
+						}
+					}
+					food_li = document.getElementById("ve_warp").getElementsByTagName("li");
+					addfood();
+					mui('#pullrefresh').pullRefresh().endPulldownToRefresh(); //refresh completed
+				}, 1500);
+			}
+
+			var count = 0;
+			/*
+			 * 上拉加载具体业务实现
+			 */
+			function pullupRefresh() {
+				setTimeout(function() {
+					mui('#pullrefresh').pullRefresh().endPullupToRefresh((++count > 2)); //参数为true代表没有更多数据了。
+					var table = document.getElementsByClassName("mui-table-view")[0];
+					var cells = document.getElementsByClassName('.mui - table - view - cell');
+
+					for(i = cells.length, len = i + 27; i < len; i++) {
+						var li = document.createElement('li');
+						li.innerHTML = '<p>樱桃番茄</p><img src="img/selectImg/v1.png" class="img" />';
+						table.appendChild(li);
+					}
+
+					food_li = document.getElementById("ve_warp").getElementsByTagName("li");
+
+				}, 1500);
+			}
+
+			if(mui.os.plus) {
+				mui.plusReady(function() {
+					setTimeout(function() {
+						mui('#pullrefresh').pullRefresh().pullupLoading();
+					}, 1000);
+
+				});
+
+			} else {
+				mui.ready(function() {
+					mui('#pullrefresh').pullRefresh().pullupLoading();
+				});
+			}
+
+			var body = document.getElementsByTagName("body")[0];
+			var cook = document.getElementsByClassName("cook")[0];
+			var move = document.getElementsByClassName("move")[0];
+			var cook_centent = (cook.offsetWidth - move.offsetWidth) / 2;
+
+			var select_thing_warp = document.getElementsByClassName("select_thing_warp")[0]
+			var thing_ul = select_thing_warp.getElementsByClassName("swiper-wrapper")[0];
+			//			var thing_ul = select_thing_warp.getElementsByTagName("ul")[0];
+			var thing_li = thing_ul.getElementsByClassName("swiper-slide");
+			//			var thing_li = thing_ul.getElementsByTagName("li");
+			var cook_bol = false;
+			var buju_bol = false;
+			var select_thing_warpBol = false;
+
+			//select_thing_warp的适应式布局
+			//--------------------------------------------
+			function buju() {
+				if(buju_bol == true) {
+					cook_centent = (cook.offsetWidth - move.offsetWidth) / 2;
+					if((move.offsetLeft + move.offsetWidth + cook_centent < body.offsetWidth) && cook_bol == true) {
+						cook.style.left = move.offsetLeft - cook_centent + "px";
+					} else if(move.offsetLeft + move.offsetWidth + cook_centent > body.offsetWidth) {
+						cook.style.left = body.offsetWidth - cook.offsetWidth + "px";
+					}
+
+					//				thing_ul.style.width = body.offsetWidth + "px";
+				}
+
+			}
+
+			window.onresize = function() {
+				buju();
+			}
+			move.onclick = function() {
+					if(cook_bol == false) {
+						cook.style.display = "block";
+						cook.style.zIndex = 100;
+						cook_bol = true;
+						buju();
+					} else {
+						cook.style.display = "none";
+						cook_bol = false;
+						buju();
+					}
+				}
+				//--------------------------------------------
+
+			//添加菜品
+			//--------------------------------------------
+			var thing_li_width;
+			var swiper_container = document.getElementsByClassName("swiper-container")[0];
+			var touch_bol = true;
+			var cancel_bol = false;
+			thing_ul.style.listStyle = "none";
+
+			function addfood() {
+				for(var j = 0; j < food_li.length; j++) {
+					food_li[j].index = j;
+					food_li[j].addEventListener('touchend', function(event) {
+						if(touch_bol == true) {
+							if(select_thing_warpBol == false) {
+								select_thing_warp.style.display = "block";
+								buju_bol = true;
+								thing_ul.innerHTML = thing_ul.innerHTML + "<li class='swiper-slide'><img src='img/selectImg/cancel.png' class='cancel' /><p>樱桃番茄</p><img src='img/selectImg/v1.png' class='img' /></li>"
+									//							if(thing_li.length >= 2) {
+									//								thing_li_width = thing_li[1].offsetLeft - thing_li[0].offsetLeft;
+									//								console.log(thing_li_width);
+									//								if(thing_li.length * thing_li_width > body.offsetWidth) {
+									//									for(var k = 0; k < thing_li.length; k++) {
+									//										thing_li[k].style.width = thing_li_width + "px"
+									//									}
+									//									thing_ul.style.width = thing_li.length * thing_li_width + 8 + "px";
+									//									swiper_container.style.width = thing_li.length * thing_li_width + 8 + "px";
+									//								}
+									//							}
+
+								cancel_bol = true;
+								cancel_btn();
+								var cancel = document.getElementsByClassName("cancel");
+							}
+							cancel_btn();
+
+							//						var thing_li_length=body.offsetWidth/thing_li_width
+							var swiper = new Swiper('.swiper-container', {
+								slidesPerView: 'auto',
+								freeMode: true
+							});
+						}
+					}, false)
+					document.addEventListener('touchmove', function() {
+						touch_bol = false;
+						document.addEventListener('touchend', function() {
+							touch_bol = true;
+						}, false);
+					}, false);
+					console.log(cancel_bol);
+				}
+			}
+
+			function cancel_btn() {
+				if(cancel_bol == true) {
+					$('.cancel').click(function() {
+						$(this).parent().remove();
+						cancel = document.getElementsByClassName("cancel");
+						if(cancel.length <= 0) {
+							cancel_bol = false;
+							buju_bol = false;
+							select_thing_warp.style.display = "none"
+						}
+					});
+
+				}
+
+			}
+
+			addfood();
+			//--------------------------------------------
+
+			//添加栏滑动
+			//--------------------------------------------
+			//			thing_ul.addEventListener('touchstart', function(event) {
+			//				var event = event || window.event;
+			//				var staX = event.touches[0].clientX - thing_ul.offsetLeft;
+			//				var staY = event.touches[0].clientY - thing_ul.offsetTop;
+			//				thing_ul.addEventListener('touchmove', function(event) {
+			//					var event = event || window.event;
+			//					var X = event.touches[0].clientX - staX;
+			//					var Y = event.touches[0].clientY - staY;
+			//					if(Y < select_thing_warp.clientTop) {
+			//						Y = 0;
+			//					} else if(Y > 0) {
+			//						Y = 0;
+			//					}
+			//
+			//					if(X > 0) {
+			//						X = 0;
+			//					} else if(X < body.offsetWidth - thing_ul.offsetWidth) {
+			//						X = body.offsetWidth - thing_ul.offsetWidth;
+			//					}
+			//					thing_ul.style.left = X + 'px';
+			//					thing_ul.style.top = Y + 'px';
+			//
+			//					//清除默认事件
+			//					event.preventDefault();
+			//					return false;
+			//				}, false);
+			//				document.addEventListener('touchend', function() {
+			//					//					var event = event || window.event;
+			//					document.ontouchmove = null;
+			//				}, false);
+			//			}, false);
+			//--------------------------------------------
+		</script>
+	</body>
+
+</html>

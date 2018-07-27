@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/followList/followList.css" />
+		<script type="text/javascript">
+			//sArgName表示要获取哪个参数的值 
+			function getQueryString(name) {
+				var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+				var r = window.location.search.substr(1).match(reg);
+				if(r != null) return unescape(r[2]);
+				return null;
+			}
+		</script>
+	</head>
+
+	<body>
+		<div class="followListwarp">
+			<div class="followListhead">
+				<img src="img/friendimg/return.png" />
+				<span>关注的人</span>
+			</div>
+			<div class="followList">
+				<ul>
+					<li>
+						<img src="img/followListimg/followlist_one.png" alt="" />
+						<p><span class="f_username">只若初见</span><span>1分钟</span><span>0.01km</span></p>
+						<p><span class="f_sex">女</span><span class="f_age">23岁</span><span>北京</span><span>大兴区</span></p>
+						<p>蛋炒饭饭炒蛋,两个鸡蛋一碗饭</p>
+						<div class="cancelfollow">
+							取消关注
+						</div>
+					</li>
+					
+					<li>
+						<img src="img/followListimg/followlist_one.png" alt="" />
+						<p><span class="f_username1">只若初见</span><span>1分钟</span><span>0.01km</span></p>
+						<p><span class="f_sex1">女</span><span class="f_age1">23岁</span><span>北京</span><span>大兴区</span></p>
+						<p>速度是多少大大三大傻蛋大三</p>
+						<div class="cancelfollow">
+							取消关注
+						</div>
+					</li>
+					
+					<li>
+						<img src="img/followListimg/followlist_one.png" alt="" />
+						<p><span class="f_username2">只若初见</span><span>1分钟</span><span>0.01km</span></p>
+						<p><span class="f_sex2">女</span><span class="f_age2">23岁</span><span>北京</span><span>大兴区</span></p>
+						<p>惹我认为人v</p>
+						<div class="cancelfollow">
+							取消关注
+						</div>
+					</li>
+					
+					<li>
+						<img src="img/followListimg/followlist_one.png" alt="" />
+						<p><span class="f_username3">只若初见</span><span>1分钟</span><span>0.01km</span></p>
+						<p><span class="f_sex3">女</span><span class="f_age3">23岁</span><span>北京</span><span>大兴区</span></p>
+						<p>方式等纷纷丰富是否</p>
+						<div class="cancelfollow">
+							取消关注
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+		var f_username=document.getElementsByClassName("f_username")[0];
+		var f_username1=document.getElementsByClassName("f_username1")[0];
+		var f_username2=document.getElementsByClassName("f_username2")[0];
+		var f_username3=document.getElementsByClassName("f_username3")[0];
+		var f_uname;
+		//根据id跳转
+			$.ajax({
+				type: "post",
+				url: "php/mynews.php",
+				dataType: "json",
+				data: {
+					id: getQueryString("id")
+				},
+				success: function(json) {
+					console.log(json);
+					$(".followListhead>img").click(function() {
+						location.href = 'mynews.html	?id=' + json[0].id
+					})
+				},
+				async: true
+			});
+		//获取关注列表
+			$.ajax({
+				type: "post",
+				url: "php/followList.php",
+				dataType: "json",
+				data: {
+					id: getQueryString("id")
+				},		
+				success: function(json) {
+					console.log(json);
+					f_username.innerHTML=json[0].username;
+					f_username1.innerHTML=json[1].username;
+					f_username2.innerHTML=json[2].username;
+					f_username3.innerHTML=json[3].username;
+					$(".f_sex").html(json[0].sex);
+					$(".f_sex1").html(json[1].sex);
+					$(".f_sex2").html(json[2].sex);
+					$(".f_sex3").html(json[3].sex);
+					$(".f_age").html(json[0].age+'岁');
+					$(".f_age1").html(json[1].age+'岁');
+					$(".f_age2").html(json[2].age+'岁');
+					$(".f_age3").html(json[3].age+'岁');
+				},
+				async: true
+			});
+		</script>
+	</body>
+
+</html>

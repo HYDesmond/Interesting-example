@@ -1,0 +1,131 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+img {
+  display: block;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  background-color: #ebeae4;
+}
+.warp {
+  position: relative;
+  width: 100%;
+  background-color: #ebeae4;
+}
+.head {
+  width: 100%;
+  background-color: #48382b;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.region {
+  width: 8%;
+  display: inline-block;
+}
+.region a {
+  margin: 0 4%;
+  font-size: 18px;
+  line-height: 280%;
+  color: #fff;
+  text-align: center;
+  display: inline-block;
+}
+.region .back-btn {
+  width: 43.01075268817204%;
+  display: inline-block;
+}
+.search {
+  display: inline-block;
+  width: 75.46666666666667%;
+}
+.search div {
+  width: 100%;
+  height: 100%;
+  background-size: 20px 20px;
+  background-color: #403228;
+  border-radius: 5px;
+  border: 0;
+}
+.search div img {
+  margin: 5px 4px 5px 6px;
+  float: left;
+  width: 20px;
+}
+.search input {
+  border: 0;
+  background-color: #403228;
+  line-height: 200%;
+  width: 85%;
+  height: 100%;
+  outline: none;
+  font-size: 16px;
+  color: #756550;
+}
+.do {
+  height: 100%;
+  display: inline-block;
+  margin-left: 2.666666666666667%;
+  color: #f6f5f5;
+}
+.search input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: #756550;
+}
+.search input::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: #756550;
+}
+.search input:-ms-input-placeholder {
+  color: #756550;
+}
+.search input::-webkit-input-placeholder {
+  color: #756550;
+}
+.search a {
+  tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.data {
+  padding-top: ;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+.data ul {
+  list-style: none;
+  display: block;
+  float: left;
+  width: 80%;
+}
+.data li {
+  text-align: left;
+  float: left;
+  width: 50%;
+  margin-bottom: 6.172839506172839%;
+  color: #25112a;
+}
+.record {
+  padding: 10% 10% 10% 10%;
+}
+.record li:nth-of-type(1),
+.hot_search li:nth-of-type(1) {
+  color: #99886b;
+}
+.record li:nth-of-type(2) {
+  color: #aacf50;
+  text-align: right;
+}
+.hot_search {
+  padding: 0 10% 10% 10%;
+}
+.hot_search > li:nth-of-type(1) {
+  width: 100%;
+}
+/*# sourceMappingURL=search.css.map */

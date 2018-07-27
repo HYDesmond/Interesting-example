@@ -1,0 +1,581 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+.clear:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#wrap {
+  width: 100%;
+  height: 100%;
+  background-size: 100%;
+}
+#nav {
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+}
+#navBg {
+  width: 100%;
+}
+#foodName {
+  position: absolute;
+  color: white;
+  left: 50%;
+  top: 50%;
+}
+#back {
+  position: absolute;
+  width: 3.0666666666666664%;
+  left: 3.733333333333334%;
+  top: 23.809523809523807%;
+}
+#help {
+  width: 5.466666666666667%;
+  right: 4%;
+  top: 47.61904761904761%;
+  position: absolute;
+}
+#helpList {
+  width: 22%;
+  position: absolute;
+  right: 3.0666666666666664%;
+  top: 92.85714285714286%;
+  z-index: 20;
+  display: none;
+}
+#helpList img {
+  width: 100%;
+}
+.text {
+  width: 100%;
+  position: absolute;
+}
+.text p {
+  color: white;
+  text-align: center;
+}
+.swiper-wrapper,
+.swiper-container {
+  width: 100%;
+  height: 50.23183925811438%;
+}
+.swiper-slide img {
+  width: 100%;
+  position: absolute;
+  top: -10.131712259371833%;
+}
+.swiper-slide {
+  width: 100%;
+  height: 30.911901081916536%;
+}
+#price {
+  position: relative;
+  padding: 2.7047913446676968% 4.266666666666667% 0 4.266666666666667%;
+  margin-bottom: 5.4095826893353935%;
+}
+#price p:nth-child(1) {
+  color: #646464;
+}
+#price p:nth-child(2) {
+  color: #a09f9f;
+}
+#price p:nth-child(3) {
+  color: #ff5d5d;
+  padding-left: 1.3333333333333335%;
+}
+#price p:nth-child(4) {
+  color: #646464;
+  position: absolute;
+  right: 8%;
+  bottom: -6.9551777434312205%;
+}
+#mark span,
+#share span {
+  color: #a09f9f;
+}
+#mark {
+  width: 8.666666666666668%;
+  border-right: 1px solid #a09f9f;
+  position: absolute;
+  right: 14.666666666666666%;
+  top: 15.455950540958268%;
+  padding: 0.7727975270479135%;
+  text-align: center;
+}
+#share {
+  width: 8.666666666666668%;
+  position: absolute;
+  right: 4.8%;
+  top: 15.455950540958268%;
+  padding: 0.7727975270479135%;
+  text-align: center;
+}
+#share img,
+#mark img {
+  width: 70%;
+}
+#size {
+  padding: 2.7047913446676968% 4.266666666666667% 0 4.266666666666667%;
+  margin-bottom: 5.4095826893353935%;
+}
+#size p:nth-child(1) {
+  color: #646464;
+  line-height: 1.6rem;
+}
+#size p:nth-child(2) {
+  color: #646464;
+  padding-left: 4.266666666666667%;
+  text-indent: 2em;
+}
+#pay p:first-child {
+  height: 4.482225656877898%;
+  color: #646464;
+  padding: 4.482225656877898% 0 4.482225656877898% 6.182380216383308%;
+  background: #ebeae4;
+  border-top: 1px solid #a9a9a9;
+}
+#payWay {
+  border-top: 1px solid #a9a9a9;
+  border-bottom: 1px solid #a9a9a9;
+  background: #ebeae4;
+  padding: 3.863987635239567% 0 3.863987635239567% 6.182380216383308%;
+}
+#payWay li {
+  width: 32%;
+  float: left;
+  list-style: none;
+}
+#payWay li p {
+  color: #646464;
+  float: left;
+  margin-top: 1.9319938176197835%;
+  padding-left: 1.9319938176197835%;
+}
+#payWay li img {
+  width: 15%;
+  float: left;
+}
+#drag {
+  padding: 3.863987635239567% 0;
+  text-align: center;
+}
+#drag p {
+  color: #646464;
+}
+#drag img {
+  width: 4.8%;
+  padding-top: 2.666666666666667%;
+}
+#infoAss p {
+  float: left;
+  text-align: center;
+  width: 50%;
+  padding: 3.863987635239567% 0;
+  color: #6f6f6f;
+}
+#info {
+  background: #eecb91;
+}
+#ass {
+  background: #ebeae4;
+}
+#infoOn {
+  padding: 3.863987635239567% 0;
+  text-align: center;
+}
+#infoOn img {
+  width: 94%;
+}
+#assOn {
+  display: none;
+}
+#assTag {
+  width: 96.8%;
+  list-style: none;
+  padding-left: 3.2%;
+  padding-top: 1.3333333333333335%;
+}
+#assTag li {
+  float: left;
+  width: 26.666666666666668%;
+  color: #6ab439;
+  text-align: center;
+  border: 1px solid #6ab439;
+  border-radius: 6px 6px 6px 6px;
+  padding: 1.3333333333333335% 0;
+  margin: 1.6% 2.4%;
+}
+#assList {
+  width: 96.8%;
+  position: relative;
+  padding-left: 3.2%;
+  list-style: none;
+  overflow: hidden;
+}
+.user {
+  width: 100%;
+  margin: 3.863987635239567%;
+}
+#assList .user div {
+  width: 13.333333333333334%;
+  overflow: hidden;
+  margin-left: 2.2666666666666666%;
+}
+#assList .user img {
+  width: 100%;
+  border-radius: 50%;
+}
+#assList .user span {
+  color: #6f6f6f;
+  position: absolute;
+  top: 25.64102564102564%;
+  left: 26.666666666666668%;
+}
+#assList .user p:nth-of-type(1) {
+  color: #6f6f6f;
+  line-height: 2.1rem;
+  padding-left: 3.4666666666666663%;
+}
+#assList .user p:nth-of-type(2) {
+  color: #6f6f6f;
+  padding-left: 3.4666666666666663%;
+}
+#checkAll {
+  text-align: center;
+  margin-bottom: 15.455950540958268%;
+}
+#checkAll span {
+  color: #6f6f6f;
+  border: 1px solid #a9a9a9;
+  border-radius: 6px 6px 6px 6px;
+  padding: 0.7727975270479135% 2.666666666666667%;
+}
+#joinBuy {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+#joinBuy p {
+  float: left;
+  text-align: center;
+  width: 50%;
+  padding: 4.636785162287481% 0;
+  color: white;
+}
+#joinBuy p:nth-child(1) {
+  background: #ffa842;
+}
+#joinBuy p:nth-child(2) {
+  background: #ff5e39;
+}
+@media screen and (max-width: 360px) {
+  #foodName,
+  #price p:nth-child(1),
+  #drag p,
+  #infoAss p,
+  #assList .user span,
+  #assList .user p:nth-of-type(1),
+  #checkAll span {
+    font-size: 14px;
+  }
+  .text {
+    top: 20.606060606060606%;
+  }
+  .text p {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  #price p:nth-child(2) {
+    font-size: 12px;
+    line-height: 50px;
+  }
+  #price p:nth-child(3),
+  #price p:nth-child(4),
+  #mark span,
+  #share span,
+  #pay p:first-child,
+  #payWay li p,
+  #assTag li,
+  #assList .user p:nth-of-type(2) {
+    font-size: 12px;
+  }
+  #size p:nth-child(1) {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  #size p:nth-child(2) {
+    font-size: 12px;
+    line-height: 24px;
+  }
+  #joinBuy p {
+    font-size: 14px;
+    padding: 3.554868624420402% 0;
+  }
+}
+@media screen and (min-width: 360px) and (max-width: 420px) {
+  #foodName,
+  #price p:nth-child(1),
+  #drag p,
+  #infoAss p,
+  #checkAll span {
+    font-size: 16px;
+  }
+  .user span,
+  .user p:nth-of-type(1) {
+    font-size: 14px;
+  }
+  .user p:nth-of-type(2) {
+    font-size: 12px;
+  }
+  .text {
+    top: 24.242424242424242%;
+  }
+  .text p {
+    font-size: 14px;
+    line-height: 25px;
+  }
+  #price p:nth-child(2) {
+    font-size: 14px;
+    line-height: 50px;
+  }
+  #price p:nth-child(3),
+  #price p:nth-child(4),
+  #pay p:first-child,
+  #payWay li p {
+    font-size: 14px;
+  }
+  #mark span,
+  #share span,
+  #assTag li {
+    font-size: 12px;
+  }
+  #size p:nth-child(1) {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  #size p:nth-child(2) {
+    font-size: 14px;
+    line-height: 26px;
+  }
+  #joinBuy p {
+    font-size: 16px;
+    padding: 3.554868624420402% 0;
+  }
+}
+@media screen and (min-width: 420px) and (max-width: 480px) {
+  #foodName,
+  #price p:nth-child(1),
+  #drag p,
+  #infoAss p,
+  #checkAll span {
+    font-size: 18px;
+  }
+  .user span,
+  .user p:nth-of-type(1) {
+    font-size: 16px;
+  }
+  .user p:nth-of-type(2) {
+    font-size: 14px;
+  }
+  .text {
+    top: 22.424242424242426%;
+  }
+  .text p {
+    font-size: 16px;
+    line-height: 28px;
+  }
+  #price p:nth-child(2) {
+    font-size: 16px;
+    line-height: 50px;
+  }
+  #price p:nth-child(3),
+  #price p:nth-child(4),
+  #pay p:first-child,
+  #payWay li p,
+  #assTag li,
+  #assList .user p:nth-of-type(2) {
+    font-size: 16px;
+  }
+  #mark span,
+  #share span,
+  #assTag li {
+    font-size: 14px;
+  }
+  #size p:nth-child(1) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  #size p:nth-child(2) {
+    font-size: 16px;
+    line-height: 28px;
+  }
+  #joinBuy p {
+    font-size: 18px;
+    padding: 3.554868624420402% 0;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 640px) {
+  #foodName,
+  #price p:nth-child(1),
+  #drag p,
+  #infoAss p,
+  #checkAll span {
+    font-size: 20px;
+  }
+  .user span,
+  .user p:nth-of-type(1) {
+    font-size: 18px;
+  }
+  .user p:nth-of-type(2) {
+    font-size: 16px;
+  }
+  .text {
+    top: 23.636363636363637%;
+  }
+  .text p {
+    font-size: 18px;
+    line-height: 35px;
+  }
+  #price p:nth-child(2) {
+    font-size: 18px;
+    line-height: 60px;
+  }
+  #price p:nth-child(3),
+  #price p:nth-child(4),
+  #pay p:first-child,
+  #payWay li p,
+  #assTag li,
+  #assList .user p:nth-of-type(2) {
+    font-size: 18px;
+  }
+  #mark span,
+  #share span,
+  #assTag li {
+    font-size: 16px;
+  }
+  #size p:nth-child(1) {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  #size p:nth-child(2) {
+    font-size: 18px;
+    line-height: 34px;
+  }
+  #joinBuy p {
+    font-size: 20px;
+    padding: 3.554868624420402% 0;
+  }
+}
+@media screen and (min-width: 640px) and (max-width: 780px) {
+  #foodName,
+  #price p:nth-child(1),
+  #drag p,
+  #infoAss p,
+  #checkAll span {
+    font-size: 22px;
+  }
+  .user span,
+  .user p:nth-of-type(1) {
+    font-size: 20px;
+  }
+  .user p:nth-of-type(2) {
+    font-size: 18px;
+  }
+  .text {
+    top: 24.242424242424242%;
+  }
+  .text p {
+    font-size: 20px;
+    line-height: 45px;
+  }
+  #price p:nth-child(2) {
+    font-size: 20px;
+    line-height: 78px;
+  }
+  #price p:nth-child(3),
+  #price p:nth-child(4),
+  #pay p:first-child,
+  #payWay li p,
+  #assTag li,
+  #assList .user p:nth-of-type(2) {
+    font-size: 20px;
+  }
+  #mark span,
+  #share span,
+  #assTag li {
+    font-size: 18px;
+  }
+  #size p:nth-child(1) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  #size p:nth-child(2) {
+    font-size: 20px;
+    line-height: 36px;
+  }
+  #joinBuy p {
+    font-size: 22px;
+    padding: 3.7094281298299845% 0;
+  }
+}
+@media screen and (min-width: 780px) {
+  #foodName,
+  #price p:nth-child(1),
+  #drag p,
+  #infoAss p,
+  #checkAll span {
+    font-size: 26px;
+  }
+  .user span,
+  .user p:nth-of-type(1) {
+    font-size: 24px;
+  }
+  .user p:nth-of-type(2) {
+    font-size: 22px;
+  }
+  .text {
+    top: 29.6969696969697%;
+  }
+  .text p {
+    font-size: 24px;
+    line-height: 58px;
+  }
+  #price p:nth-child(2) {
+    font-size: 24px;
+    line-height: 78px;
+  }
+  #price p:nth-child(3),
+  #price p:nth-child(4),
+  #pay p:first-child,
+  #payWay li p,
+  #assTag li,
+  #assList .user p:nth-of-type(2) {
+    font-size: 24px;
+  }
+  #mark span,
+  #share span,
+  #assTag li {
+    font-size: 22px;
+  }
+  #size p:nth-child(1) {
+    font-size: 24px;
+    line-height: 40px;
+  }
+  #size p:nth-child(2) {
+    font-size: 24px;
+    line-height: 46px;
+  }
+  #joinBuy p {
+    font-size: 26px;
+    padding: 3.863987635239567% 0;
+  }
+}
+/*# sourceMappingURL=foodInfo.css.map */

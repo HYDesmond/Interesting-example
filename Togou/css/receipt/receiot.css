@@ -1,0 +1,166 @@
+.head {
+  position: fixed;
+  width: 6.4rem;
+  height: 0.7rem;
+  top: 0;
+  background-color: #48382b;
+}
+.head img {
+  float: left;
+  width: 0.19rem;
+  height: 0.33rem;
+  padding-top: 0.20rem;
+  padding-left: 0.22rem;
+}
+.head p {
+  float: left;
+  font-size: 0.2rem;
+  color: white;
+  padding-left: 1.83rem;
+  padding-top: 0.23rem;
+}
+.head span {
+  float: left;
+  font-size: 0.15rem;
+  color: white;
+  padding-left: 1.3rem;
+  padding-top: 0.3rem;
+}
+#top {
+  width: 6.4rem;
+  height: 1.78rem;
+  background-color: white;
+  border-bottom: 1px solid #e7e8e9;
+  margin-top: 0.7rem;
+}
+#top p {
+  width: 6.21rem;
+  font-size: 0.2rem;
+  color: #181819;
+  padding-left: 0.19rem;
+  padding-top: 0.33rem;
+}
+#bht {
+  width: 6.4rem;
+  height: 0.72rem;
+  padding-top: 0.2rem;
+}
+/*.pge1:active {
+  background-color: yellow;
+}*/
+#bht div {
+  float: left;
+  width: 1.85rem;
+  height: 0.7rem;
+  border: 1px solid #979797;
+  border-radius: 10px;
+  line-height: 0.7rem;
+  text-align: center;
+  margin-left: 0.19rem;
+  font-size: 0.2rem;
+}
+#chest {
+  width: 6.4rem;
+  height: 1.4rem;
+  margin-top: 0.13rem;
+  background-color: white;
+  border-bottom: 1px solid #e7e8e9;
+}
+#chest p {
+  font-size: 0.2rem;
+  color: #181819;
+  padding-left: 0.19rem;
+  padding-top: 0.33rem;
+}
+#chest span {
+  float: left;
+  font-size: 0.2rem;
+  padding-top: 0.26rem;
+  padding-left: 0.2rem;
+}
+.push {
+  float: left;
+  width: 0.35rem;
+  height: 0.35rem;
+  border: 1px solid #b0b0b0;
+  border-radius: 55%;
+  margin-top: 0.2rem;
+  margin-left: 0.2rem;
+}
+.push2 {
+  float: left;
+  width: 0.35rem;
+  height: 0.35rem;
+  border: 1px solid #b0b0b0;
+  border-radius: 55%;
+  margin-top: 0.2rem;
+  margin-left: 0.2rem;
+}
+#body {
+  width: 6.4rem;
+  height: 0.79rem;
+  border-bottom: 1px solid #e7e8e9;
+  margin-top: 0.13rem;
+  background-color: white;
+}
+#body p {
+  font-size: 0.2rem;
+  color: #181819;
+  padding-left: 0.19rem;
+  padding-top: 0.33rem;
+}
+#box {
+  width: 6.4rem;
+  height: 3.3rem;
+  border-bottom: 1px solid #e7e8e9;
+  background-color: white;
+}
+.tex {
+  font-size: 0.2rem;
+  color: #808281;
+  padding-left: 0.19rem;
+  padding-top: 0.22rem;
+  overflow: hidden;
+}
+.line {
+  width: 6.4rem;
+  height: 0.4rem;
+  padding-top: 0.23rem;
+}
+.line p {
+  float: left;
+  line-height: 0.4rem;
+  padding-left: 0.2rem;
+  font-size: 0.2rem;
+}
+.button {
+  float: left;
+  width: 0.35rem;
+  height: 0.35rem;
+  border: 1px solid #b0b0b0;
+  border-radius: 55%;
+  margin-left: 0.19rem;
+}
+#foot {
+  width: 3.24rem;
+  height: 0.73rem;
+  background-color: #f23030;
+  margin-top: 0.2rem;
+  margin-left: 25%;
+  color: white;
+  text-align: center;
+  line-height: 0.73rem;
+  font-size: 0.4rem;
+}
+#botton {
+  position: fixed;
+  width: 6.4rem;
+  height: 2.31rem;
+  background-color: #f3f4f6;
+  top: 8.5rem;
+}
+#spr {
+  width: 6.4rem;
+  height: 2.31rem;
+}
+/*# sourceMappingURL=receiot.css.map */

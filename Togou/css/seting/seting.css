@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+.setingwarp {
+  width: 100%;
+  height: 100%;
+  background-image: url(../../img/helpcenterimg/loginbg.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.setinghead {
+  width: 100%;
+  height: 6.481481481481481%;
+  background-color: #48382b;
+  color: #FFF;
+}
+.setinghead > img {
+  width: 2.666666666666667%;
+  height: 44.047619047619044%;
+  padding-left: 4%;
+  padding-top: 2.700617283950617%;
+}
+.setinghead span {
+  padding-left: 38.53333333333334%;
+  font-size: 16px;
+}
+.setingwarp > img:nth-of-type(1) {
+  width: 100%;
+  height: 0.38580246913580246%;
+  position: absolute;
+  top: 6.481481481481481%;
+}
+.shadow {
+  width: 100%;
+  height: 1.5432098765432098%;
+  background-color: #eeeeee;
+}
+.setingwarp > img:nth-of-type(1) {
+  width: 100%;
+  height: 1.5432098765432098%;
+}
+.seting_all {
+  width: 100%;
+}
+.seting_all ul {
+  overflow: hidden;
+}
+.seting_all ul > img:nth-of-type(1) {
+  float: left;
+  width: 100%;
+}
+.seting_all ul li {
+  width: 100%;
+  height: 6.172839506172839%;
+  border-bottom: 1px solid #c5c4c4;
+  padding: 2.314814814814815% 0;
+  overflow: hidden;
+}
+.seting_all ul li img:nth-of-type(2) {
+  width: 1.7333333333333332%;
+  height: 1.7746913580246912%;
+  float: right;
+  padding-right: 4%;
+  padding-top: 2.314814814814815%;
+}
+.seting_all ul li:nth-of-type(1) img:nth-of-type(1) {
+  width: 3.2%;
+  padding-left: 4%;
+}
+.seting_all ul li:nth-of-type(2) img:nth-of-type(1) {
+  width: 3.2%;
+  padding-left: 4%;
+}
+.seting_all ul li:nth-of-type(3) img:nth-of-type(1) {
+  width: 2.933333333333333%;
+  padding-left: 4%;
+}
+.seting_all ul li:nth-of-type(4) img:nth-of-type(1) {
+  width: 3.3333333333333335%;
+  padding-left: 4%;
+}
+.seting_all ul li:nth-of-type(5) img:nth-of-type(1) {
+  width: 3.2%;
+  padding-left: 4%;
+}
+.seting_all ul li span {
+  padding-left: 3.4666666666666663%;
+}
+.outbtn {
+  width: 92.13333333333334%;
+  height: 6.172839506172839%;
+  background-color: #48382b;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 50px;
+  text-align: center;
+  line-height: 1.8em;
+  margin-left: 4%;
+  margin-top: 61.72839506172839%;
+}
+/*# sourceMappingURL=seting.css.map */

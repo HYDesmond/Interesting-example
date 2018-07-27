@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/login/login.css" />
+	</head>
+
+	<body>
+		<div class="loginwarp">
+			<div class="loginhead">
+				<a href="mynews.html"><img src="img/loginimg/return.png" /></a>
+				<span>登录</span>
+			</div>
+			<img src="img/loginimg/shadow.png" />
+			<div class="logo">
+				<img src="img/loginimg/logo.png" />
+			</div>
+			<input type="text" name="loginuserPhone" value="" placeholder="用户名/邮箱/手机号" />
+			<input type="password" name="loginuserPsw" value="" placeholder="密码" />
+			<span class="logintips"></span>
+			<div class="loginbtn">
+				登录
+			</div>
+			<p>其他登录方式:</p>
+			<ul class="otherlogin">
+				<li><img src="img/loginimg/qq.png" /></li>
+				<li><img src="img/loginimg/weixin.png" /></li>
+				<li><img src="img/loginimg/weibo.png" /></li>
+				<li><img src="img/loginimg/baidu.png" /></li>
+			</ul>
+			<span class="forgetpsw">忘记密码</span>
+			<span class="newUser">新用户注册</span>
+		</div>
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var loginuserPhone = document.getElementsByName("loginuserPhone")[0];
+			var loginuserPsw = document.getElementsByName("loginuserPsw")[0];
+			var loginbtn = document.getElementsByClassName("loginbtn")[0];
+			var logintips = document.getElementsByClassName("logintips")[0];
+			var login = false;
+			var newUser = document.getElementsByClassName('newUser')[0];
+			//跳转到注册界面
+			newUser.onclick = function() {
+					location.href = "register.html";
+				}
+			//登录验证手机号码是否注册
+			loginuserPhone.onblur = function() {
+					var ajax = null;
+					if(window.ActiveXObject) {
+						ajax = new ActiveXObject("Microsoft.XMLHTTP")
+					} else if(window.XMLHttpRequest) {
+						ajax = new XMLHttpRequest();
+					}
+					ajax.open("POST", "php/login.php", true);
+					ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+					ajax.send("loginuserPhone=" + loginuserPhone.value + "&" + "loginuserPsw=" + loginuserPsw.value + "&" + "login=" + login);
+					ajax.onreadystatechange = function() {
+						console.log(ajax.readyState);
+						if(ajax.readyState == 4) {
+							logintips.innerHTML = ajax.responseText;
+							if(logintips.innerHTML == "请输入登录密码") {
+								login = true;
+							}
+						}
+					}
+				}
+			//登录
+			loginbtn.onclick = function() {
+				if(loginuserPhone == "") {
+					logintips.innerText = "请输入手机号码";
+				} else if(loginuserPsw == "") {
+					logintips.innerText = "请输入密码";
+				}
+				if(login == true) {
+					console.log('1')
+					if(window.ActiveXObject) {
+						ajax = new ActiveXObject("Microsoft.XMLHTTP")
+					} else if(window.XMLHttpRequest) {
+						ajax = new XMLHttpRequest();
+					}
+					ajax.open("POST", "php/login.php", true);
+					ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+					ajax.send("loginuserPhone=" + loginuserPhone.value + "&" + "loginuserPsw=" + loginuserPsw.value + "&" + "login=" + login);
+					ajax.onreadystatechange = function() {
+						console.log(ajax.readyState);
+						if(ajax.readyState == 4) {
+							location.href="mynews.html?id="+ajax.responseText;
+						} 
+					}									
+				}
+			}
+				
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/shopCart/shopCart.css" />
+	</head>
+
+	<body>
+		<div id="wrap">
+			<div id="nav">
+				<img src="img/foodListImg/navBg.png" id="navBg" />
+				<img src="img/foodListImg/back.png" id="back" />
+				<p id="title">购物车</p>
+				<p class="edit">编辑</p>
+				<p class="finish">完成</p>
+			</div>
+			<ul id="goods">
+				<li>
+					<div class="click">
+						<!--<img src="shopCartImg/clickBg.png" class="editOff"/>-->
+						<img src="img/shopCartImg/clickDot.png" class="editOn"/>
+					</div>
+					<div class="goodsImg">
+						<img src="img/shopCartImg/goods1.png" />
+					</div>
+					<div class="text">
+						<h4>科尔沁牛腩切块500g</h4>
+						<p>脂肪少，适合炖汤</p>
+						<p class="unitPri">&yen;21.80</p>
+						<div class="add">
+							<img src="img/shopCartImg/add.png" />
+							<span class="minus">-</span>
+							<span class="sum">1</span>
+							<span class="plus">+</span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="click">
+						<!--<img src="shopCartImg/clickBg.png" class="editOff"/>-->
+						<img src="img/shopCartImg/clickDot.png" class="editOn"/>
+					</div>
+					<div class="goodsImg">
+						<img src="img/shopCartImg/goods2.png" />
+					</div>
+					<div class="text">
+						<h4>精选有机胡萝卜300g</h4>
+						<p>胡萝卜富含维生素</p>
+						<p class="unitPri">&yen;8.60</p>
+						<div class="add">
+							<img src="img/shopCartImg/add.png" />
+							<span class="minus">-</span>
+							<span class="sum">1</span>
+							<span class="plus">+</span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="click">
+						<!--<img src="shopCartImg/clickBg.png" class="editOff"/>-->
+						<img src="img/shopCartImg/clickDot.png" class="editOn"/>
+					</div>
+					<div class="goodsImg">
+						<img src="img/shopCartImg/goods3.png" />
+					</div>
+					<div class="text">
+						<h4>精选本地豆角300g</h4>
+						<p>富有维生素和矿物质</p>
+						<p class="unitPri">&yen;10.20</p>
+						<div class="add">
+							<img src="img/shopCartImg/add.png" />
+							<span class="minus">-</span>
+							<span class="sum">1</span>
+							<span class="plus">+</span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="click">
+						<!--<img src="shopCartImg/clickBg.png" class="editOff"/>-->
+						<img src="img/shopCartImg/clickDot.png" class="editOn"/>
+					</div>
+					<div class="goodsImg">
+						<img src="img/shopCartImg/goods4.png" />
+					</div>
+					<div class="text">
+						<h4>精选本地柿子椒500g</h4>
+						<p>它可以防治坏血病</p>
+						<p class="unitPri">&yen;15.80</p>
+						<div class="add">
+							<img src="img/shopCartImg/add.png" />
+							<span class="minus">-</span>
+							<span class="sum">1</span>
+							<span class="plus">+</span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="click">
+						<!--<img src="shopCartImg/clickBg.png" class="editOff"/>-->
+						<img src="img/shopCartImg/clickDot.png" class="editOn"/>
+					</div>
+					<div class="goodsImg">
+						<img src="img/shopCartImg/goods5.png" />
+					</div>
+					<div class="text">
+						<h4>科尔沁牛腩切块500g</h4>
+						<p>脂肪少，适合炖汤</p>
+						<p class="unitPri">&yen;21.84</p>
+						<div class="add">
+							<img src="img/shopCartImg/add.png" />
+							<span class="minus">-</span>
+							<span class="sum">1</span>
+							<span class="plus">+</span>
+						</div>
+					</div>
+				</li>
+			</ul>
+			<div id="totalPrice" class="clear">
+				<div id="price">
+					<div class="chooseAll">
+						<img src="img/shopCartImg/allBg.png"/>
+						<span>全选</span>
+					</div>
+					<div class="money">
+						<p id="sumPrice">合计: &yen;0.0</p>
+					</div>
+				</div>
+				<div id="accou">去结算</div>
+			</div>
+			<div id="del">
+				<div class="chooseAll">
+					<img src="img/shopCartImg/clickBg.png"/>
+					<span>全选</span>
+				</div>
+				<p class="delete">删除</p>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var title = document.getElementById('title');
+			var oClick = document.getElementsByClassName('click');
+			var editOn = document.getElementsByClassName('editOn');
+
+			function navPos(obj) {
+				obj.style.marginLeft = -obj.offsetWidth / 2 + 'px';
+				obj.style.marginTop = -obj.offsetHeight / 2 + 'px';
+			}
+			navPos(title);
+			
+			function together(){
+				var edit = document.getElementsByClassName('edit')[0];
+				var finish = document.getElementsByClassName('finish')[0];
+				var chooseAll = document.getElementsByClassName('chooseAll');
+				
+				var unitPri = document.getElementsByClassName('unitPri');
+				var sumPrice = document.getElementById('sumPrice');
+				
+				var minus = document.getElementsByClassName('minus');
+				var sum = document.getElementsByClassName('sum');
+				var plus = document.getElementsByClassName('plus');
+				
+				var accou = document.getElementById('accou');
+				var item = 0;
+				
+				var del = document.getElementById('del');
+				var delBtn = del.getElementsByClassName('delete')[0];
+				var totalPrice = document.getElementById('totalPrice');
+				
+				var goods = document.getElementById('goods');
+				var goodsLi = goods.getElementsByTagName('li');
+				
+				function minusPlus(){
+					for(var i = 0; i < sum.length; i++){
+						plus[i].index = i;
+						minus[i].index = i;
+						plus[i].onclick = function(){
+							sum[this.index].innerHTML = ++sum[this.index].innerHTML;
+							goodsLi[this.index].isOn = true;
+							editOn[this.index].src = "shopCartImg/clickDot.png";
+							count();
+						}
+						minus[i].onclick = function(){
+							if(sum[this.index].innerHTML == 1){
+								return;
+							}else{
+								sum[this.index].innerHTML = --sum[this.index].innerHTML;
+								goodsLi[this.index].isOn = true;
+								editOn[this.index].src = "shopCartImg/clickDot.png";
+							}
+							count();
+						}
+						
+					}
+				}
+				minusPlus();
+				//计算总额函数
+				function count(){
+					var totalPrice = 0;
+					var str = 0;
+					for(var i = 0; i < goodsLi.length; i++){
+						if(goodsLi[i].isOn == true){
+							str = unitPri[i].innerHTML
+							totalPrice += Number(str.substring(1,str.length))*sum[i].innerHTML;
+						}
+							sumPrice.innerHTML = '合计: &yen;' + (Math.round(totalPrice*100)/100).toFixed(2);
+					}
+					
+				}
+				
+				function editFinish(){
+					for (var i = 0; i < goodsLi.length; i++) {
+						goodsLi[i].isOn = true;
+						editOn[i].index = i;
+						count();
+						editOn[i].onclick = function(){
+							if(goodsLi[this.index].isOn == false){
+								this.src = "shopCartImg/clickDot.png";
+								goodsLi[this.index].isOn = true;
+							}else{
+								this.src = "shopCartImg/clickBg.png";
+								goodsLi[this.index].isOn = false;
+							}
+							count();
+						}
+					}
+				}
+				editFinish();
+				edit.onclick = function(){
+					this.style.display = 'none';
+					finish.style.display = 'block';
+					totalPrice.style.display = 'none';
+					del.style.display = 'block';
+					for (var i = 0; i < goodsLi.length; i++) {
+						editOn[i].src = "shopCartImg/clickBg.png";
+						goodsLi[i].isOn = false;
+					}
+					finish.onclick = function(){
+						edit.style.display = 'block';
+						finish.style.display = 'none';
+						totalPrice.style.display = 'block';
+						del.style.display = 'none';
+						if(goods.children.length == 0){
+							sumPrice.innerHTML = '合计: &yen;0.00';
+						}
+						count();
+					}
+				}
+				for (var i = 0; i < chooseAll.length; i++) {
+					chooseAll[i].onclick = function(){
+						
+						for (var i = 0; i < editOn.length; i++) {
+							editOn[i].src = "shopCartImg/clickDot.png";
+							goodsLi[i].isOn = true;
+							delBtn.onclick = function(){
+								var liArr = [];
+								var y = 0;
+								var childNodes = goods.children;
+								for (var i = 0; i < childNodes.length; i++) {
+									if(childNodes[i].nodeType == 1 && goodsLi[i].isOn == true){
+										liArr[y] = childNodes[i];
+										y++;
+									}
+								}
+								for (var i = 0; i < liArr.length; i++) {
+									goods.removeChild(liArr[i]);
+									sumPrice.innerHTML = '合计: &yen;0.00';
+								}
+								editChoose();
+							}
+						count();
+						}
+					}
+				}
+				function editChoose(){
+					for (var i = 0; i < goodsLi.length; i++) {
+						editOn[i].index = i;
+						count();
+						editOn[i].onclick = function(){
+							if(goodsLi[this.index].isOn == false){
+								this.src = "shopCartImg/clickDot.png";
+								goodsLi[this.index].isOn = true;
+							}else{
+								this.src = "shopCartImg/clickBg.png";
+								goodsLi[this.index].isOn = false;
+							}
+							count();
+						}
+					}
+				}
+				delBtn.onclick = function(){
+					editChoose();
+					var liArr = [];
+					var y = 0;
+					var childNodes = goods.children;
+					for (var i = 0; i < childNodes.length; i++) {
+						if(childNodes[i].nodeType == 1 && goodsLi[i].isOn == true){
+							liArr[y] = childNodes[i];
+							y++;
+						}
+					}
+					for (var i = 0; i < liArr.length; i++) {
+						goods.removeChild(liArr[i]);
+						editChoose();
+						minusPlus();
+						count();
+					}
+				}
+			}
+			together();
+			var accou = document.getElementById('accou');
+			accou.onclick = function(){
+				window.location.href = 'gr.html';
+			}
+//			点击返回事件
+			var back = document.getElementById('back');
+			back.onclick = function(){
+				window.location.href = history.go(-1);
+			}
+			var urlInfo=window.location.href;  
+            var argsIndex=urlInfo.indexOf("?");  
+            var args=urlInfo.substring((argsIndex+1)).split("&");
+            
+            if(args.length != 1){
+	            var addGoods = document.createElement('li');
+	            var clickImg = document.createElement('div');
+	            clickImg.className = 'click';
+	            clickImg.innerHTML = "<img src='shopCartImg/clickDot.png' class='editOn'/>";
+	            var goodsImg = document.createElement('div');//
+	            goodsImg.className = 'goodsImg';
+	            var oText = document.createElement('div');
+	            oText.className = 'text';
+	            var goodsTitle = document.createElement('h4');//
+	            var price = document.createElement('p');//
+	            price.className = 'unitPri';
+	            var add = document.createElement('div');
+	            add.className = 'add';
+	            add.innerHTML = "<img src='shopCartImg/add.png' /><span class='minus'>-</span><span class='sum'>1</span><span class='plus'>+</span>";
+	            window.onscroll = function(){
+	            		var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+					document.body.style.height = document.documentElement.clientHeight + scrollTop + 'px';
+	            }
+	            for(i=0;i<args.length;i++){  
+	                var argResult=args[i].split("=");
+					if(argResult.length==2 && decodeURI(argResult[0]) == 'foodImg'){
+						goodsImg.innerHTML = "<img src="+decodeURI(argResult[1])+">";
+					}
+					if(argResult.length==2 && decodeURI(argResult[0]) == 'foodName'){
+						goodsTitle.innerHTML = decodeURI(argResult[1]);
+					}
+					if(argResult.length==2 && decodeURI(argResult[0]) == 'foodPrice'){
+						price.innerHTML = decodeURI(argResult[1]);
+					}
+	            }
+	            addGoods.appendChild(clickImg);
+	            addGoods.appendChild(goodsImg);
+	            oText.appendChild(goodsTitle);
+	            oText.appendChild(price);
+	            oText.appendChild(add);
+	            addGoods.appendChild(oText);
+	            if(goods.children.length != 0){
+					goods.insertBefore(addGoods,goods.children[0]);
+				}else{
+					goods.appendChild(addGoods);
+				}	
+				together();
+			}
+		</script>
+	</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

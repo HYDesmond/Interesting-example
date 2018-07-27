@@ -1,0 +1,421 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+.clear:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+#wrap {
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+}
+#nav{
+    width: 100%;
+    position: fixed; 
+    z-index: 10;
+}
+#navBg{
+    width: 100%;
+}
+#foodName{
+    position: absolute;
+    color: white;
+//  font-size: 1rem;
+    left: 50%;
+    top: 50%;
+}
+#back{
+    position: absolute;
+    width: percentage(23/750);
+    left: percentage(28/750);
+    top: percentage(20/84); 
+}
+#help{
+    width: percentage(41/750);
+    right: percentage(30/750);
+    top: percentage(40/84);
+    position: absolute;
+}
+#helpList{
+    width: percentage(165/750);
+    position: absolute;
+    right: percentage(23/750);
+    top: percentage(78/84);
+    z-index: 20;
+    display: none;
+}
+#helpList img{
+    width: 100%;
+}
+.text{
+    width: 100%;
+    position: absolute;
+
+}
+.text p{
+    color: white;
+    text-align: center;
+//  font-size: 0.8rem;
+//  line-height: 1.3rem;
+}
+
+.swiper-wrapper,.swiper-container{
+    width: 100%;
+    height: percentage(650/1294);
+}
+.swiper-slide img{
+    width: 100%;
+//  height: 100%;
+    position: absolute;
+    top: percentage(-100/987);
+}
+.swiper-slide{
+    width: 100%;
+    height: percentage(400/1294);
+}
+#price{
+//  width: 100%;
+    position: relative;
+    padding: percentage(35/1294) percentage(32/750) 0 percentage(32/750);
+    margin-bottom: percentage(70/1294);
+}
+#price p:nth-child(1){
+    color: #646464;
+//  font-size: 1.1rem;
+}
+#price p:nth-child(2){
+    color: #a09f9f;
+//  font-size: 0.9rem;
+//  line-height: 2.6rem;
+}
+#price p:nth-child(3){
+    color: #ff5d5d;
+//  font-size: 1rem;
+    padding-left: percentage(10/750);
+}
+#price p:nth-child(4){
+    color: #646464;
+//  font-size: 1rem;
+    position: absolute;
+    right: percentage(60/750);
+    bottom: percentage(-90/1294);
+}
+#mark span,#share span{
+    color: #a09f9f;
+//  font-size: 0.9rem;
+}
+#mark{
+    width: percentage(65/750);
+    border-right: 1px solid #a09f9f;
+    position: absolute;
+    right: percentage(110/750);
+    top: percentage(200/1294);
+    padding: percentage(10/1294);
+    text-align: center;
+}
+#share{
+    width: percentage(65/750);
+    position: absolute;
+    right: percentage(36/750);
+    top: percentage(200/1294);
+    padding: percentage(10/1294);
+    text-align: center;
+}
+#share img,#mark img{
+    width: 70%;
+}
+#size{
+    padding: percentage(35/1294) percentage(32/750) 0 percentage(32/750);
+    margin-bottom: percentage(70/1294);
+}
+#size p:nth-child(1){
+    color: #646464;
+//  font-size: 0.9rem;
+    line-height: 1.6rem;
+}
+#size p:nth-child(2){
+    color: #646464;
+    padding-left: percentage(32/750);
+    text-indent: 2em;
+//  font-size: 0.9rem;
+//  line-height: 1.6rem;
+}
+#pay p:first-child{
+    height: percentage(58/1294);
+    color: #646464;
+//  font-size: 0.9rem;
+    padding: percentage(58/1294) 0 percentage(58/1294)  percentage(80/1294);
+    background: #ebeae4;
+    border-top: 1px solid #a9a9a9;
+}
+#payWay{
+    border-top: 1px solid #a9a9a9;
+    border-bottom: 1px solid #a9a9a9;
+    background: #ebeae4;
+    padding: percentage(50/1294) 0 percentage(50/1294)  percentage(80/1294);
+}
+#payWay li{
+    width: 32%;
+    float: left;
+    list-style: none;
+}
+#payWay li p{
+    color: #646464;
+//  font-size: 0.9rem;
+    float: left;
+    margin-top: percentage(25/1294);
+    padding-left: percentage(25/1294);
+}
+#payWay li img{
+    width: 15%;
+    float: left;
+}
+#drag{
+    padding: percentage(50/1294) 0;
+    text-align: center;
+}
+#drag p{
+    color: #646464;
+//  font-size: 1rem;
+}
+#drag img{
+    width: percentage(36/750);
+    padding-top: percentage(20/750);
+}
+
+#infoAss p{
+    float: left;
+    text-align: center;
+    width: 50%;
+    padding: percentage(50/1294) 0;
+    color: #6f6f6f;
+//  font-size: 1rem;
+}
+#info{
+    background: #eecb91;
+}
+#ass{
+    background: #ebeae4;
+}
+
+#infoOn{
+//  display: none;
+    padding: percentage(50/1294) 0;
+    text-align: center;
+}
+#infoOn img{
+    width: 94%;
+}
+#assOn{
+    display: none;
+}
+#assTag{
+    width: 100% - percentage(24/750);
+    list-style: none;
+    padding-left: percentage(24/750);
+    padding-top: percentage(10/750)
+}
+#assTag li{
+    float: left;
+    width: percentage(200/750);
+    color: #6ab439;
+    text-align: center;
+//  font-size: 0.7rem;
+    border: 1px solid #6ab439;
+    border-radius: 6px 6px 6px 6px;
+    padding: percentage(10/750) 0;
+    margin: percentage(12/750) percentage(18/750);
+}
+
+//-----------------宝贝评价列表-----------------
+#assList{
+    width: 100% - percentage(24/750);
+    position: relative;
+    padding-left: percentage(24/750);
+    list-style: none;
+    overflow: hidden;
+}
+.user{
+    width: 100%;
+    margin: percentage(50/1294);
+}
+#assList .user div{
+    width: percentage(100/750);
+//  border-radius: 50%;
+//  border: 1px solid pink;
+    overflow: hidden;
+    margin-left: percentage(17/750);
+}
+#assList .user img{
+    width: 100%;
+    border-radius: 50%;
+}
+#assList .user span{
+    color: #6f6f6f;
+//  font-size: 1rem;
+    position: absolute;
+    top: percentage(20/78);
+    left: percentage(200/750);
+}
+#assList .user p:nth-of-type(1){
+    color: #6f6f6f;
+//  font-size: 1rem;
+    line-height: 2.1rem;
+    padding-left: percentage(26/750);
+}
+#assList .user p:nth-of-type(2){
+    color: #6f6f6f;
+//  font-size: 0.8rem;
+    padding-left: percentage(26/750);
+}
+#checkAll{
+    text-align: center;
+    margin-bottom: percentage(200/1294);
+}
+#checkAll span{
+    color: #6f6f6f;
+//  font-size: 1rem;
+    border: 1px solid #a9a9a9;
+    border-radius: 6px 6px 6px 6px;
+    padding: percentage(10/1294) percentage(20/750);
+}
+
+//-----------------加入购物车/直接购买-----------------
+#joinBuy{
+//  display: none;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+#joinBuy p{
+    float: left;
+    text-align: center;
+    width: 50%;
+    padding: percentage(60/1294) 0;
+    color: white;
+//  font-size: 1rem;
+}
+#joinBuy p:nth-child(1){
+    background: #ffa842;
+}
+#joinBuy p:nth-child(2){
+    background: #ff5e39;
+}
+
+
+@media screen and (max-width: 360px){
+    #foodName,#price p:nth-child(1),#drag p,#infoAss p,#assList .user span,#assList .user p:nth-of-type(1),#checkAll span{font-size: 14px;}
+    .text{top: percentage(68/330);}
+    .text p{font-size: 12px;line-height: 20px;}
+    #price p:nth-child(2){font-size: 12px;line-height: 50px;}
+    #price p:nth-child(3),#price p:nth-child(4),#mark span,#share span,#pay p:first-child,#payWay li p,#assTag li,#assList .user p:nth-of-type(2){ font-size: 12px;}
+    #size p:nth-child(1){font-size: 12px;line-height: 20px;}
+    #size p:nth-child(2){font-size: 12px;line-height: 24px;}
+    #joinBuy p{font-size: 14px; padding: percentage(46/1294) 0;}
+}
+@media screen and (min-width: 360px) and (max-width: 420px){
+    #foodName,#price p:nth-child(1),#drag p,#infoAss p,#checkAll span{font-size: 16px;}
+    .user span,.user p:nth-of-type(1){font-size: 14px;}
+    .user p:nth-of-type(2){ font-size: 12px;}
+    .text{top: percentage(80/330);}
+    .text p{font-size: 14px;line-height: 25px;}
+    #price p:nth-child(2){font-size: 14px;line-height: 50px;}
+    #price p:nth-child(3),#price p:nth-child(4),#pay p:first-child,#payWay li p{ font-size: 14px;}
+    #mark span,#share span,#assTag li{font-size: 12px;}
+    #size p:nth-child(1){font-size: 14px;line-height: 22px;}
+    #size p:nth-child(2){font-size: 14px;line-height: 26px;}
+    #joinBuy p{font-size: 16px; padding: percentage(46/1294) 0;}
+}
+@media screen and (min-width: 420px) and (max-width: 480px){
+    #foodName,#price p:nth-child(1),#drag p,#infoAss p,#checkAll span{font-size: 18px;}
+    .user span,.user p:nth-of-type(1){font-size: 16px;}
+    .user p:nth-of-type(2){ font-size: 14px;}
+    .text{top: percentage(74/330);}
+    .text p{font-size: 16px;line-height: 28px;}
+    #price p:nth-child(2){font-size: 16px;line-height: 50px;}
+    #price p:nth-child(3),#price p:nth-child(4),#pay p:first-child,#payWay li p,#assTag li,#assList .user p:nth-of-type(2){ font-size: 16px;}
+    #mark span,#share span,#assTag li{font-size: 14px;}
+    #size p:nth-child(1){font-size: 16px;line-height: 24px;}
+    #size p:nth-child(2){font-size: 16px;line-height: 28px;}
+    #joinBuy p{font-size: 18px; padding: percentage(46/1294) 0;}
+}
+@media screen and (min-width: 480px) and (max-width: 640px){
+    #foodName,#price p:nth-child(1),#drag p,#infoAss p,#checkAll span{font-size: 20px;}
+    .user span,.user p:nth-of-type(1){font-size: 18px;}
+    .user p:nth-of-type(2){ font-size: 16px;}
+    .text{top: percentage(78/330);}
+    .text p{font-size: 18px;line-height: 35px;}
+    #price p:nth-child(2){font-size: 18px;line-height: 60px;}
+    #price p:nth-child(3),#price p:nth-child(4),#pay p:first-child,#payWay li p,#assTag li,#assList .user p:nth-of-type(2){ font-size: 18px;}
+    #mark span,#share span,#assTag li{font-size: 16px;}
+    #size p:nth-child(1){font-size: 18px;line-height: 28px;}
+    #size p:nth-child(2){font-size: 18px;line-height: 34px;}
+    #joinBuy p{font-size: 20px; padding: percentage(46/1294) 0;}
+    
+}
+@media screen and (min-width: 640px) and (max-width: 780px){
+     #foodName,#price p:nth-child(1),#drag p,#infoAss p,#checkAll span{font-size: 22px;}
+    .user span,.user p:nth-of-type(1){font-size: 20px;}
+    .user p:nth-of-type(2){ font-size: 18px;}
+    .text{top: percentage(80/330);}
+    .text p{font-size: 20px;line-height: 45px;}
+    #price p:nth-child(2){font-size: 20px;line-height: 78px;}
+    #price p:nth-child(3),#price p:nth-child(4),#pay p:first-child,#payWay li p,#assTag li,#assList .user p:nth-of-type(2){ font-size: 20px;}
+    #mark span,#share span,#assTag li{font-size: 18px;}
+    #size p:nth-child(1){font-size: 20px;line-height: 30px;}
+    #size p:nth-child(2){font-size: 20px;line-height: 36px;}
+    #joinBuy p{font-size: 22px; padding: percentage(48/1294) 0;}
+}
+
+@media screen and (min-width: 780px){
+    #foodName,#price p:nth-child(1),#drag p,#infoAss p,#checkAll span{font-size: 26px;}
+    .user span,.user p:nth-of-type(1){font-size: 24px;}
+    .user p:nth-of-type(2){ font-size: 22px;}
+    .text{top: percentage(98/330);}
+    .text p{font-size: 24px;line-height: 58px;}
+    #price p:nth-child(2){font-size: 24px;line-height: 78px;}
+    #price p:nth-child(3),#price p:nth-child(4),#pay p:first-child,#payWay li p,#assTag li,#assList .user p:nth-of-type(2){ font-size: 24px;}
+    #mark span,#share span,#assTag li{font-size: 22px;}
+    #size p:nth-child(1){font-size: 24px;line-height: 40px;}
+    #size p:nth-child(2){font-size: 24px;line-height: 46px;}
+    #joinBuy p{font-size: 26px; padding: percentage(50/1294) 0;}
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

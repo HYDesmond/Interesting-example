@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="css/foodInfo/foodInfo.css"/>
+	<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+	<body>
+		<div id="wrap">
+			<div id="nav">
+				<img src="img/foodListImg/navBg.png" id="navBg" />
+				<img src="img/foodListImg/back.png" id="back" />
+				<p id="foodName">湾仔小精排</p>
+				<img src="img/foodListImg/help.png" id="help" />
+				<div id="helpList">
+					<img src="img/foodListImg/helpBg.png" id="helpBg" />
+					<div class="text">
+						<p>帮助</p>
+						<p>首页</p>
+						<p>客服消息</p>
+					</div>
+				</div>
+			</div>
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide listImg">
+						<img src="https://img13.360buyimg.com/n1/jfs/t2584/209/3459257183/342952/88bb3297/578c7abfN5606c258.jpg"/>
+					</div>
+			        <div class="swiper-slide listImg">
+						<img src="https://img13.360buyimg.com/n1/jfs/t2764/190/3347781490/299111/b8b529be/578c7ab9Na7719097.jpg"/>
+			        </div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+			<div id="price">
+				<p>湾仔码头精选1000g超级小精排</p>
+				<p>米其林三星专供</p>
+				<p>&yen;120</p>
+				<p>周销120份</p>
+				<div id="mark">
+					<img src="img/foodListImg/mark.png"/>
+					<span>收藏</span>
+				</div>
+				<div id="share">
+					<img src="img/foodListImg/share.png"/>
+					<span>分享</span>
+				</div>
+			</div>
+			<hr/>
+			<div id="size">
+				<p>规格:&nbsp;1000g</p>
+				<p>因该产品加工时鲜肉精分割后抽真空包装在进行急速冷冻的，所以包装内会出现少量的血冰，为正常现象，不会影响商品的品质及口感。</p>
+			</div>
+			<div id="pay">
+				<p>16:00前付款，预计3月23日送达</p>
+				<ul id="payWay" class="clear">
+					<li>
+						<img src="img/foodListImg/payTime.png"/>
+						<p>信用卡支付</p>
+					</li>
+					<li>
+						<img src="img/foodListImg/payTime.png"/>
+						<p>微信支付</p>
+					</li>
+					<li>
+						<img src="img/foodListImg/payTime.png"/>
+						<p>当天无理由</p>
+					</li>
+				</ul>
+			</div>
+			<div id="drag">
+				<p>拖动查看商品详情</p>
+				<img src="img/foodListImg/dragDown.png"/>
+			</div>
+			<div id="infoAss" class="clear">
+				<p id="info">商品详情</p>
+				<p id="ass">宝贝评价</p>
+			</div>
+			<div id="infoOn">
+				<img src="img/foodListImg/infoImg.png"/>
+			</div>
+			<div id="assOn">
+				<ul id="assTag" class="clear">
+					<li>口感不错(22)</li>
+					<li>物理超快(10)</li>
+					<li>包装很好(90)</li>
+					<li>价格实惠(18)</li>
+					<li>小贵(1)</li>
+				</ul>
+				<ul id="assList">
+					<li>
+						<div class="user">
+							<div><img src="img/foodListImg/assUser.png"/></div>
+							<span>只若初见</span>
+							<p>这次买的没有上次送货快，希望改进</p>
+							<p>2016-03-20</p>
+						</div>
+					</li>
+				</ul>
+				<div id="checkAll">
+					<span>查看全部评价</span>
+				</div>
+			</div>
+			<div id="joinBuy" class="clear">
+				<p>加入购物车</p>
+				<p>直接购买</p>
+			</div>
+		</div>
+		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			
+			var infoAss = document.getElementById('infoAss');
+			var info = document.getElementById('info');
+			var ass = document.getElementById('ass');
+			var foodName = document.getElementById('foodName');
+			var helpList = document.getElementById('helpList');
+			var helpBtn = document.getElementById('help');
+			var helpText = document.getElementsByClassName('text')[0];
+			var back = document.getElementById('back');
+			var price = document.getElementById('price');
+			var aP = price.getElementsByTagName('p');
+			var size = document.getElementById('size');
+			var sizeP = size.getElementsByTagName('p');
+			var listImg = document.getElementsByClassName('swiper-wrapper')[0];
+			
+			var joinBuy = document.getElementById('joinBuy');
+			var buyP = joinBuy.getElementsByTagName('p');
+			
+			function navPos(obj){
+				obj.style.marginLeft = -obj.offsetWidth/2 + 'px';
+				obj.style.marginTop = -obj.offsetHeight/2 + 'px';
+			}
+			navPos(foodName);
+			info.onclick = function(){
+				infoOn.style.display = 'block';
+				assOn.style.display = 'none';
+				this.style.backgroundColor = '#eecb91';
+				ass.style.backgroundColor = '#ebeae4';
+			}
+			ass.onclick = function(){
+				infoOn.style.display = 'none';
+				assOn.style.display = 'block';
+				this.style.backgroundColor = '#eecb91';
+				info.style.backgroundColor = '#ebeae4';
+			}
+			
+			var clickHelp = true;
+			helpBtn.onclick = function(ev){
+				var ev = ev || window.event;
+				ev.cancelBubble = true;
+				if(clickHelp){
+					helpList.style.display = 'block';
+					clickHelp = false
+				}else{
+					helpList.style.display = 'none';
+					clickHelp = true;
+				}
+			}
+			helpText.onclick = function(ev){
+				var ev = ev || window.event;
+				ev.cancelBubble = true;
+				helpList.style.display = 'block';
+			}
+			document.onclick = function(){
+				helpList.style.display = 'none';
+			}
+			
+			back.onclick = function(){
+				window.location.href = history.go(-1);
+			}
+			
+			listImg.innerHTML = '';
+			var urlInfo=window.location.href;  
+            var argsIndex=urlInfo.indexOf("?");  
+            var args=urlInfo.substring((argsIndex+1)).split("&");
+            var shoppingCart = '';
+            var goodsName = '';
+            var goodsPrice = '';
+            var goodsIntro = '很好吃';
+            var goodsSum = 1;
+            var goodsImg = '';
+            for(i=0;i<args.length;i++){  
+                var argResult=args[i].split("=");
+                if(argResult.length==2 && decodeURI(argResult[0]) == 'foodPrice'){
+                   aP[2].innerHTML = decodeURI(argResult[1]);
+                   shoppingCart += decodeURI(argResult[1]) + '&foodName=';
+                   goodsPrice = decodeURI(argResult[1]);
+                   
+                }
+                if(argResult.length==2 && decodeURI(argResult[0]) == 'foodName'){
+                   aP[0].innerHTML = decodeURI(argResult[1]);  
+                   shoppingCart += decodeURI(argResult[1]) + '&foodImg=';
+                   goodsName = decodeURI(argResult[1]);
+                }
+                if(argResult.length==2 && decodeURI(argResult[0]) == 'market'){
+                		aP[3].innerHTML = '周销'+decodeURI(argResult[1])+'份';
+                }
+                if(argResult.length==2 && decodeURI(argResult[0]) == 'size'){
+                		sizeP[0].innerHTML = '规格: '+decodeURI(argResult[1]);
+                }
+                if(argResult.length==2 && decodeURI(argResult[0]) == 'intro'){
+                		sizeP[1].innerHTML = decodeURI(argResult[1]);
+                }
+                if(argResult.length==2 && decodeURI(argResult[0]) == 'foodTitle'){
+                		foodName.innerHTML = decodeURI(argResult[1]);
+                }
+                
+                if(argResult.length==2 && decodeURI(argResult[0]) == 'listImg1'){
+                		var listImg1 = document.createElement('div');
+                		listImg1.className = 'swiper-slide';
+                		listImg1.innerHTML = '<img src='+argResult[1]+'>';
+                		listImg.appendChild(listImg1);
+                		shoppingCart += argResult[1];
+                		goodsImg = argResult[1];
+                }
+                if(argResult.length==2 && decodeURI(argResult[0]) == 'listImg2'){
+                		var listImg2 = document.createElement('div');
+                		listImg2.className = 'swiper-slide';
+                		listImg2.innerHTML = '<img src='+argResult[1]+'>';
+                		listImg.appendChild(listImg2);
+                }
+                if(argResult.length==2 && decodeURI(argResult[0]) == 'listImg3'){
+                		var listImg3 = document.createElement('div');
+                		listImg3.className = 'swiper-slide';
+                		listImg3.innerHTML = '<img src='+argResult[1]+'>';
+                		listImg.appendChild(listImg3);
+                }
+            }  
+            var mySwiper = new Swiper('.swiper-container', {
+				direction: 'horizontal',
+				loop: true,
+				pagination: '.swiper-pagination',
+			});
+			
+//          	ajax('get','shoppingCart.php','foodName='+goodsName+'&foodPrice='+goodsPrice+'&foodIntro='+goodsIntro+'&foodSum='+goodsSum+'&foodImg='+goodsImg,function(){})
+            buyP[0].onclick = function(){
+            		window.location.href = 'shopCart.html?foodPrice='+shoppingCart;
+            }
+		</script>
+	</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

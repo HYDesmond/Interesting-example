@@ -1,0 +1,154 @@
+.box{
+	position: fixed;
+	width: 6.4rem;
+	height: 0.7rem;
+	/*top: 0;*/
+	background-color: #48382b;
+	z-index: 200;
+	
+}
+.box1{
+	position: absolute;
+	width: 6.4rem;
+	height: 0.7rem;
+	top: 0;
+}
+.box2{
+	position: absolute;
+	width: 0.17rem;
+	height: 0.32rem;
+	top: 0.16rem;
+	left: 0.31rem;
+}
+.box3{
+	position: absolute;
+	width: 1.15rem;
+	height: 0.29rem;
+	top: 0.16rem;
+	left: 2.63rem;
+}
+
+#body{
+	
+	width: 6.4rem;
+	height: 2.65rem;
+	overflow: hidden;
+}
+#body div{
+	float: left;
+}
+.box4{
+	/*position: absolute;*/
+	width: 6.4rem;
+	height: 2.65rem;
+}
+.box5{
+	position: absolute;
+	width: 6.4rem;
+	height: 0.05rem;
+	top: 2.55rem;
+}
+.p{
+	position: absolute;
+	font-size: 0.25rem;
+	font-family: "";
+	top: 1.4rem;
+	left: 0.62rem;
+}
+.p2{
+	position: absolute;
+	font-size: 0.25rem;
+	font-family: "";
+	top: 1.5rem;
+	left: 1.9rem;
+}
+.p3{
+	position: absolute;
+	font-size: 0.2rem;
+	font-family: "";
+	top:2.18rem;
+	left: 0.62rem;
+	color: #6b6b6b;
+}
+.box6{
+	position: absolute;
+	width: 0.14rem;
+	height: 0.27rem;
+	top: 1.5rem;
+	left: 6rem;
+}
+#body2{
+	position: relative;
+	width: 3.8rem;
+	height: 1.43rem;
+	margin-top: 0.05rem;
+	margin-left: 0.26rem;
+	overflow: hidden;
+}
+.td{
+	position: absolute;
+	height: 1.43rem;
+	
+}
+.greens1{
+	/*position: absolute;*/
+	float: left;
+	width: 1.09rem;
+	height: 1.43rem;
+	margin-right:0.16rem ;
+	/*background-color: red;*/
+	overflow: hidden;
+}
+
+.greens1 img{
+	width: 1.49rem;
+	height: 1.49rem;
+}
+.greens2 img{
+	width: 1.49rem;
+	height: 1.49rem;
+}
+
+#ps{
+width: 6.4rem;
+height: 1.48rem;
+margin-top: 0.7rem;	
+border-bottom: 1px solid #eaeaea;
+}
+#fp{
+width: 6.4rem;
+height: 0.68rem;
+}
+#yh{
+	width:6.4rem ;
+	height: 0.68rem;
+	border-bottom: 1px solid #ececec;
+}
+#jf{
+	width:6.4rem ;
+	height: 0.67rem;
+	border-bottom: 1px solid #ececec;
+}
+#je{
+	width:6.4rem ;
+	height: 0.67rem;
+	border-bottom: 1px solid #ececec;
+}
+#yf{
+	width:6.4rem ;
+	height: 0.67rem;
+	border-bottom: 1px solid #ececec;
+}
+#foot{
+	position: fixed;
+	width: 6.4rem;
+	height: 0.7rem;
+	top: 93.6%;
+	background-color: #65584d;
+	
+	z-index: 100;
+	
+}
+#foot p{
+	float: left;	
+}

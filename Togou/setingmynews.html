@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/setingmynews/setingmynews.css" />
+
+		<script type="text/javascript">
+			//sArgName表示要获取哪个参数的值 
+			function getQueryString(name) {
+				var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+				var r = window.location.search.substr(1).match(reg);
+				if(r != null) return unescape(r[2]);
+				return null;
+			}
+			console.log(getQueryString("id"))
+		</script>
+	</head>
+
+	<body>
+		<div class="setingmynewswarp">
+			<div class="setingmynewshead">
+				<img src="img/helpcenterimg/return.png" alt="" />
+				<span>修改个人资料</span>
+			</div>
+			<ul>
+				<li><span>昵称:</span><span class="username">0</span></li>
+				<li><span>性别:</span><span class="sex">0</span></li>
+				<li><span>地区:</span><span class="address">0</span></li>
+				<li><span>年龄:</span><span class="age">0</span></li>
+				<li><span>邮箱:</span><span class="mail">0</span></li>
+			</ul>
+			<input type="text" name="" id="" value="" class="update" />
+			<input type="button" name="" id="" value="保存" class="baocun" />
+		</div>
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var username = document.getElementsByClassName("username")[0];
+			var li = document.getElementsByTagName("li");
+			var update = document.getElementsByClassName("update")[0];
+			var ul = document.getElementsByTagName('ul')[0];
+			var username = document.getElementsByClassName("username")[0];
+			var baocun = document.getElementsByClassName("baocun")[0];
+			var sex=document.getElementsByClassName("sex")[0];
+			var myname;
+			function ajaxmain() {
+				$.ajax({
+					type: "post",
+					url: "php/setingmynews.php",
+					dataType: "json",
+					data: {
+						id: getQueryString("id"),
+						username: $(".username").val(),
+						sex: $(".sex").val(),
+						address: $(".address").val(),
+						age: $(".age").val(),
+						mail: $(".mail").val()
+					},
+					success: function(json) {
+						console.log(json);
+						username.innerHTML = json[0].username;
+						$(".setingmynewshead>img").click(function(){
+							location.href='mynews.html?id=' + json[0].id;
+						})
+					},
+					async: true
+				});
+			}
+			li[0].onclick = function() {
+				update.style.display = "block";
+				ul.style.display = "none";
+				baocun.style.display = "block";
+			}
+			baocun.onclick = function() {
+				username.value = update.value;
+				update.style.display = "none";
+				ul.style.display = "block";
+				baocun.style.display = "none";
+				ajaxmain();
+			}
+			ajaxmain();			
+		</script>
+	</body>
+
+</html>

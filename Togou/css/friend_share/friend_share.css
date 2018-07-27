@@ -1,0 +1,291 @@
+.head {
+  position: relative;
+  width: 100%;
+  height: 6.33693972%;
+  top: 0%;
+  z-index: 1;
+}
+#top {
+  position: absolute;
+  width: 16.66666667%;
+  height: 75.6097561%;
+  top: 15.85365854%;
+  left: 34.26666667%;
+  z-index: 1;
+}
+#top2 {
+  position: absolute;
+  width: 16.66666667%;
+  height: 75.6097561%;
+  top: 15.85365854%;
+  left: 34.26666667%;
+  z-index: 1;
+}
+.top3 {
+  position: absolute;
+  width: 5.46666667%;
+  height: 75.6097561%;
+  top: 15.85365854%;
+  left: 50.13333333%;
+  z-index: 1;
+}
+#top4 {
+  position: absolute;
+  width: 16.66666667%;
+  height: 73.17073171%;
+  top: 15.85365854%;
+  left: 50.13333333%;
+  z-index: 1;
+}
+#top5 {
+  position: absolute;
+  width: 16.66666667%;
+  height: 75.6097561%;
+  top: 15.85365854%;
+  left: 50.13333333%;
+  z-index: 1;
+}
+
+.body {
+  position: relative;
+  width: 100%;
+  height: 45%;
+  margin-top: 2.5%;
+  left: 0%;
+}
+.body img {
+	width: 100%;
+}
+.tu {
+  position: absolute;
+  width: 100%;
+  height: 64.98194946%;
+  /*background-color: red;*/
+  overflow: hidden;
+}
+.tx {
+  position: absolute;
+  width: 12%;
+  height: 14.45%;
+  top: 2.4%;
+  left: 4%;
+  /*border: 1px solid #243441;*/
+  border-radius:100%;
+  overflow: hidden;
+ /*z-index: 100;*/
+}
+.username {
+  position: absolute;
+  font-size: 15px;
+  color: #f2f2f4;
+  top: 3.3%;
+  left: 18%;
+  z-index: 50;
+  
+}
+.so {
+  position: absolute;
+  width: 9.33333333%;
+  top: 4.69314079%;
+  left: 86.66666667%;
+}
+.text {
+  position: absolute;
+  width: 100%;
+  top: 68.23104693%;
+  border-bottom: 1px solid gainsboro;
+}
+.text p {
+  text-indent: 1em;
+  width: 100%;
+  left: 4%;
+  font-family: "宋体";
+  font-size: 0.5em;
+}
+.icon-z {
+  position: absolute;
+  width: 5.06666667%;
+  height: 6.31768953%;
+  top: 80%;
+  left: 6.13333333%;
+}
+.icon-d {
+  position: absolute;
+  width: 5.2%;
+  height: 7.03971119%;
+  top: 80%;
+  left: 90.8%;
+}
+#body1 {
+  position: absolute;
+  width: 100%;
+  height: 42.812983%;
+  top: 51.15919629%;
+  left: 0%;
+}
+.icon-x1 {
+  position: absolute;
+  width: 5.06666667%;
+  height: 6.31768953%;
+  top: 80%;
+  left: 6.13333333%;
+}
+.icon-p {
+  position: absolute;
+  width: 5.06666667%;
+  height: 6.85920578%;
+  top: 80%;
+  left: 15.73333333%;
+}
+.icon-p1 {
+  position: absolute;
+  width: 5.06666667%;
+  height: 6.85920578%;
+  top: 80%;
+  left: 15.73333333%;
+}
+.icon-d1 {
+  position: absolute;
+  width: 5.2%;
+  height: 7.03971119%;
+  top: 80%;
+  left: 90.8%;
+}
+#foot {
+  position: fixed;
+  width: 100%;
+  height: 6%;
+  bottom: 0%;
+}
+.zy {
+  position: absolute;
+  width: 5.33333333%;
+  top: 15.95744681%;
+  left: 7.33333333%;
+}
+.sc {
+  position: absolute;
+  width: 5.46666667%;
+  top: 15.95744681%;
+  left: 28.26666667%;
+}
+.xc {
+  position: absolute;
+  width: 6.4%;
+  top: 15.95744681%;
+  left: 46.93333333%;
+}
+.fx {
+  position: absolute;
+  width: 6.66666667%;
+  top: 15.95744681%;
+  left: 66.8%;
+}
+.wd {
+  position: absolute;
+  width: 5.06666667%;
+  top: 15.95744681%;
+  left: 87.46666667%;
+}
+.text1 {
+  position: absolute;
+  width: 100%;
+  top: 69.48529412%;
+}
+.tx1 {
+  position: absolute;
+  width: 8%;
+  top: 3.30882353%;
+  left: 4%;
+}
+.sx1 {
+  position: absolute;
+  width: 9.33333333%;
+  top: 4.69314079%;
+  left: 86.66666667%;
+}
+.ss {
+  position: absolute ;
+  width: 5.2%;
+  top: 33%;
+  left: 90%;
+}
+.tr1 {
+  width: 91.73333333%;
+  height: 32.30293663%;
+  margin-top: 1.5%;
+  margin-left: 4.2%;
+}
+.tr2 {
+  width: 91.73333333%;
+  height: 32.30293663%;
+  margin-top: 1.5%;
+  margin-left: 4.2%;
+}
+.box {
+  width: 91.73333333333333%;
+  height: 32.30293663060278%;
+  margin-top: 1.5%;
+  margin-left: 4.2%;
+}
+#sp2 {
+  position: absolute;
+  width: 177.866666667%;
+  height: 100%;
+  top: 0%;
+  left: -40%;
+  transform: rotate(90deg);
+}
+#video1 {
+  position: absolute;
+  width: 177.866666667%;
+  height: 100%;
+  top: 0%;
+  left: 0%;
+  transform: rotate(90deg);
+}
+.foot {
+  position: fixed;
+  width: 100%;
+  height: 55px;
+  background-color: #48382b;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+.foot ul {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.foot ul li {
+  float: left;
+  list-style: none;
+  width: 20%;
+  height: 100%;
+  text-align: center;
+  font-size: 12px;
+}
+.foot ul:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+.foot ul li img {
+  text-align: center;
+ 	display: block;	
+  margin: 0 auto;
+  height: 47.87234042553192%;
+}
+.foot ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding-top: 8px;
+  text-decoration: none;
+  color: #c8b391;
+}
+.foot ul li:nth-child(4) a {
+  color: #6ab439;
+}

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/register/register.css" />
+	</head>
+
+	<body>
+		<div class="registerwarp">
+			<div class="registerhead">
+				<a href="login.html"><img src="img/loginimg/return.png" /></a>
+				<span>注册</span>
+			</div>
+			<img src="img/loginimg/shadow.png" alt="" />
+			<div class="registerlogo">
+				<img src="img/loginimg/logo.png" />
+			</div>
+			<input type="text" name="userphone" id="" value="" placeholder="手机号" />
+			<input type="password" name="userpsw" id="" value="" placeholder="密码" />
+			<input type="password" name="confirmUserpsw" id="" value="" placeholder="确认密码" />
+			<div class="code">
+				<input type="text" name="code" id="" value="" />
+				<div class="codebtn">
+					获取验证码
+				</div>
+			</div>
+			<span class="tips"></span>
+			<div class="registerbtn">
+				登录
+			</div>
+			<p>快速注册方式</p>
+			<ul class="otherregister">
+				<li><img src="img/loginimg/qq.png" /></li>
+				<li><img src="img/loginimg/weixin.png" /></li>
+				<li><img src="img/loginimg/weibo.png" /></li>
+				<li><img src="img/loginimg/baidu.png" /></li>
+			</ul>
+		</div>
+
+		<script type="text/javascript">
+			var userphone = document.getElementsByName('userphone')[0];
+			var userpsw = document.getElementsByName('userpsw')[0];
+			var confirmUserpsw = document.getElementsByName('confirmUserpsw')[0];
+			var code = document.getElementsByName('code')[0];
+			var registerbtn = document.getElementsByClassName('registerbtn')[0];
+			var tips = document.getElementsByClassName('tips')[0];
+			var phonereg = new RegExp("^[0-9]*$"); //验证是否为数字
+			var pswreg = new RegExp("^[a-zA-Z]w{5,17}$"); //验证密码,只能以字母开头，长度在5-16之间,只能包含字符、数字和下划线
+			var register = false;
+			var time = 3;
+			var timer;
+
+			//输入手机号码时异步验证数据库是否存在相同的手机号码
+			userphone.onblur = function() {
+					var uphone = userphone.value;
+					var upsw = userpsw.value;
+					var cpsw = confirmUserpsw.value;
+					var ucode = code.value;
+					if(userphone.value.length != 11 || !phonereg.test(userphone.value)) { //判断手机号码的正确格式11位数且为数字
+						tips.innerText = "请输入有效的手机号码";
+						userphone.value = "";
+					} else if(userphone.value.length == 11 || phonereg.test(userphone.value)) {
+						if(register == false) {
+							var ajax = null;
+							if(window.ActiveXObject) {
+								ajax = new ActiveXObject("Microsoft.XMLHTTP")
+							} else if(window.XMLHttpRequest) {
+								ajax = new XMLHttpRequest();
+							}
+							ajax.open("POST", "php/register.php", true);
+							ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+							ajax.send("uphone=" + uphone + "&" + "cpsw=" + cpsw + "&" + "register=" + register);
+							ajax.onreadystatechange = function() {
+								//console.log(ajax.readyState);
+								if(ajax.readyState == 4) {
+									tips.innerText = ajax.responseText;
+									if(tips.innerText == "手机号码可注册") {
+										register = true;
+									};
+									if(tips.innerText == "该手机已被使用"){
+										userphone.value = "";
+									}
+								}
+							}
+						}
+					}
+				}
+				//失去焦点判断密码格式是否正确
+			userpsw.onblur = function() {
+					if(!/^[a-zA-Z_]{1}\w{5,16}$/.test(userpsw.value)) {
+						tips.innerText = "以字母开头，长度在5-16之间,只能包含字符、数字和下划线";
+						userpsw.value = "";
+					} else {
+						tips.innerText = "可以";
+					}
+				}
+				//判断两次输入密码是否一样
+			confirmUserpsw.onblur = function() {
+					if(userpsw.value != confirmUserpsw.value) {
+						tips.innerText = "两次输入的密码不对";
+						confirmUserpsw.value = "";
+					} else if(userphone.value != "" && userpsw.value != "" && confirmUserpsw.value != "") {
+						tips.innerText = "填写完成";
+					}
+				}
+				//执行注册步骤，将正确的数据传给后台
+			registerbtn.onclick = function() {
+				var uphone = userphone.value;
+				var upsw = userpsw.value;
+				var cpsw = confirmUserpsw.value;
+				var ucode = code.value;
+				if(userphone.value == "" || userpsw.value == "" || confirmUserpsw.value == "") {
+					tips.innerText = "请填写完整资料";
+				}
+				if(tips.innerText == "填写完成") {
+					if(register == true) {
+						var ajax = null;
+						if(window.ActiveXObject) {
+							ajax = new ActiveXObject("Microsoft.XMLHTTP")
+						} else if(window.XMLHttpRequest) {
+							ajax = new XMLHttpRequest();
+						}
+						ajax.open("POST", "php/register.php", true);
+						ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+						ajax.send("uphone=" + uphone + "&" + "cpsw=" + cpsw + "&" + "register=" + register);
+						ajax.onreadystatechange = function() {
+							console.log(ajax.readyState);
+							if(ajax.readyState == 4) {
+								tips.innerText = ajax.responseText;
+							}
+						}
+						register = false;
+						if(tips.innerText === "注册成功") {
+							timer();
+
+						}
+					}
+					timer = setInterval(function() {
+						if(time <= 0) {
+							location.href = "login.html";
+						}
+						tips.innerText = time + "s后自动跳转到登录界面";
+						time--;
+					}, 1000)
+				}
+
+			}
+		</script>
+	</body>
+
+</html>

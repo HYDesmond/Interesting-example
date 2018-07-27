@@ -1,0 +1,322 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+.clear:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+#wrap {
+    width: 100%;
+    height: 100%;
+//  background-image: url("../mallImg/bg.png");
+//  background-size: 100%;
+    background: #ebeae4;
+}
+#nav{
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+}
+#navBg{
+    width: 100%;
+}
+#city{
+//  font-size: 1.2rem;
+    color: white;
+    top: percentage(18/84);
+    right: percentage(655/750);
+    position: absolute;
+}
+#more{
+    width: percentage(41/750);
+    right: percentage(30/750);
+    top: percentage(25/84);
+    position: absolute;
+}
+#search{
+    position: absolute;
+    width: percentage(42/750);
+    right: percentage(106/750);
+    top: percentage(20/84);
+}
+#cookOff,#cookOn{
+    position: absolute;
+    width: percentage(118/750);
+    right: percentage(257/750);
+    top: percentage(13/84);
+}
+#foodOn,#foodOff{
+    position: absolute;
+    width: percentage(118/750);
+    right: percentage(375/750);
+    top: percentage(13/84);
+}
+#cookOn,#foodOff{
+    display: none;
+}
+#choose{
+    position: absolute;
+    width: percentage(23/750);
+    left: percentage(100/750);
+    top: percentage(35/84); 
+}
+#moreList{
+    width: percentage(165/750);
+    position: absolute;
+    right: percentage(23/750);
+    top: percentage(60/84);
+    z-index: 20;
+    display: none;
+}
+#moreList img{
+    width: 100%;
+}
+.text{
+    width: 100%;
+    position: absolute;
+//  top: percentage(70/330);
+}
+.text p{
+    color: white;
+//  font-size: 1rem;
+    text-align: center;
+//  line-height: 1.5rem;
+}
+
+
+#Food{
+    width: 100%;
+    margin: percentage(180/1294) auto;
+    position: absolute;
+    display: block;
+}
+#Food li:nth-child(1){
+   margin-left: percentage(48/1294);
+}
+#Food li{
+    width: percentage(335/750);
+    list-style: none;
+    float: left;
+    margin-right: percentage(20/750);
+}
+#Food li div{
+    width: 94%;
+    padding: percentage(27/750);
+    margin-bottom: percentage(30/1249);
+    background-image: url(../mallImg/foodBg.png);
+}
+#Food li div img{
+    width: 100%;
+}
+#Food li div img+p{
+//  font-size: 0.9em;
+//  line-height: 1.5em;
+}
+#Food li div img+p+p{
+//  font-size: 0.9rem;
+    color: red;
+//  line-height: 1.5em;
+}
+#Cook{
+    width: 100%;
+    margin: percentage(180/1294) auto;
+    position: absolute;
+    display: none;
+}
+#Cook li:nth-child(1){
+   margin-left: percentage(48/1294);
+}
+#Cook li{
+    width: percentage(335/750);
+    list-style: none;
+    float: left;
+    margin-right: percentage(20/750);
+}
+#Cook li div{
+    width: 94%;
+    position: relative;
+    padding: percentage(27/750);
+    margin-bottom: percentage(30/1249);
+    background-image: url(../mallImg/foodBg.png);
+}
+#Cook .cookImg{
+    width: 100%;
+}
+#Cook li div img+p{
+//  font-size: 0.9em;
+//  line-height: 1.5em;
+}
+#Cook li div img+p+p{
+    color: red;
+//  font-size: 0.9rem;
+//  line-height: 1.5em;
+}
+.share{
+    width: percentage(26/338);
+    position: absolute;
+    bottom: percentage(16/570);
+    right: percentage(60/338);
+    z-index: 1;
+}
+.mark{
+    width: percentage(26/338);
+    position: absolute;
+    bottom: percentage(16/570);
+    right: percentage(16/338);
+    z-index: 1;
+}
+.shop_car{
+    position: fixed;
+    width: percentage(200/750);
+    max-width: 45px;
+    top: 60%;
+    right: 0;
+//  background-color: #000000;
+    z-index: 1;
+    opacity: 0.5;
+    border-radius: 50%;
+    padding: percentage(20/750);
+}
+.shop_car img{
+    width: 100%;
+}
+.back_top{
+    position: fixed;
+    width: percentage(140/750);
+    max-width: 45px;
+    top: 70%;
+    right: 0;
+    z-index: 1;
+    opacity: 0.5;
+    border-radius: 50%;
+    padding: percentage(20/750);
+    display: none;
+}
+.back_top img{
+    width: 100%;
+}
+
+.foot{
+    position: fixed;
+    width: 100%;
+    height: 55px;
+    background-color: #48382b;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+.foot ul{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.foot ul li{
+    float: left;
+    list-style: none;
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    font-size: 12px;
+}
+.foot ul:after{
+    display: block;
+    content: "";
+    clear: both;
+}
+.foot ul li img{ 
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    height: percentage(45/94);
+}
+.foot ul li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding-top: 8px;
+    text-decoration:none;
+    color: #c8b391;
+}
+.foot ul li:nth-child(2) a{
+    color: #6ab439;
+}
+
+
+@media screen and (max-width: 360px){
+    #city{font-size: 12px;top: percentage(24/84);right: percentage(655/750);}
+    .text{top: percentage(60/330);}
+    .text p{font-size: 12px;line-height: 20px;}
+    #Food li div img+p{font-size: 12px;line-height: 20px;}
+    #Food li div img+p+p{font-size: 12px;line-height: 20px;}
+    #Cook li div img+p{font-size: 12px;line-height: 20px;}
+    #Cook li div img+p+p{font-size: 12px;line-height: 20px;}
+}
+@media screen and (min-width: 360px) and (max-width: 400px){
+    #city{font-size: 14px;top: percentage(24/84);right: percentage(655/750);}
+    .text{top: percentage(66/330);}
+    .text p{font-size: 14px;line-height: 23px;}
+    #Food li div img+p,#Food li div img+p+p,#Cook li div img+p,#Cook li div img+p+p{font-size: 14px;line-height: 24px;}
+}
+@media screen and (min-width: 400px) and (max-width: 480px){
+    #city{font-size: 16px;top: percentage(24/84);right: percentage(655/750);}
+    .text{top: percentage(68/330);}
+    .text p{font-size: 16px;line-height: 25px;}
+    #Food li div img+p,#Food li div img+p+p,#Cook li div img+p,#Cook li div img+p+p{font-size: 16px;line-height: 30px;}
+}
+@media screen and (min-width: 480px) and (max-width: 640px){
+    #city{font-size: 18px;top: percentage(24/84);right: percentage(655/750);}
+    .text{top: percentage(68/330);}
+    .text p{font-size: 18px;line-height: 34px;}
+    #Food li div img+p,#Food li div img+p+p,#Cook li div img+p,#Cook li div img+p+p{font-size: 18px;line-height: 36px;}
+}
+@media screen and (min-width: 640px) and (max-width: 780px){
+    #city{font-size: 20px;top: percentage(24/84);right: percentage(655/750);}
+    .text{top: percentage(70/330);}
+    .text p{font-size: 20px;line-height: 45px;}
+    #Food li div img+p,#Food li div img+p+p,#Cook li div img+p,#Cook li div img+p+p{font-size: 20px;line-height: 42px;}
+}
+
+@media screen and (min-width: 780px){
+    #city{font-size: 24px;top: percentage(24/84);right: percentage(655/750);}
+    .text{top: percentage(68/330);}
+    .text p{font-size: 24px;line-height: 60px;}
+    #Food li div img+p,#Food li div img+p+p,#Cook li div img+p,#Cook li div img+p+p{font-size: 24px;line-height: 42px;}   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

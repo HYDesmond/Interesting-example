@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/das/das.css" />
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			.main-info {
+				height: 0.88rem;
+				padding-bottom: 0.24rem;
+			}
+			
+			.fund-info {
+				position: relative;
+				font-weight: normal;
+				padding: 0.2rem 0;
+				padding-right: 1.7rem;
+				padding-left: 0.23rem;
+				font-size: 0.32rem;
+				line-height: 1;
+			}
+			
+			body {
+				max-width: 6.4rem;
+				margin: 0 auto;
+			}
+			
+			body * {
+				max-width: 6.4rem;
+			}
+			</style>
+					<script src="js/adaptive.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			// 设计图宽度
+			window['adaptive'].desinWidth = 640;
+			// body 字体大小 会将body字体大小设置为 baseFont / 100 + 'rem'  750的设计图一般设置为28,640的设计图一般设置为24
+			window['adaptive'].baseFont = 24;
+			/*
+			// 显示最大宽度 可选
+			window['adaptive'].maxWidth = 480;
+			// rem值改变后执行方法 可选
+			window['adaptive'].setRemCallback = function () {
+			    alert(1)
+			}
+			// scaleType 1:iphone andriod下viewport均无缩放 2:iphone下viewport有缩放,andriod没有 3:iphone andriod下viewport均有缩放; 默认值为1
+			window['adaptive'].scaleType = 1;
+			*/
+			// 初始化
+			window['adaptive'].init();
+			</script>
+	</head>
+
+	<body>
+		<!--<div id="warp">-->
+			<div id="head">
+					<img class="it" src="img/imgh/2.png" style="position: absolute; width: 6.4rem;height: 4.37rem;opacity: 0.93;z-index: 10;"/>
+					<img src="img/imgh/3.png" style="position: absolute; width: 6.4rem;height: 9.71rem;top: -2.7rem;"/>
+					<img class="back" src="img/imgh/1.png" style="position: absolute;width: 0.17rem;height: 0.32rem;top: 0.29rem;left: 0.27rem;z-index: 50;"/>
+					<img src="img/imgh/4.png" style="position: absolute;width: 0.55rem;height: 0.29rem;top: 0.36rem;left: 2.93rem;z-index: 50;"/>
+					<img src="img/imgh/5.png" style="position: absolute;width: 1.67rem;height: 1.67rem	;top: 3.49rem;left: 2.37rem;z-index: 50;"/>
+					<p style="position: absolute;font-size: 0.26rem;width: 1.99rem;height: 0.35rem;z-index: 100;color: #484847 ;margin-top: 1.76rem;margin-left: 2.21rem;">宝宝别闹，咬你</p>
+					<img src="img/imgh/16.png" style="position: absolute;width: 0.18;height: 0.15rem;margin-top: 2.18rem;margin-left: 2.28rem;z-index: 100;"/>
+					<p class="name" style="position: absolute;font-size: 0.26rem;height: 0.35rem;z-index: 100;color: #484847 ;margin-top: 2.11rem;margin-left: 2.54rem;">其实很爱你</p>
+					</div>
+					<div style="position: absolute;width: 1.52rem;height: 1.52rem	;top: 3.57rem;left: 2.442rem;z-index: 50;border-radius:1.52rem ;overflow: hidden;"/>
+					<img class="tx" src="img/imgh/15.png" style="position: absolute;width: 1.52rem;height: 1.52rem;"/>
+					</div>
+				<img src="img/imgh/7.png" style="width: 5.48rem;height: 0.31rem	;margin-top: 1rem;margin-left: 0.47rem; z-index: 50;"/>
+
+					<div id="body">
+						<img src="img/imgh/8.png" style="width: 1.55rem;height: 1.17rem;margin-right: 0.155rem;"/>
+						<img src="img/imgh/9.png" style="width: 1.55rem;height: 1.17rem;margin-right: 0.155rem;"/>
+						<img src="img/imgh/10.png" style="width: 1.55rem;height: 1.17rem;"/>
+						<img src="img/imgh/11.png" style="width: 1.55rem;height: 1.17rem;margin-right: 0.155rem;margin-top: 0.155rem;"/>
+						<img src="img/imgh/12.png" style="width: 1.55rem;height: 1.17rem;margin-right: 0.155rem;margin-top: 0.155rem;"/>
+						<img src="img/imgh/13.png" style="width: 1.55rem;height: 1.17rem;margin-top: 0.155rem;"/>
+					</div>
+						
+				<img src="img/imgh/zdy.png" class="zdy" style="width: 1.54rem;height: 0.43rem; margin-left: 2.43rem;margin-top: 0.5rem;" />
+					<div class="nm" style="width: 1.44rem;height: 0.27rem;">
+				<img src="img/imgh/nm.png" style="width: 1.07rem;" />
+				<div class="dg">
+					<img src="img/imgh/dg.png" id="img" style="width: 0.24rem;" />
+				</div>
+			</div>
+			
+		</div>
+			
+		
+		
+				
+			</div>
+
+			<div id="inp1" style="display: none;">
+				<img src="img/imgh/inp.png" style="position: absolute; width: 100%;height: 100%;" />
+				
+					<img src="img/imgh/ca.png" class="ca" style="position: absolute; width: 0.23rem;height: 0.23rem;margin-top: 0.36rem;margin-left: 0.26rem;" />
+				
+				
+					<img src="img/imgh/zdyj.png" style="position: absolute; width: 1.4rem;height: 0.28rem;margin-left: 2.07rem;margin-top: 0.34rem;" />
+				
+				<div class="tex">
+					<input type="text" name="text" id="text1" value="" />
+					
+						<img src="img/imgh/je.png"class="je" style="position: absolute; width: 3.1rem;height: 0.3rem;top: 0.26rem;left: 0.32rem;" />
+				
+
+				</div>
+				
+					<img src="img/imgh/zhanshang.png"class="bht" style="position: absolute; width:4.82rem;height:0.79rem;margin-left: 0.36rem;margin-top: 2.16rem;" />
+				
+			</div>
+			
+				<img src="img/imgh/mb.png"class="mb" style="position: absolute; width: 6.4rem;height: 11.38rem;display: none;" />
+			</div>
+		</div>
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var dg = document.getElementsByClassName('dg')[0];
+			var img = document.getElementById('img');
+			var inp = document.getElementById('text1');
+			var je = document.getElementsByClassName('je')[0];
+			var zdy = document.getElementsByClassName('zdy')[0];
+			var mb = document.getElementsByClassName('mb')[0];
+			var inp1 = document.getElementById('inp1')
+			var up = document.getElementsByClassName('ca')[0];
+			var back =document.getElementsByClassName('back')[0];
+			var tx = document.getElementsByClassName('tx')[0]
+			var name = document.getElementsByClassName('name')[0];
+			var bol = true;
+			dg.onclick = function() {
+				if(bol) {
+					img.src = 'img/imgh/dg2.png';
+					bol = false;
+				} else {
+					img.src = 'img/imgh/dg.png';
+					bol = true;
+				}
+			}
+
+			function name() {
+				if(inp.value=="") {
+					je.style.display = "block";
+				} else {
+					je.style.display = "none";
+				}
+			}
+			inp.onkeyup = name;
+			
+			zdy.onclick=function  () {
+				inp1.style.display="block";
+				mb.style.display="block";
+			}
+			mb.onclick=function  () {
+				mb.style.display="none";
+				inp1.style.display="none";
+			}
+			up.onclick=function  () {
+				mb.style.display="none";
+				inp1.style.display="none";
+			}
+//			$('#warp').height($(window).height());
+
+			$.ajax({
+
+			     type: 'get', //提交方式
+			
+			     url: "php/circle.php" ,  //发送到后台的地址
+			
+			    data: "ABCD" , //发送给后台的数据
+			    
+				dataType:"JSON", 
+				
+			    success: function(res){
+			          //请求成功了 后台返回了数据：res
+			          
+			    },
+			
+			    //数据类型
+
+});
+		back.onclick=function  () {
+			window.location.href=window.history.go(-1);
+		}
+		
+		var name,value;
+		var str = window.location.href;
+//		console.log(typeof str);
+//		var rep = str.replace(?,"!");
+//		console.log(rep);
+		var num = str.indexOf('?');
+		str = str.substr(num+1);
+		var arr = str.split('&');
+		console.log(arr.length);		
+		console.log(arr);
+		for(var i=0;i < arr.length;i++){
+			num=arr[i].split('=');
+			if(num[0] == 'userImg'){
+				tx.src = num[1];
+			}
+			if(num[0] == 'userName'){
+				name.innerHTML=decodeURI(num[1]);
+			}
+		}
+		</script>
+	</body>
+
+</html>

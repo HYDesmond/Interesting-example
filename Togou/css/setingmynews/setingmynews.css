@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+.setingmynewswarp {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+.setingmynewshead {
+  width: 100%;
+  height: 6.486486486486487%;
+  background-color: #48382b;
+  overflow: hidden;
+}
+.setingmynewshead img {
+  width: 2.666666666666667%;
+  height: 44.047619047619044%;
+  float: left;
+  padding-top: 1.7746913580246912%;
+  padding-left: 4%;
+}
+.setingmynewshead span {
+  float: right;
+  color: #FFFFFF;
+  font-size: 16px;
+  padding-top: 1.7746913580246912%;
+  padding-right: 36.4%;
+}
+ul li {
+  border-bottom: 1px solid black;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  overflow: hidden;
+}
+ul li span:nth-of-type(2) {
+  float: right;
+  padding-right: 5%;
+}
+.update {
+  display: none;
+  width: 50%;
+  height: 3%;
+  margin: 5%;
+  border: 1px solid black;
+  outline: none;
+}
+.baocun {
+  display: none;
+  margin-left: 5%;
+  border: 1px solid black;
+  background-color: greenyellow;
+  color: white;
+  width: 15%;
+  height: 3%;
+  border-radius: 5px;
+}
+/*# sourceMappingURL=setingmynews.css.map */

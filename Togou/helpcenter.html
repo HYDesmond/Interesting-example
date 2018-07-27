@@ -1,0 +1,210 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/helpcenter/helpcenter.css" />
+		<script type="text/javascript">
+			//sArgName表示要获取哪个参数的值 
+			function getQueryString(name) {
+				var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+				var r = window.location.search.substr(1).match(reg);
+				if(r != null) return unescape(r[2]);
+				return null;
+			}
+		</script>
+	</head>
+
+	<body>
+		<div class="helpwarp">
+			<div class="helphead">
+				<img src="img/helpcenterimg/return.png" />
+				<span>快速帮助中心</span>
+			</div>
+			<img src="img/helpcenterimg/shadow1.png" />
+			<img src="img/setingimg/shadow2.png" />
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell mui-collapse">
+					<a class="mui-navigate-right help_one" href="#"><img src="img/helpcenterimg/cancel1.png" / class="cancel">已审核订单能够取消</a>
+					<div class="mui-collapse-content">
+						<p>答:订单提交后,您将无法自行取消您的订单。若您通过礼金卡进行支付,订单在未审核前,可自行取消订单。 其他付款方式取消订单可直接致电1234-000-321
+						</p>
+					</div>
+				</li>
+				<li class="mui-table-view-cell mui-collapse">
+					<a class="mui-navigate-right help_two" href="#"><img src="img/helpcenterimg/modify1.png" / class="modify">如何修改订单</a>
+					<div class="mui-collapse-content">
+						<p>答:订单提交后,您将无法自行取消您的订单。若您通过礼金卡进行支付,订单在未审核前,可自行取消订单。 其他付款方式取消订单可直接致电1234-000-321
+						</p>
+					</div>
+				</li>
+				<li class="mui-table-view-cell mui-collapse">
+					<a class="mui-navigate-right help_three" href="#"><img src="img/helpcenterimg/receipt1.png" / class="receipt">怎样获得发票</a>
+					<div class="mui-collapse-content">
+						<p>答:订单提交后,您将无法自行取消您的订单。若您通过礼金卡进行支付,订单在未审核前,可自行取消订单。 其他付款方式取消订单可直接致电1234-000-321
+						</p>
+					</div>
+				</li>
+				<li class="mui-table-view-cell mui-collapse">
+					<a class="mui-navigate-right help_four" href="#"><img src="img/helpcenterimg/apply1.png" / class="apply">如何申请退货</a>
+					<div class="mui-collapse-content">
+						<p>答:订单提交后,您将无法自行取消您的订单。若您通过礼金卡进行支付,订单在未审核前,可自行取消订单。 其他付款方式取消订单可直接致电1234-000-321
+						</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			var bol1 = true;
+			var bol2 = true;
+			var bol3 = true;
+			var bol4 = true;
+			var l1 = document.getElementsByClassName("help_one")[0];
+			var img_one = document.getElementsByClassName("cancel")[0];
+			var l2 = document.getElementsByClassName("help_two")[0];
+			var img_two = document.getElementsByClassName("modify")[0];
+			var l3 = document.getElementsByClassName("help_three")[0];
+			var img_three = document.getElementsByClassName("receipt")[0];
+			var l4 = document.getElementsByClassName("help_four")[0];
+			var img_four = document.getElementsByClassName("apply")[0];
+			var dj = true;
+			var dj2=true;
+			l1.addEventListener('touchstart', function(event) {
+				dj = true;
+			}, false)
+			l1.addEventListener('touchend', function(event) {
+				if(bol1 == true && dj == true) {
+					bol1 = false;
+					bol2 = true;
+					bol3 = true;
+					bol4 = true;
+					var event = event || window.event;
+					img_one.src = 'img/helpcenterimg/cancel2.png';
+					img_two.src = 'img/helpcenterimg/modify1.png';
+					img_three.src = 'img/helpcenterimg/receipt1.png';
+					img_four.src = 'img/helpcenterimg/apply1.png';
+					console.log(bol1, dj);
+				} else if(bol1 == false && dj == true) {
+					bol1 = true;
+					bol2 = true;
+					bol3 = true;
+					bol4 = true;
+					var event = event || window.event;
+					img_one.src = 'img/helpcenterimg/cancel1.png';
+				}
+			}, false)
+			document.addEventListener('touchmove', function() {
+				dj = false;
+			}, false)
+			
+			
+			l2.addEventListener('touchstart', function(event) {
+				dj = true;
+			}, false)
+			l2.addEventListener('touchend', function(event) {
+				if(bol2 == true&&dj == true) {
+					bol2 = false;
+					bol1 = true;
+					bol3 = true;
+					bol4 = true;
+					var event = event || window.event;
+					img_two.src = 'img/helpcenterimg/modify2.png';
+					img_one.src = 'img/helpcenterimg/cancel1.png';
+					img_three.src = 'img/helpcenterimg/receipt1.png';
+					img_four.src = 'img/helpcenterimg/apply1.png';
+				} else if(bol2 == false&& dj == true) {
+					bol2 = true;
+					bol1 = true;
+					bol3 = true;
+					bol4 = true;
+					var event = event || window.event;
+					img_two.src = 'img/helpcenterimg/modify1.png';
+					console.log(bol1, bol2, bol3, bol4)
+				}
+			}, false)
+			document.addEventListener('touchmove', function() {
+				dj = false;
+			}, false)
+			
+			l3.addEventListener('touchstart', function(event) {
+				dj = true;
+			}, false)
+			l3.addEventListener('touchend', function(event) {
+				if(bol3 == true&&dj == true) {
+					bol3 = false;
+					bol2 = true;
+					bol1 = true;
+					bol4 = true;
+					var event = event || window.event;
+					img_three.src = 'img/helpcenterimg/receipt2.png';
+					img_one.src = 'img/helpcenterimg/cancel1.png';
+					img_two.src = 'img/helpcenterimg/modify1.png';
+					img_four.src = 'img/helpcenterimg/apply1.png';
+				} else if(bol3 == false&&dj == true) {
+					bol3 = true;
+					bol2 = true;
+					bol1 = true;
+					bol4 = true;
+					var event = event || window.event;
+					img_three.src = 'img/helpcenterimg/receipt1.png';
+					console.log(bol1, bol2, bol3, bol4)
+				}
+			}, false)
+			document.addEventListener('touchmove', function() {
+				dj = false;
+			}, false)
+			
+			l4.addEventListener('touchstart', function(event) {
+				dj = true;
+			}, false)
+			l4.addEventListener('touchend', function(event) {
+				if(bol4 == true&&dj == true) {
+					bol4 = false;
+					bol2 = true;
+					bol3 = true;
+					bol1 = true;
+					var event = event || window.event;
+					img_four.src = 'img/helpcenterimg/apply2.png';
+					img_one.src = 'img/helpcenterimg/cancel1.png';
+					img_two.src = 'img/helpcenterimg/modify1.png';
+					img_three.src = 'img/helpcenterimg/receipt1.png';
+				} else if(bol4 == false&&dj == true) {
+					bol4 = true;
+					bol2 = true;
+					bol3 = true;
+					bol1 = true;
+					var event = event || window.event;
+					img_four.src = 'img/helpcenterimg/apply1.png';
+					console.log(bol1, bol2, bol3, bol4)
+				}
+			}, false)
+			document.addEventListener('touchmove', function() {
+				dj = false;
+			}, false)
+			//返回
+			$.ajax({
+				type: "post",
+				url: "php/mynews.php",
+				dataType: "json",
+				data: {
+					id: getQueryString("id")
+				},
+				success: function(json) {
+					console.log(json);
+					$(".helphead>img").click(function(){
+						location.href="seting.html?id="+json[0].id;
+					})
+				},
+				async: true
+			});
+		</script>
+
+	</body>
+
+</html>

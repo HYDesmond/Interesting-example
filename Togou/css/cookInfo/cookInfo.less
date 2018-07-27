@@ -1,0 +1,340 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+.clear:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+#wrap {
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+}
+#nav{
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+}
+#navBg{
+    width: 100%;
+}
+#title{
+    position: absolute;
+    color: white;
+//  font-size: 1rem;
+    left: 50%;
+    top: 50%;
+}
+#back{
+    position: absolute;
+    width: percentage(23/750);
+    left: percentage(28/750);
+    top: percentage(20/84); 
+}
+#banner{
+    width: 100%;
+    position: relative;
+    height: percentage(400/1294);
+    overflow: hidden;
+}
+#banner img{
+    width: 100%;
+    position: absolute;
+    top: percentage(-1000/1294);
+}
+#cookName{
+    position: relative;
+    padding: percentage(30/750) percentage(30/750) 0 percentage(30/750);
+}
+#cookName ul{
+    position: absolute;
+    list-style: none;
+    left: percentage(500/750);
+    top: percentage(160/750);
+}
+#cookName li{
+    width: 16%;
+    float: left;
+    padding-right: percentage(30/750);
+}
+#cookName li img{
+    width: 98%;
+}
+#cookName p{
+    color: #292929;
+//  font-size: 1.2rem;
+    margin-bottom: percentage(120/1294);
+}
+#cookName span{
+    color: #999999;
+//  font-size: 0.9rem;
+}
+#cookName span:nth-of-type(2){
+    color: #999999;
+//  font-size: 0.9rem;
+    padding-left: percentage(30/750);
+}
+#cookName span:nth-of-type(3){
+    color: #999999;
+//  font-size: 0.9rem;
+    float: right;
+    padding-left: percentage(30/750);
+}
+
+#menu{
+    width: percentage(160/750);
+    margin-top: percentage(56/1294);
+    margin-bottom: percentage(30/1294);
+}
+
+#material{
+    width: 100%;
+    background: #ebeae4;
+    position: relative;
+    overflow: hidden;
+}
+#menuBg{
+    width: 100%;
+}
+#material ul{
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    position: absolute;
+    top: 0;
+}
+#material ul li{
+    width: percentage(230/750);
+    position: absolute;
+    padding-top: percentage(20/750);
+}
+#material ul li div{
+    width: 100%;
+    background: #ffffff;
+    text-align: center;
+    border-radius: 15px;
+}
+#material ul li div p{
+    color: #999999;
+//  font-size: 1rem;
+//  line-height: 2.1rem;
+}
+#material ul li div img{
+    width: percentage(130/230);
+}
+#material ul li:nth-child(1){
+    left: percentage(30/750);
+}
+#material ul li:nth-child(2){
+    left: percentage(282/750);
+}
+#material ul li:nth-child(3){
+    left: percentage(534/750);
+}
+#material ul li:nth-child(3){
+    left: percentage(534/750);
+}
+#material ul li:nth-child(4){
+    left: percentage(786/750);
+}
+#material ul li:nth-child(5){
+    left: percentage(1038/750);
+}
+#make{
+    width: percentage(160/750);
+    margin: percentage(56/1294) 0;
+}
+
+#main{
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #cccccc;
+}
+#main h4{
+    color: #646464;
+//  font-size: 1rem;
+//  line-height: 2.5rem;
+    border-bottom: 1px solid #cccccc;
+}
+#main p{
+    float: left;
+    width: 49%;
+    color: #999999;
+//  font-size: 0.9rem;
+}
+#main p:nth-of-type(1){
+    border-right: 1px solid #cccccc;
+//  line-height: 2.5rem;
+}
+#sub{
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #cccccc;
+    border-top: 1px solid #cccccc;
+}
+#sub h4{
+    color: #646464;
+//  font-size: 1rem;
+//  line-height: 2.5rem;
+    border-bottom: 1px solid #cccccc;
+}
+#sub p{
+    float: left;
+    width: 49.7%;
+    color: #999999;
+//  font-size: 0.9rem;
+}
+#sub p:nth-of-type(1){
+    border-right: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+//  line-height: 2.5rem;
+}
+#sub p:nth-of-type(2){
+    border-bottom: 1px solid #cccccc;
+//  line-height: 2.5rem;
+}
+#sub p:nth-of-type(3){
+//  line-height: 2.5rem;
+    border-right: 1px solid #cccccc;
+}
+
+#step{
+    width: 100% - percentage(60/750);
+    height: 100% - percentage(122/1294);
+    list-style: none;
+    padding: percentage(61/1294) percentage(30/750);
+}
+#step li{
+    width: 100%;
+    height: percentage(340/1294);
+    position: relative;
+    margin-bottom: percentage(22/1394);
+}
+.stepImg{
+    width: percentage(470/690);
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.stepImg img{
+    width: 100%;
+    position: absolute;
+    top: percentage(-300/648);
+}
+
+.stepText{
+    width: percentage(220/690);
+    position: absolute;
+    top: 0;
+    left: percentage(490/690);
+}
+.stepText p{
+    color: #b0b0b0;
+//  font-size: 0.9rem;
+//  line-height: 1.6rem;
+//  padding-top: percentage(17/179);
+}
+
+#joinBuy{
+//  display: none;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+#joinBuy p{
+    float: left;
+    text-align: center;
+    width: 50%;
+    padding: percentage(60/1294) 0;
+    color: white;
+//  font-size: 1rem;
+}
+#joinBuy p:nth-child(1){
+    background: #ffa842;
+}
+#joinBuy p:nth-child(2){
+    background: #ff5e39;
+}
+
+@media screen and (max-width: 360px){      
+    #title,#cookName{font-size: 14px;}
+    #cookName span,.stepText h4{font-size: 12px;}
+    #material ul li div p{ font-size: 12px; line-height: 32px;}
+    #main h4,#sub h4{font-size: 14px;line-height: 30px;}
+    #main p,#sub p{font-size: 12px;line-height: 30px;}
+    .stepText p{font-size: 12px;line-height: 16px;padding-top: percentage(10/179)}
+    #joinBuy p{padding: percentage(40/1294) 0;font-size: 12px;}
+}
+@media screen and (min-width: 360px) and (max-width: 420px){
+    #title,#cookName{font-size: 18px;}
+    #cookName span,.stepText h4{font-size: 16px;}
+    #material ul li div p{ font-size: 16px; line-height: 40px;}
+    #main h4,#sub h4{font-size: 16px;line-height: 38px;}
+    #main p,#sub p{font-size: 16px;line-height: 38px;}
+    .stepText p{font-size: 14px;line-height: 22px;padding-top: percentage(12/179)}
+    #joinBuy p{padding: percentage(45/1294) 0;font-size: 16px;}
+}
+
+@media screen and (min-width: 420px) and (max-width: 480px){
+    #title,#cookName{font-size: 22px;}
+    #cookName span,.stepText h4{font-size: 20px;}
+    #material ul li div p{ font-size: 20px; line-height: 48px;}
+    #main h4,#sub h4{font-size: 20px;line-height: 46px;}
+    #main p,#sub p{font-size: 20px;line-height: 46px;}
+    .stepText p{font-size: 18px;line-height: 30px;padding-top: percentage(16/179)}
+    #joinBuy p{padding: percentage(50/1294) 0;font-size: 20px;}
+}
+@media screen and (min-width: 480px) and (max-width: 640px){
+    #title,#cookName{font-size: 26px;}
+    #cookName span,.stepText h4{font-size: 24px;}
+    #material ul li div p{ font-size: 24px; line-height: 56px;}
+    #main h4,#sub h4{font-size: 24px;line-height: 54px;}
+    #main p,#sub p{font-size: 24px;line-height: 54px;}
+    .stepText p{font-size: 22px;line-height: 36px;padding-top: percentage(16/179)}
+    #joinBuy p{padding: percentage(50/1294) 0;font-size: 24px;}
+}
+@media screen and (min-width: 640px) and (max-width: 780px){
+    #title,#cookName{font-size: 32px;}
+    #cookName span,.stepText h4{font-size: 28px;}
+    #material ul li div p{ font-size: 28px; line-height: 64px;}
+    #main h4,#sub h4{font-size: 28px;line-height: 64px;}
+    #main p,#sub p{font-size: 28px;line-height: 64px;}
+    .stepText p{font-size: 26px;line-height: 42px;padding-top: percentage(16/179)}
+    #joinBuy p{padding: percentage(50/1294) 0;font-size: 28px;}
+}
+
+@media screen and (min-width: 780px){
+    #title,#cookName{font-size: 38px;}
+    #cookName span,.stepText h4{font-size: 32px;}
+    #material ul li div p{ font-size: 32px; line-height: 52px;}
+    #main h4,#sub h4{font-size: 32px;line-height: 52px;}
+    #main p,#sub p{font-size: 32px;line-height: 52px;}
+    .stepText p{font-size: 30px;line-height: 48px;padding-top: percentage(16/179)}
+    #joinBuy p{padding: percentage(50/1294) 0;font-size: 32px;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

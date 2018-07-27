@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  max-width: 750px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+.loginwarp {
+  width: 100%;
+  height: 100%;
+  background-image: url("../../img/loginimg/loginbg.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+}
+.loginhead {
+  width: 100%;
+  height: 6.481481481481481%;
+  background-color: #48382b;
+  text-align: center;
+  line-height: 250%;
+}
+.loginhead > span {
+  display: inline-block;
+  color: #fff;
+  font-size: 18px;
+  height: 100%;
+  line-height: 2em;
+}
+.loginhead a {
+  height: 100%;
+  display: inline-block;
+  line-height: 3em;
+  float: left;
+  padding-left: 4%;
+}
+.loginhead a img {
+  height: 47.61904761904761%;
+  display: inline-block;
+  line-height: 2.5em;
+  padding-top: 1.9290123456790123%;
+}
+.loginwarp > img:nth-of-type(1) {
+  width: 100%;
+  height: 0.4629629629629629%;
+  position: absolute;
+  left: 0;
+  top: 6.481481481481481%;
+}
+.logo > img {
+  width: 23.333333333333332%;
+  height: 13.503086419753085%;
+  margin-left: 38.266666666666666%;
+  margin-top: 9.466666666666667%;
+}
+.loginwarp > input:nth-of-type(1) {
+  width: 92.13333333333334%;
+  border-bottom: 1px solid black;
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  outline: none;
+  font-size: 16px;
+  margin-top: 6.172839506172839%;
+  margin-left: 3.5999999999999996%;
+}
+.loginwarp > input:nth-of-type(2) {
+  width: 92.13333333333334%;
+  border-bottom: 1px solid black;
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  outline: none;
+  font-size: 16px;
+  margin-top: 6.481481481481481%;
+  margin-left: 3.5999999999999996%;
+}
+.logintips {
+  display: inline-block;
+  margin-left: 20%;
+  margin-top: 5%;
+  color: red;
+}
+.loginbtn {
+  width: 92%;
+  height: 4.62962962962963%;
+  background-color: #48382b;
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 50px;
+  margin-top: 5.333333333333334%;
+  margin-left: 3.733333333333334%;
+  padding-top: 2%;
+}
+p {
+  font-size: 16px;
+  margin-top: 6.790123456790123%;
+  text-align: center;
+}
+ul {
+  width: 49.46666666666666%;
+  list-style: none;
+  overflow: hidden;
+  margin-top: 3.8580246913580245%;
+  margin-left: 23.733333333333334%;
+}
+li {
+  float: left;
+  width: 25%;
+  text-align: center;
+}
+.otherlogin li:nth-of-type(1) img {
+  width: 43.01075268817204%;
+}
+.otherlogin li:nth-of-type(2) img {
+  width: 52.68817204301075%;
+}
+.otherlogin li:nth-of-type(3) img {
+  width: 49.46236559139785%;
+}
+.otherlogin li:nth-of-type(4) img {
+  width: 36.55913978494624%;
+}
+.loginwarp > span:nth-of-type(2) {
+  font-size: 14px;
+  display: inline-block;
+  margin-left: 3.733333333333334%;
+  margin-top: 29.166666666666668%;
+}
+.loginwarp > span:nth-of-type(3) {
+  font-size: 14px;
+  margin-left: 53.333333333333336%;
+}
+/*# sourceMappingURL=login.css.map */

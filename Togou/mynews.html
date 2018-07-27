@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/mynews/mynews.css" />
+		<title></title>
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			//sArgName表示要获取哪个参数的值 
+			function getQueryString(name) {
+				var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+				var r = window.location.search.substr(1).match(reg);
+				if(r != null) return unescape(r[2]);
+				return null;
+			}
+		</script>
+	</head>
+
+	<body>
+		<div class="mynewswarp">
+			<div class="headborder">
+				<div class="headbg" class="btn btn-primary" id="select_file" onclick="upload_file.click();">
+					<input type="file" class="form-control" id="upload_file" name="upload_file" style="display: none;" onchange="change();">
+					<img src="img/myimg/headimg.png" />
+				</div>
+			</div>
+			<div class="login">
+				登录
+			</div>
+			<div class="mynews">
+				<ul class="list_one">
+					<li class="follow">关注<span class="myfollow">0</span></li>
+					<li class="fans">粉丝<span class="myfans">0</span></li>
+				</ul>
+				<ul class="list_two">
+					<li class="collect">收藏<span class="mycollect">0</span></li>
+					<li class="news">消息<span>0</span></li>
+					<li class="points">可用积分<span>0</span></li>
+				</ul>
+			</div>
+			<div class="split"></div>
+			<div class="order">
+				<div class="allorder">
+					<span>全部订单</span>
+					<img src="img/myimg/enter.png" alt="" />
+				</div>
+				<ul class="all">
+					<li><img src="img/myimg/pay.png" /><span>代付款</span></li>
+					<li><img src="img/myimg/sendgoods.png" /><span>代发货</span></li>
+					<li><img src="img/myimg/takegoods.png" /><span>代收货</span></li>
+					<li><img src="img/myimg/assess.png" /><span>代评价</span></li>
+				</ul>
+			</div>
+			<div class="othernews">
+				<ul class="othernewslist">
+					<li class="shop_car">
+						<img src="img/myimg/buycar.png" alt="" />
+						<span>我的购物车</span>
+						<img src="img/myimg/enter.png" alt="" />
+					</li>
+					<li>
+						<img src="img/myimg/vip.png" alt="" />
+						<span>我的会员</span>
+						<img src="img/myimg/enter.png" alt="" />
+					</li>
+					<li>
+						<img src="img/myimg/phonenumber.png" alt="" />
+						<span>客服热线</span>
+						<img src="img/myimg/enter.png" alt="" />
+					</li>
+					<li class="update_index">
+						<img src="img/myimg/myupload.png" alt="" />
+						<span>我的上传</span>
+						<img src="img/myimg/enter.png" alt="" />
+					</li>
+					<li class="seting_index">
+						<img src="img/myimg/seting.png" alt="" />
+						<span>我的设置</span>
+						<img src="img/myimg/enter.png" alt="" />
+					</li>
+				</ul>
+			</div>
+			<div class="foot">
+				<ul>
+					<li>
+						<a href="index.html"><img src="img/myimg/homelogo.png" />主页</a>
+					</li>
+					<li>
+						<a href="mall.html"><img src="img/myimg/malllogo.png" />商城</a>
+					</li>
+					<li>
+						<a href="select.html"><img src="img/myimg/selectlogo.png" />选菜</a>
+					</li>
+					<li>
+						<a href="friend_share.html"><img src="img/myimg/foundlogo.png" />发现</a>
+					</li>
+					<li>
+						<a href="mynews.html"><img src="img/myimg/mylogo.png" />我的</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var name;
+			var psw;
+			var login = document.getElementsByClassName("login")[0];
+			var upload_file_tmp = document.getElementById("upload_file_tmp");
+			var upload_file = document.getElementById("upload_file");
+
+			function change() {
+				document.getElementById("upload_file_tmp").value = document.getElementById("upload_file").value;
+			}
+			//跳转到登陆界面
+			login.onclick = function() {
+				location.href = 'login.html';
+			}
+			$(".seting_index").click(function() {
+				location.href = "seting.html";
+			});
+			$.ajax({
+				type: "post",
+				url: "php/mynews.php",
+				dataType: "json",
+				data: {
+					id: getQueryString("id")
+				},
+				success: function(json) {
+					console.log(json);
+					console.log(name);
+					psw = json[0].psw;
+					name = json[0].username;
+					if(name != "") {
+						console.log(psw);
+						login.innerHTML = name;
+						login.className = "afterlogin";
+						login.onclick = function() {
+							location.href = 'setingmynews.html?id=' + json[0].id;
+						}
+					}
+					$(".myfollow").click(function() {
+						location.href = "followList.html?id=" + json[0].id;
+					})
+					$(".seting_index").click(function(){
+						location.href = "seting.html?id=" + json[0].id;
+					})
+					$(".shop_car").click(function(){
+						location.href="shopCart.html?id="+json[0].id;
+					})
+					$(".update_index").click(function(){
+						location.href="release.html?id="+json[0].id;
+					})
+				},
+				async: true
+			});
+		</script>
+	</body>
+
+</html>

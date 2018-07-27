@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/mall.css"/>
+	</head>
+	<body>
+		<div id="wrap">
+			<div id="nav">
+				<img src="mallImg/navBg.png" id="navBg"/>
+				<span id="city">北京</span>
+				<img src="mallImg/navChoose.png" id="choose"/>
+				<img src="mallImg/navFoodOn.png" id="foodOn"/>
+				<img src="mallImg/navCookOff.png" id="cookOff"/>
+				<img src="mallImg/navFoodOff.png" id="foodOff"/>
+				<img src="mallImg/navCookOn.png" id="cookOn"/>
+				<img src="mallImg/navSearch.png" id="search"/>
+				<img src="mallImg/navMore.png" id="more"/>
+				<div id="moreList">
+					<img src="mallImg/more.png"/>
+					<div class="text">
+						<p>荤菜</p>
+						<p>素菜</p>
+						<p>汤羹</p>
+						<p>凉菜</p>
+						<p>更多</p>
+					</div>
+				</div>
+			</div>
+			<ul id="Food" class="clear">
+				<li></li>
+				<li></li>
+			</ul>
+			<ul id="Cook" class="clear">
+				<li>
+					<div>
+						<img src="mallImg/cook1.png" class="cookImg"/>
+						<p>燕麦粥</p>
+						<p>&yen;21.80</p>
+						<img src="mallImg/share.png" class="share"/>
+						<img src="mallImg/mark.png" class="mark"/>
+					</div>
+					<div>
+						<img src="mallImg/cook3.png" class="cookImg"/>
+						<p>燕麦粥</p>
+						<p>&yen;21.80</p>
+						<img src="mallImg/share.png" class="share"/>
+						<img src="mallImg/mark.png" class="mark"/>
+					</div>
+					<div>
+						<img src="mallImg/cook1.png" class="cookImg"/>
+						<p>燕麦粥</p>
+						<p>&yen;21.80</p>
+						<img src="mallImg/share.png" class="share"/>
+						<img src="mallImg/mark.png" class="mark"/>
+					</div>
+				</li>
+				<li>
+					<div>
+						<img src="mallImg/cook2.png" class="cookImg"/>
+						<p>燕麦粥</p>
+						<p>&yen;21.80</p>
+						<img src="mallImg/share.png" class="share"/>
+						<img src="mallImg/mark.png" class="mark"/>
+					</div>
+					<div>
+						<img src="mallImg/cook4.png" class="cookImg"/>
+						<p>燕麦粥</p>
+						<p>&yen;21.80</p>
+						<img src="mallImg/share.png" class="share"/>
+						<img src="mallImg/mark.png" class="mark"/>
+					</div>
+					<div>
+						<img src="mallImg/cook2.png" class="cookImg"/>
+						<p>燕麦粥</p>
+						<p>&yen;21.80</p>
+						<img src="mallImg/share.png" class="share"/>
+						<img src="mallImg/mark.png" class="mark"/>
+					</div>
+				</li>
+			</ul>
+			<div class="shop_car">
+				<!--<img src="mallImg/shop_car.png"/>-->
+				<img src="mallImg/购物车.png"/>
+			</div>
+			<div class="back_top">
+				<!--<img src="mallImg/shop_car.png"/>-->
+				<img src="mallImg/回到顶部 (1).png"/>
+			</div>
+			<div class="foot">
+				<ul>
+					<li><a href="index.html"><img src="mallImg/homelogo.png"/>主页</a></li>
+					<li><a href="mall.html"><img src="mallImg/malllogo.png"/>商城</a></li>
+					<li><a href="select.html"><img src="mallImg/selectlogo.png"/>选菜</a></li>
+					<li><a href="friend_share.html"><img src="mallImg/foundlogo.png" />发现</a></li>
+					<li><a href="mynews.html"><img src="mallImg/mylogo.png" />我的</a></li>
+				</ul>
+			</div>
+		</div>
+		<script src="js/ajax.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+		window.onload = function(){
+			var Cook = document.getElementById('Cook');
+			var cookLi = Cook.getElementsByTagName('li');
+			var Food = document.getElementById('Food');
+			var foodLi = Food.getElementsByTagName('li');
+			var foodDiv = Food.getElementsByTagName('div');
+			
+			var arrCook = ["mallImg/cook1.png","mallImg/cook2.png","mallImg/cook3.png","mallImg/cook4.png"];
+			var foodOn = document.getElementById('foodOn');
+			var foodOff = document.getElementById('foodOff');
+			var cookOn = document.getElementById('cookOn');
+			var cookOff = document.getElementById('cookOff');
+			var bol = true;
+			
+			var moreBtn = document.getElementById('more');
+			var moreList = document.getElementById('moreList');
+			var moreText = document.getElementsByClassName('text')[0];
+			
+			var search = document.getElementById('search');
+			
+			var shop_car = document.getElementsByClassName('shop_car')[0];
+			
+			var back_top = document.getElementsByClassName('back_top')[0];
+			
+			search.onclick = function(){
+				window.location.href = 'search.html';
+			}
+			
+			cookOff.onclick = function(){
+				this.style.display = 'none';
+				cookOn.style.display = 'block';
+				foodOn.style.display = 'none';
+				foodOff.style.display = 'block';
+				Cook.style.display = 'block';
+				Food.style.display = 'none';
+				bol = false;
+				var clickMore = true;
+				moreBtn.onclick = function(ev){
+					var ev = ev || window.event;
+					ev.cancelBubble = true;
+					if(clickMore){
+						moreList.style.display = 'block';
+						clickMore = false
+					}else{
+						moreList.style.display = 'none';
+						clickMore = true;
+					}
+				}
+				moreText.onclick = function(ev){
+					var ev = ev || window.event;
+					ev.cancelBubble = true;
+					moreList.style.display = 'block';
+				}
+				document.onclick = function(){
+					moreList.style.display = 'none';
+				}
+				document.body.scrollTop = cookScroll + 'px';
+			}
+			foodOff.onclick = function(){
+				this.style.display = 'none';
+				foodOn.style.display = 'block';
+				cookOn.style.display = 'none';
+				cookOff.style.display = 'block';
+				Cook.style.display = 'none';
+				Food.style.display = 'block';
+				bol = true;
+				moreBtn.onclick = function(){
+					return;
+				}
+				document.body.scrollTop = foodScroll + 'px';
+			}
+			
+			function getTop(obj){
+				var iTop = 0;
+				while(obj){
+					iTop += obj.offsetTop
+					obj = obj.offsetParent;
+				}
+				return iTop;
+			}
+			var foodScroll = 0;
+			var cookScroll = 0;
+			var aFood = document.getElementsByClassName('foodImg');
+			var aCook = document.getElementsByClassName('cookImg');
+			for (var i = 0; i < aCook.length; i++) {
+				aCook[i].index = i;
+				aCook[i].onclick = function(){
+					window.location.href = 'cookInfo.html';
+				}
+			}
+			
+			
+			downLoad();
+			document.onscroll = function (){
+				var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+				document.body.style.height = document.documentElement.clientHeight + 2*scrollTop + 'px';
+				moreList.style.display = 'none';
+				if(bol){
+					if(getTop(foodLi[0])+foodLi[0].offsetHeight < document.documentElement.clientHeight + scrollTop){
+						
+						downLoad();
+					}
+					foodScroll = scrollTop;
+				}else{
+					if(getTop(cookLi[0])+cookLi[0].offsetHeight < document.documentElement.clientHeight + scrollTop){
+						for (var i = 0; i < arrCook.length; i++) {
+							var oDiv = document.createElement('div');
+							var oImg = document.createElement('img');
+							oImg.src = arrCook[i%arrCook.length];
+							oImg.className = 'cookImg';
+							var oP1 = document.createElement('p');
+							oP1.innerHTML = "燕麦粥";
+							var oP2 = document.createElement('p');
+							var oShare = document.createElement('img');
+							oShare.src = 'mallImg/share.png';
+							oShare.className = 'share';
+							var oMark = document.createElement('img');
+							oMark.src = 'mallImg/mark.png';
+							oMark.className = 'mark';
+							oP2.innerHTML = "&yen;21.80";
+							oDiv.appendChild(oImg);
+							oDiv.appendChild(oP1);
+							oDiv.appendChild(oP2);
+							oDiv.appendChild(oShare);
+							oDiv.appendChild(oMark);
+							cookLi[i%2].appendChild(oDiv);
+						}
+					}
+					cookScroll = scrollTop;
+					var aCook = document.getElementsByClassName('cookImg');
+					for (var i = 0; i < aCook.length; i++) {
+						aCook[i].index = i;
+						aCook[i].onclick = function(){
+							window.location.href = 'cookInfo.html';
+						}
+					}
+				}
+			}
+			shop_car.onclick = function(){
+				window.location.href = 'shopCart.html';
+			}
+			function downLoad(){
+				ajax('get','php/mall.php','',function(data) {
+					if(!data.length){
+						return;
+					}
+					var data = JSON.parse( data );
+					console.log(data.length);
+					for(var i = 0; i < data.length; i++){
+						var oDiv = document.createElement('div');
+						oDiv.info = data[i%data.length];
+						var oImg = document.createElement('img');
+						oImg.src = data[i%data.length].foodImg;
+						oImg.className = 'foodImg';
+						var oP1 = document.createElement('p');
+						oP1.innerHTML = data[i%data.length].foodName;
+						var oP2 = document.createElement('p');
+						oP2.innerHTML = data[i%data.length].foodPrice;
+						oDiv.appendChild(oImg);
+						oDiv.appendChild(oP1);
+						oDiv.appendChild(oP2);
+						foodLi[i%2].appendChild(oDiv);
+					}
+					var foodDiv = Food.getElementsByTagName('div');
+					for (var i = 0; i < foodDiv.length; i++) {
+						foodDiv[i].index = i;
+						foodDiv[i].onclick = function(){
+							window.location.href = 'foodInfo.html?foodPrice='+encodeURI(this.info.foodPrice)+'&foodName=' + encodeURI(this.info.foodName)+'&foodTitle=' + encodeURI(this.info.foodTitle)+'&intro='+encodeURI(this.info.intro)+'&listImg1='+encodeURI(this.info.listImg1)+'&listImg2='+encodeURI(this.info.listImg2)+'&listImg3='+encodeURI(this.info.listImg3)+'&market='+encodeURI(this.info.market)+'&size='+encodeURI(this.info.size);
+						}
+					}
+				});
+			}
+		}
+		</script>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

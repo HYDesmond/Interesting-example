@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+.clear:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+#wrap {
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+}
+#nav{
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+}
+#navBg{
+    width: 100%;
+}
+#title{
+    position: absolute;
+    color: white;
+//  font-size: 1rem;
+    left: 50%;
+    top: 50%;
+}
+#back{
+    position: absolute;
+    width: percentage(23/750);
+    left: percentage(28/750);
+    top: percentage(20/84); 
+}
+
+
+//---------------可做菜品-----------------
+#cookList{
+    height: 100% - percentage(170/1294);
+    width: 100% - percentage(60/750);
+    padding: percentage(170/1294) percentage(30/750) 0 percentage(30/750);
+}
+#cookList li{
+    width: 100%;
+    height: percentage(240/1186);
+    position: relative;
+    margin-bottom: percentage(20/1294);
+    border: 1px solid #a9a9a9;
+    overflow: hidden;
+}
+//---------------可做菜品配图-----------------
+.cookImg{
+    width: percentage(277/690);
+    height: 100%;
+    position: relative;
+}
+.cookImg img{
+    height: 100%;
+    width: 100%;
+    background: #d9d9d9;
+}
+
+//---------------可做菜品描述-----------------
+.disc{
+    width: percentage(413/690) - percentage(12/413);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: percentage(277/690);
+    background: white;
+    border-left: 1px solid #a9a9a9;
+    padding-left: percentage(19/413);
+}
+//菜名
+#cookList h5{
+    color: #6e6e6e;
+//  font-size: 0.9rem;
+//  line-height: 2rem;
+}
+//评分
+.heater{
+    width: 100% - percentage(12/413);
+    position: absolute;
+//  top: percentage(74/240);
+}
+.heater img{
+    width: 9%;
+    margin-right: percentage(14/413);
+
+}
+//标签
+.tag{
+    width: 100%;
+    position: absolute;
+//  top: percentage(120/240);
+}
+.tag span{
+    color: #c1c1c1;
+//  font-size: 0.8rem;
+    margin-right: percentage(38/413);
+}
+//时间
+.time span{
+    color: #b0b0b0;
+//  font-size: 0.8rem;
+    position: absolute;
+    bottom: percentage(15/240);
+}
+//收藏
+.time img{
+    position: absolute;
+    width: percentage(40/413);
+    bottom: percentage(15/240);
+    right: percentage(20/240);
+}
+.markOn{
+    display: none;
+}
+.markOff{
+    display: block;
+}
+
+
+@media screen and (max-width: 360px){
+     #title{font-size: 14px;} 
+     #cookList h5{font-size: 14px;line-height: 28px;}
+     .time span,.tag span{font-size: 12px;}
+     .heater{top: percentage(74/240);}
+     .tag{top: percentage(120/240);}
+
+}
+@media screen and (min-width: 360px) and (max-width: 420px){
+     #title{font-size: 18px;} 
+     #cookList h5{font-size: 14px;line-height: 36px;}
+     .time span,.tag span{font-size: 12px;}
+     .heater{top: percentage(84/240);}
+     .tag{top: percentage(134/240);}
+}
+@media screen and (min-width: 420px) and (max-width: 480px){
+     #title{font-size: 22px;} 
+     #cookList h5{font-size: 14px;line-height: 44px;}
+     .time span,.tag span{font-size: 12px;}
+     .heater{top: percentage(84/240);}
+     .tag{top: percentage(140/240);}
+}
+@media screen and (min-width: 480px) and (max-width: 640px){
+     #title{font-size: 26px;} 
+     #cookList h5{font-size: 16px;line-height: 52px;}
+     .time span,.tag span{font-size: 14px;}
+     .heater{top: percentage(84/240);}
+     .tag{top: percentage(140/240);}
+}
+@media screen and (min-width: 640px) and (max-width: 780px){
+     #title{font-size: 32px;} 
+     #cookList h5{font-size: 18px;line-height: 60px;}
+     .time span,.tag span{font-size: 16px;}
+     .heater{top: percentage(84/240);}
+     .tag{top: percentage(146/240);}
+}
+
+@media screen and (min-width: 780px){
+     #title{font-size: 38px;} 
+     #cookList h5{font-size: 30px;line-height: 60px;}
+     .time span,.tag span{font-size: 18px;}
+     .heater{top: percentage(84/240);}
+     .tag{top: percentage(150/240);}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

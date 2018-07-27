@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+.registerwarp {
+  width: 100%;
+  height: 100%;
+  background-image: url(../../img/loginimg/loginbg.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.registerhead {
+  width: 100%;
+  height: 6.481481481481481%;
+  background-color: #48382b;
+  text-align: center;
+  line-height: 250%;
+}
+.registerhead > span {
+  display: inline-block;
+  color: #fff;
+  font-size: 18px;
+  height: 100%;
+  line-height: 2em;
+}
+.registerhead a {
+  height: 100%;
+  display: inline-block;
+  line-height: 3em;
+  float: left;
+  padding-left: 4%;
+}
+.registerhead a img {
+  height: 47.61904761904761%;
+  display: inline-block;
+  line-height: 2.5em;
+  padding-top: 1.9290123456790123%;
+}
+.registerwarp > img:nth-of-type(1) {
+  width: 100%;
+  float: left;
+  height: 0.4629629629629629%;
+  margin-top: 0;
+}
+.registerlogo > img {
+  width: 23.333333333333332%;
+  height: 13.503086419753085%;
+  margin-top: 5.478395061728395%;
+  margin-left: 38.4%;
+}
+.registerwarp > input:nth-of-type(1) {
+  width: 92%;
+  border-bottom: 1px solid black;
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  outline: none;
+  font-size: 16px;
+  margin-top: 7.716049382716049%;
+  margin-left: 3.5999999999999996%;
+}
+.registerwarp > input:nth-of-type(2) {
+  width: 92%;
+  border-bottom: 1px solid black;
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  outline: none;
+  font-size: 16px;
+  margin-top: 7.716049382716049%;
+  margin-left: 3.5999999999999996%;
+}
+.registerwarp > input:nth-of-type(3) {
+  width: 92%;
+  border-bottom: 1px solid black;
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  outline: none;
+  font-size: 16px;
+  margin-top: 7.716049382716049%;
+  margin-left: 3.5999999999999996%;
+}
+.code {
+  position: relative;
+}
+.code > input {
+  width: 66.66666666666666%;
+  border-bottom: 1px solid black;
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  outline: none;
+  font-size: 16px;
+  margin-top: 7.716049382716049%;
+  margin-left: 3.5999999999999996%;
+}
+.codebtn {
+  position: absolute;
+  width: 19.6%;
+  border: 1px solid black;
+  font-size: 12px;
+  text-align: center;
+  line-height: 1.8em;
+  top: 40%;
+  right: 5%;
+}
+.registerbtn {
+  width: 92%;
+  height: 4.62962962962963%;
+  background-color: #48382b;
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 50px;
+  padding-top: 2%;
+  margin-top: 11.574074074074074%;
+  margin-left: 3.733333333333334%;
+}
+.tips {
+  display: inline-block;
+  margin-top: 5%;
+  margin-left: 10%;
+  color: red;
+}
+p {
+  font-size: 16px;
+  text-align: center;
+  margin-top: 9.25925925925926%;
+}
+.otherregister {
+  width: 49.46666666666666%;
+  list-style: none;
+  overflow: hidden;
+  text-align: center;
+  margin-top: 3.8580246913580245%;
+  margin-left: 23.733333333333334%;
+}
+.otherregister > li {
+  width: 25%;
+  float: left;
+}
+.otherregister li:nth-of-type(1) img {
+  width: 43.01075268817204%;
+}
+.otherregister li:nth-of-type(2) img {
+  width: 52.68817204301075%;
+}
+.otherregister li:nth-of-type(3) img {
+  width: 49.46236559139785%;
+}
+.otherregister li:nth-of-type(4) img {
+  width: 36.55913978494624%;
+}
+/*# sourceMappingURL=register.css.map */
