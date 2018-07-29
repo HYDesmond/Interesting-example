@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>下拉框控件的美化</title>
+<style>
+input {
+	width: 150px;
+	height: 30px;
+	padding: 0 0 0 4px;
+	border: 1px solid #ccc;
+}
+ul {
+	list-style: none;/*取消列表项前面的标记符号*/
+	padding: 0;
+	margin: -1px 0 0;
+	width: 154px;
+	border: 1px solid #ccc;
+}
+ul li {
+	height: 30px;
+	line-height: 30px;
+	padding-left: 4px;
+}
+ul li:hover {/*设置鼠标移到列表项上的样式*/
+	background: #000;
+	color: #fff;
+}
+</style>
+  <div class="box">
+    <input type="text">
+    <ul>
+      <li>列表1</li>
+      <li>列表2</li>
+      <li>列表3</li>
+    </ul>
+  </div>
+</body>
+</html>

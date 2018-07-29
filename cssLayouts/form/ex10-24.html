@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>文本框控件美化</title>
+<style>
+input {
+	width: 150px;
+	height: 30px;
+	outline: none;/*取消轮廓*/
+}
+.txtipt1 {
+	border: 1px solid #ccc;/*重置边框样式*/
+	border-radius: 10px;  /*css样式设置圆角*/
+	padding-left: 8px;
+}
+.txtipt2 {
+	border: none;/*取消边框*/
+	padding: 0 15px;
+	background: url(images/txtBg.png) no-repeat;/*设置文本框使用背景图片*/
+}	
+</style>
+</head>
+<body>
+  <form>
+      原生态的文本框：<input type="text" name="txt1"><br/><br/>
+      使用CSS设置圆角的文本框：<input type="text" name="txt2" class="txtipt1">
+      <br/><br/>
+      使用CSS背景图片的文本框：<input type="text" name="txt3" class="txtipt2">
+  </form>
+</body>
+</html>

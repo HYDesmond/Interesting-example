@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>单选框的美化</title>
+<style>
+span {
+	width: 50px;
+	height: 30px;
+	font: 16px/30px "宋体";
+	background: #ccc;
+	text-align: center;
+	border-radius: 4px;
+     display: inline-block;/*将内联元素的span修改为内联块级元素，这样可以设置元素的宽高*/
+}
+input {
+	display: none;/*将input控件隐藏*/
+}
+/* 找到选中的input表单后紧邻的span元素*/
+input:checked+span {
+	color: #fff;
+	background: #000;
+}
+</style>
+</head>
+<body>
+  <label>
+  	<input type="radio" name="gender" checked />
+    <span>男</span>
+  </label>
+  <label>
+    <input type="radio" name="gender" />
+    <span>女</span>
+  </label>
+</body>
+</html>

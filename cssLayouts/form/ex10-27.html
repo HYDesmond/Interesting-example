@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>复选框的美化</title>
+<style>
+span {
+	height: 30px;
+	font: 16px/30px "宋体";
+	text-align: center;
+	display: inline-block;
+	padding-left: 35px;
+	background: url(images/checkbox-1.png) no-repeat;
+	/*CSS3属性，用于设置背景图片的大小，第一个值表示宽度，第二个值表示高度*/
+	background-size: 30px 30px;
+}
+input {
+	display: none;/*隐藏复选框*/
+}
+/*找到选中的input表单后紧邻的span元素*/
+input:checked+span {
+	background: url(images/checkbox.png) no-repeat;
+	background-size: 30px 30px;
+}
+</style>
+</head>
+<body>
+  <label>
+    <input type="checkbox" name="like" />
+    <span id="ip">苹果</span>
+  </label>
+  <label>
+    <input type="checkbox" name="like" />
+    <span>橙子</span>
+  </label>
+  <label>
+    <input type="checkbox" name="like" />
+    <span>香蕉</span>
+  </label>
+</body>
+</html>
