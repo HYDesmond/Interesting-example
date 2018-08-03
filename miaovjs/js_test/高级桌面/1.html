@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<style>
+*{margin: 0; padding: 0;}
+#ul1{
+	margin: 20px auto;
+	width: 660px;
+
+}
+#ul1 li{
+	list-style: none;
+	float: left;
+	margin: 10px;
+	z-index:1;
+}
+#ul1 .active{
+
+	border: 1px dashed red;
+}
+</style>
+<script src="move2.js"></script>
+<script>
+window.onload=function()
+{
+	var oUl=document.getElementById('ul1');
+	var aLi=document.getElementsByTagName('li');
+	var aPos=[];
+	var iMinZIndex=2;
+
+	//布局转换
+	for(var i=0;i<aLi.length;i++)
+	{
+		aPos[i]={left: aLi[i].offsetLeft, top: aLi[i].offsetTop};
+	}
+	for(var i=0;i<aLi.length;i++)
+	{
+		aLi[i].style.left=aPos[i].left+'px';
+		aLi[i].style.top=aPos[i].top+'px';
+		aLi[i].style.position='absolute';
+		aLi[i].style.margin='0';
+		aLi[i].index=i;
+	}
+
+	//拖拽
+	for(var i=0;i<aLi.length;i++)
+	{
+		Drag(aLi[i]);
+	}
+
+	function Drag(obj)
+	{
+		obj.onmousedown=function(ev)
+		{
+			var oEvent=ev||event;
+			obj.style.zIndex=iMinZIndex++;
+			var disX=oEvent.clientX-obj.offsetLeft;
+			var disY=oEvent.clientY-obj.offsetTop;
+
+			document.onmousemove=function(ev)
+			{
+				var oEvent=ev||event;
+				obj.style.left=oEvent.clientX-disX+'px';
+				obj.style.top=oEvent.clientY-disY+'px';
+
+				for(var i=0;i<aLi.length;i++)
+				{
+					aLi[i].className='';
+				}
+
+				var oNear=findNearest(obj);
+				if(oNear)
+				{
+					oNear.className='active';
+				}
+
+				/*for(var i=0;i<aLi.length;i++)
+				{
+					aLi[i].className='';
+					if(obj==aLi[i])continue;
+
+					if(Penzhuang(obj,aLi[i]))
+					{
+						aLi[i].className='active';
+					}
+					
+				}*/
+
+			}
+			document.onmouseup=function()
+			{
+				document.onmousemove=null;
+				document.onmouseup=null;
+
+				var oNear=findNearest(obj);
+				if(oNear)
+				{
+					oNear.className='';
+
+					oNear.style.zIndex=iMinZIndex++;
+					obj.style.zIndex=iMinZIndex++;
+
+					startMove(oNear,aPos[obj.index]);
+					startMove(obj,aPos[oNear.index]);
+
+					var tmp=0;
+					tmp=obj.index;
+					obj.index=oNear.index;
+					oNear.index=tmp;
+
+				}
+				else{
+					startMove(obj,{ left: aPos[obj.index].left,top: aPos[obj.index].top})
+				}
+
+			}
+			clearInterval(obj.timer);
+			return false;
+		}
+		
+	}
+
+	function Penzhuang(obj1,obj2)
+	{
+		var t1=obj1.offsetTop;
+		var l1=obj1.offsetLeft;
+		var b1=obj1.offsetTop+obj1.offsetHeight;
+		var r1=obj1.offsetLeft+obj1.offsetWidth;
+
+		var t2=obj2.offsetTop;
+		var l2=obj2.offsetLeft;
+		var b2=obj2.offsetTop+obj2.offsetHeight;
+		var r2=obj2.offsetLeft+obj2.offsetWidth;
+
+		if(r1<l2||r2<l1||b1<t2||b2<t1)
+		{
+			return false;
+		}
+		else
+		{
+			return true;
+		}
+	}
+
+	function getDis(obj1,obj2)
+	{
+		var a=obj1.offsetLeft-obj2.offsetLeft;
+		var b=obj2.offsetTop-obj1.offsetTop;
+
+		return Math.sqrt(a*a+b*b);		
+	}
+
+	function findNearest(obj)
+	{
+		var iMin=999999999;
+		var iMinIndex=-1;
+
+		for(var i=0;i<aLi.length;i++)
+		{
+			if(obj==aLi[i])continue;
+			if(Penzhuang(obj,aLi[i]))
+			{
+				var dis=getDis(obj,aLi[i]);
+
+				if(iMin>dis)
+				{
+					iMin=dis;
+					iMinIndex=i;
+				}
+			}
+		}
+
+		if(iMinIndex==-1)
+		{
+			return null;
+		}
+		else{
+			return aLi[iMinIndex];
+		}
+	}
+}
+</script>
+</head>
+<body>
+	<ul id="ul1">
+		<li><img src="images/1.jpg" alt="#"></li>
+		<li><img src="images/2.jpg" alt="#"></li>
+		<li><img src="images/3.jpg" alt="#"></li>
+		<li><img src="images/4.jpg" alt="#"></li>
+		<li><img src="images/5.jpg" alt="#"></li>
+		<li><img src="images/1.jpg" alt="#"></li>
+		<li><img src="images/2.jpg" alt="#"></li>
+		<li><img src="images/3.jpg" alt="#"></li>
+		<li><img src="images/4.jpg" alt="#"></li>
+		<li><img src="images/5.jpg" alt="#"></li>
+	</ul>
+</body>
+</html>

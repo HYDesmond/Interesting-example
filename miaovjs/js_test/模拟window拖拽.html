@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#div1 {
+			width: 100px;
+			height: 100px;
+			background: red;
+			position: absolute;
+		}
+
+		.box {
+			border: 1px dashed black;
+			position: absolute;
+		}
+	</style>
+	<script>
+		window.onload = function () {
+			var oDiv = document.getElementById('div1');
+
+			oDiv.onmousedown = function (ev) {
+				var oEvent = ev || event;
+				var disX = oEvent.clientX - oDiv.offsetLeft;
+				var disY = oEvent.clientY - oDiv.offsetTop;
+
+				var oNewDiv = document.createElement('div');
+
+				oNewDiv.className = 'box';
+				oNewDiv.style.width = oDiv.offsetWidth - 2 + 'px';
+				oNewDiv.style.height = oDiv.offsetHeight - 2 + 'px';
+				oNewDiv.style.left = oDiv.offsetLeft + 'px';
+				oNewDiv.style.top = oDiv.offsetTop + 'px';
+
+				document.body.appendChild(oNewDiv);
+
+				document.onmousemove = function (ev) {
+					var oEvent = ev || event;
+					oNewDiv.style.left = oEvent.clientX - disX + 'px';
+					oNewDiv.style.top = oEvent.clientY - disY + 'px';
+
+				}
+				document.onmouseup = function () {
+					document.onmousemove = null;
+					document.onmouseup = null;
+
+					oDiv.style.left = oNewDiv.offsetLeft + 'px';
+					oDiv.style.top = oNewDiv.offsetTop + 'px';
+
+					document.body.removeChild(oNewDiv);
+				}
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<div id="div1"></div>
+
+</body>
+
+</html>
