@@ -1,79 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
+	<meta charset="UTF-8">
 
-<title>Document</title>
-<style>
-body,ul,p{margin:0;padding:0;}
-li{list-style:none;}
-.clear{zoom:1;}
-.clear:after{content:'';display:block;clear:both;}
-#content{width:600px;height:600px;background:#ccc;}
-#content p{width:400px;background:#fff;margin-left:40px ;margin-top:60px;float:left;line-height: 26px}
-#content ul{width:-90px;margin:60px 0 0 20px;float:left;}
-#content li{width:-90px;height:26px;background:#333;filter:alpha(opacity=30);opacity:0.3;color:#fff;}
-#caozuo{float: left;padding: 10px 0px 10px 40px;margin-top:40px;border:4px solid #000;width:550px;}
- span{background: yellow;}
-</style>
-<script type="text/javascript">
+	<title>Document</title>
+	<style>
+		body,
+		ul,
+		p {
+			margin: 0;
+			padding: 0;
+		}
 
-window.onload=function()
-{
-	var oCen=document.getElementById('content');
-	var oZ=document.getElementById('caozuo');
-	var oP=oCen.getElementsByTagName('p')[0];
-	var aInput=document.getElementsByTagName('input');
+		li {
+			list-style: none;
+		}
 
-	
-	//console.log(aInput.length)
-	aInput[0].onclick=function()
-	{
-		
-		aInput[aInput.length-1].style.display='none';
-		aInput[aInput.length-2].style.display='none';
-	}
-	aInput[1].onclick=function()
-	{
+		.clear {
+			zoom: 1;
+		}
 
-		aInput[5].style.display='inline';
-		aInput[4].style.display='inline';
-	}
+		.clear:after {
+			content: '';
+			display: block;
+			clear: both;
+		}
 
-	aInput[3].onclick=function()
-	{var str1=aInput[2].value;
+		#content {
+			width: 600px;
+			height: 600px;
+			background: #ccc;
+		}
 
-		oP.innerHTML = oP.innerHTML.split(str1).join('<span>'+str1+'</span>');
-	}
-	aInput[5].onclick=function()
-	{var str1=aInput[2].value;
-	var str2=aInput[4].value;
-		oP.innerHTML = oP.innerHTML.split(str1).join('<span>'+str2+'</span>');
-	}
-}
+		#content p {
+			width: 400px;
+			background: #fff;
+			margin-left: 40px;
+			margin-top: 60px;
+			float: left;
+			line-height: 26px
+		}
 
-</script>
+		#content ul {
+			width: -90px;
+			margin: 60px 0 0 20px;
+			float: left;
+		}
+
+		#content li {
+			width: -90px;
+			height: 26px;
+			background: #333;
+			filter: alpha(opacity=30);
+			opacity: 0.3;
+			color: #fff;
+		}
+
+		#caozuo {
+			float: left;
+			padding: 10px 0px 10px 40px;
+			margin-top: 40px;
+			border: 4px solid #000;
+			width: 550px;
+		}
+
+		span {
+			background: yellow;
+		}
+	</style>
+	<script type="text/javascript">
+
+		window.onload = function () {
+			var oCen = document.getElementById('content');
+			var oZ = document.getElementById('caozuo');
+			var oP = oCen.getElementsByTagName('p')[0];
+			var aInput = document.getElementsByTagName('input');
+
+
+			//console.log(aInput.length)
+			aInput[0].onclick = function () {
+
+				aInput[aInput.length - 1].style.display = 'none';
+				aInput[aInput.length - 2].style.display = 'none';
+			}
+			aInput[1].onclick = function () {
+
+				aInput[5].style.display = 'inline';
+				aInput[4].style.display = 'inline';
+			}
+
+			aInput[3].onclick = function () {
+				var str1 = aInput[2].value;
+
+				oP.innerHTML = oP.innerHTML.split(str1).join('<span>' + str1 + '</span>');
+			}
+			aInput[5].onclick = function () {
+				var str1 = aInput[2].value;
+				var str2 = aInput[4].value;
+				oP.innerHTML = oP.innerHTML.split(str1).join('<span>' + str2 + '</span>');
+			}
+		}
+
+	</script>
 </head>
+
 <body>
-<div id="content" class="clear">
-	<p>妙味课堂是一支充满温馨而且极富人情味的IT培训团队；2010年，妙味深度关注WEB前端开发领域，为此精心研发出一套灵活而充满趣味的JavaScript课程、2011~2013年，妙味精准研发出最新HTML5/CSS3课程，并推出远程课程方案，尝试将线下优良的培训模式移植到远程网络培训中，希望尽最大努力，将一种快乐预约的授课体验、结合HTML/css/js知识点，精准传递给妙味课堂的每一位学员</p>
-	<ul>
-		<li>展开</li>
-		<li>查找</li>
-		<li>替换</li>
-	</ul>
-	<div id="caozuo">
-		
-		
-		<input type="button" value="查找">
-		<input type="button" value="替换"><br>
-		<input type="text" >
-		<input type="button" value="查找">
-		<input type="text" class="show">
-		<input type="button" value="替换" class="show">
-	
+	<div id="content" class="clear">
+		<p>妙味课堂是一支充满温馨而且极富人情味的IT培训团队；2010年，妙味深度关注WEB前端开发领域，为此精心研发出一套灵活而充满趣味的JavaScript课程、2011~2013年，妙味精准研发出最新HTML5/CSS3课程，并推出远程课程方案，尝试将线下优良的培训模式移植到远程网络培训中，希望尽最大努力，将一种快乐预约的授课体验、结合HTML/css/js知识点，精准传递给妙味课堂的每一位学员</p>
+		<ul>
+			<li>展开</li>
+			<li>查找</li>
+			<li>替换</li>
+		</ul>
+		<div id="caozuo">
+
+
+			<input type="button" value="查找">
+			<input type="button" value="替换">
+			<br>
+			<input type="text">
+			<input type="button" value="查找">
+			<input type="text" class="show">
+			<input type="button" value="替换" class="show">
+
+		</div>
 	</div>
-</div>
-	
+
 </body>
+
 </html>

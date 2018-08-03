@@ -1,76 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-<style>
-body,ul,div{margin:0;padding:0;}
-
-li{list-style:none;}
-#content{width:400px;height:200px;margin:10px auto;}
-#content ul{width:50px;float:left;}
-#content li{width:48px;height:38px;border:1px solid #ccc;}
-#main{width:300px;height:200px;background:#ccc;float:left;font-size: 80px;color:red;text-align:center;line-height: 200px}
-#content .active{border:1px solid #333;background:red;}
-</style>
-
-<script>
-window.onload=function()
-{
-	var oCon=document.getElementById('content');
-	var aLi=oCon.getElementsByTagName('li');
-	var num=0;
-	var oMain=document.getElementById('main');
-	function set()
-	{
-		for(var i=0;i<aLi.length;i++)
-		{
-
-			if(i%2){
-				aLi[i].style.backgroundColor='#666';
-			}
-			else
-			{
-				aLi[i].style.backgroundColor='grey';
-			}
-		}
-	}
-	function tab()
-	{
-		if(num<aLi.length/2)
-		{
-			num++;
-			if(num==aLi.length/2)
-			{
-				num=aLi.length-1;
-				
-			}
-		}
-		else{
-			num--;
-			if(num==aLi.length/2-1)
-			{
-				num=0;
-			}
+	<style>
+		body,
+		ul,
+		div {
+			margin: 0;
+			padding: 0;
 		}
 
-		for(var i=0;i<aLi.length;i++)
-		{
-
-			aLi[i].className='';
-		
-
+		li {
+			list-style: none;
 		}
 
-		aLi[num].className='active';
-		oMain.innerHTML=num+1;
-	
-	}
-	setInterval(tab,600)
-	set()
-}
-</script>
+		#content {
+			width: 400px;
+			height: 200px;
+			margin: 10px auto;
+		}
+
+		#content ul {
+			width: 50px;
+			float: left;
+		}
+
+		#content li {
+			width: 48px;
+			height: 38px;
+			border: 1px solid #ccc;
+		}
+
+		#main {
+			width: 300px;
+			height: 200px;
+			background: #ccc;
+			float: left;
+			font-size: 80px;
+			color: red;
+			text-align: center;
+			line-height: 200px
+		}
+
+		#content .active {
+			border: 1px solid #333;
+			background: red;
+		}
+	</style>
+
+	<script>
+		window.onload = function () {
+			var oCon = document.getElementById('content');
+			var aLi = oCon.getElementsByTagName('li');
+			var num = 0;
+			var oMain = document.getElementById('main');
+			function set() {
+				for (var i = 0; i < aLi.length; i++) {
+
+					if (i % 2) {
+						aLi[i].style.backgroundColor = '#666';
+					}
+					else {
+						aLi[i].style.backgroundColor = 'grey';
+					}
+				}
+			}
+			function tab() {
+				if (num < aLi.length / 2) {
+					num++;
+					if (num == aLi.length / 2) {
+						num = aLi.length - 1;
+
+					}
+				}
+				else {
+					num--;
+					if (num == aLi.length / 2 - 1) {
+						num = 0;
+					}
+				}
+
+				for (var i = 0; i < aLi.length; i++) {
+
+					aLi[i].className = '';
+
+
+				}
+
+				aLi[num].className = 'active';
+				oMain.innerHTML = num + 1;
+
+			}
+			setInterval(tab, 600)
+			set()
+		}
+	</script>
 </head>
+
 <body>
 	<div id="content">
 		<ul id="ul1">
@@ -90,4 +118,5 @@ window.onload=function()
 		</ul>
 	</div>
 </body>
+
 </html>

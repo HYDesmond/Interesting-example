@@ -1,62 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-<style>
-body,h2,ul{margin:0;padding:0;}
-#content{margin:10px auto;width:100px;}
-h2{background:lightgreen url(ico.png) no-repeat;text-indent: 6px;width:100px;text-align: center;font-size:16px;}
-ul{width:100px;display: none;}
-li{text-indent: 20px;border-bottom:1px solid #ccc;list-style: none;}
-.active{background:yellow;}
-</style>
-<script>
-window.onload=function()
-{
-	var aH=document.getElementsByTagName('h2');
-	var aUl=document.getElementsByTagName('ul');
-	var aLi=document.getElementsByTagName('li');
+	<style>
+		body,
+		h2,
+		ul {
+			margin: 0;
+			padding: 0;
+		}
 
-	for(var i=0;i<aH.length;i++)
-	{
-		aH[i].index=i;
-		aH[i].onoff=false;
-		aH[i].onclick=function()
-		{
-			if(this.onoff)
-			{
-				
-				aUl[this.index].style.display='none';
-				this.onoff=false;
-			}
-			else{
-				for(var j=0;j<aUl.length;j++)
-				{
-					aUl[j].style.display='none';
+		#content {
+			margin: 10px auto;
+			width: 100px;
+		}
+
+		h2 {
+			background: lightgreen url(ico.png) no-repeat;
+			text-indent: 6px;
+			width: 100px;
+			text-align: center;
+			font-size: 16px;
+		}
+
+		ul {
+			width: 100px;
+			display: none;
+		}
+
+		li {
+			text-indent: 20px;
+			border-bottom: 1px solid #ccc;
+			list-style: none;
+		}
+
+		.active {
+			background: yellow;
+		}
+	</style>
+	<script>
+		window.onload = function () {
+			var aH = document.getElementsByTagName('h2');
+			var aUl = document.getElementsByTagName('ul');
+			var aLi = document.getElementsByTagName('li');
+
+			for (var i = 0; i < aH.length; i++) {
+				aH[i].index = i;
+				aH[i].onoff = false;
+				aH[i].onclick = function () {
+					if (this.onoff) {
+
+						aUl[this.index].style.display = 'none';
+						this.onoff = false;
+					}
+					else {
+						for (var j = 0; j < aUl.length; j++) {
+							aUl[j].style.display = 'none';
+						}
+
+						aUl[this.index].style.display = 'block';
+						this.onoff = true;
+
+					}
+
 				}
-				
-				aUl[this.index].style.display='block';
-				this.onoff=true;
-				
 			}
-			
+			for (var i = 0; i < aLi.length; i++) {
+				aLi[i].onmouseover = function () {
+					this.className = 'active';
+				}
+				aLi[i].onmouseout = function () {
+					this.className = '';
+				}
+			}
 		}
-	}
-	for(var i=0;i<aLi.length;i++)
-	{
-		aLi[i].onmouseover=function()
-		{
-			this.className='active';
-		}
-		aLi[i].onmouseout=function()
-		{
-			this.className='';
-		}
-	}
-}
-</script>
+	</script>
 </head>
+
 <body>
 	<div id="content">
 		<h2>我的好友</h2>
@@ -79,4 +101,5 @@ window.onload=function()
 		</ul>
 	</div>
 </body>
+
 </html>

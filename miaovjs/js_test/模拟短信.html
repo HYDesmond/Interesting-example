@@ -1,61 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-<style>
-img{border:none;vertical-align: bottom;}
-#text{resize: none;}
-#div1{width:300px;height:500px;border:1px solid #000;text-align: top;resize:none;}
-#user1{width:25px;height:25px;}
-.add{width:25px;height:25px;border:none;vertical-align: center;}
-
-.r{float:right;}
-
-span{border:2px solid lightblue;border-radius:6px;background: lightblue;}
-</style>
-
-<script>
-window.onload=function()
-{
-	var oDiv=document.getElementById('div1');
-	var oSeT=document.getElementById('sentText');
-	var oSu=document.getElementById('sure');
-
-	var oUser=document.getElementById('user1');
-	var onoff=true;
-	oSu.onclick=function()
-	{
-		if(onoff)
-		{
-			oDiv.innerHTML+='<div class="l"><img src=1.png class="add">:<span>'+oSeT.value+'</div><br>';
-			oSeT.value='';
+	<style>
+		img {
+			border: none;
+			vertical-align: bottom;
 		}
-		else
-		{
-			oDiv.innerHTML+='<div class="r"><span>'+oSeT.value+'</span><img src=2.png class="add"></div><br clear="both"><br>';
-			oSeT.value='';
-		}
-	}
-	oUser.onclick=function()
-	{
-		if(onoff)
-		{
-			oUser.src='2.png';
-			onoff=false;
 
+		#text {
+			resize: none;
 		}
-		else{oUser.src='1.png';onoff=true;}
-	}
-}
-</script>
+
+		#div1 {
+			width: 300px;
+			height: 500px;
+			border: 1px solid #000;
+			text-align: top;
+			resize: none;
+		}
+
+		#user1 {
+			width: 25px;
+			height: 25px;
+		}
+
+		.add {
+			width: 25px;
+			height: 25px;
+			border: none;
+			vertical-align: center;
+		}
+
+		.r {
+			float: right;
+		}
+
+		span {
+			border: 2px solid lightblue;
+			border-radius: 6px;
+			background: lightblue;
+		}
+	</style>
+
+	<script>
+		window.onload = function () {
+			var oDiv = document.getElementById('div1');
+			var oSeT = document.getElementById('sentText');
+			var oSu = document.getElementById('sure');
+
+			var oUser = document.getElementById('user1');
+			var onoff = true;
+			oSu.onclick = function () {
+				if (onoff) {
+					oDiv.innerHTML += '<div class="l"><img src=1.png class="add">:<span>' + oSeT.value + '</div><br>';
+					oSeT.value = '';
+				}
+				else {
+					oDiv.innerHTML += '<div class="r"><span>' + oSeT.value + '</span><img src=2.png class="add"></div><br clear="both"><br>';
+					oSeT.value = '';
+				}
+			}
+			oUser.onclick = function () {
+				if (onoff) {
+					oUser.src = '2.png';
+					onoff = false;
+
+				}
+				else { oUser.src = '1.png'; onoff = true; }
+			}
+		}
+	</script>
 </head>
+
 <body>
-		<div id="div1"></div>
-		<img src="1.png" alt="#" id="user1" value="二十四桥明月雨">
-		<input type="text" id="sentText">
-		<input type="button" value="发送" id="sure">
-	
-	
+	<div id="div1"></div>
+	<img src="1.png" alt="#" id="user1" value="二十四桥明月雨">
+	<input type="text" id="sentText">
+	<input type="button" value="发送" id="sure">
+
+
 </body>
+
 </html>

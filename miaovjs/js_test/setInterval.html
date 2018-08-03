@@ -1,40 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-<style>
-#div1{width:200px;height:200px;margin:30px auto;position:relative;overflow: hidden;}
-ul{position:absolute;width:1000px;height:200px;margin:0;left:0;top:0;}
-li{list-style: none;width:200px;height:200px;float: left}
-img{border:none;vertical-align: top;width: 200px;height:200px;}
-</style>
-<script>
-window.onload=function()
-{
-	var oDiv=document.getElementById('div1');
-	var oUl=oDiv.getElementsByTagName('ul')[0];
-
-
-	var timer=setInterval(function(){
-		oUl.style.left=oUl.offsetLeft-5+'px';
-		if(oUl.offsetLeft<-oUl.offsetWidth/2){
-			oUl.style.left='0px';
+	<style>
+		#div1 {
+			width: 200px;
+			height: 200px;
+			margin: 30px auto;
+			position: relative;
+			overflow: hidden;
 		}
 
-	},30)
-}
-</script>
+		ul {
+			position: absolute;
+			width: 1000px;
+			height: 200px;
+			margin: 0;
+			left: 0;
+			top: 0;
+		}
+
+		li {
+			list-style: none;
+			width: 200px;
+			height: 200px;
+			float: left
+		}
+
+		img {
+			border: none;
+			vertical-align: top;
+			width: 200px;
+			height: 200px;
+		}
+	</style>
+	<script>
+		window.onload = function () {
+			var oDiv = document.getElementById('div1');
+			var oUl = oDiv.getElementsByTagName('ul')[0];
+
+
+			var timer = setInterval(function () {
+				oUl.style.left = oUl.offsetLeft - 5 + 'px';
+				if (oUl.offsetLeft < -oUl.offsetWidth / 2) {
+					oUl.style.left = '0px';
+				}
+
+			}, 30)
+		}
+	</script>
 </head>
+
 <body>
 	<div id="div1">
 		<ul>
-			<li><img src="1.jpg" alt=""></li>
-			<li><img src="2.jpg" alt=""></li>
-			<li><img src="3.jpg" alt=""></li>
-			<li><img src="4.jpg" alt=""></li>
-			<li><img src="1.jpg" alt=""></li>
+			<li>
+				<img src="1.jpg" alt="">
+			</li>
+			<li>
+				<img src="2.jpg" alt="">
+			</li>
+			<li>
+				<img src="3.jpg" alt="">
+			</li>
+			<li>
+				<img src="4.jpg" alt="">
+			</li>
+			<li>
+				<img src="1.jpg" alt="">
+			</li>
 		</ul>
 	</div>
 </body>
+
 </html>

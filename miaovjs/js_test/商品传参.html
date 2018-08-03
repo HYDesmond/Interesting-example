@@ -1,141 +1,153 @@
- <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>无标题文档</title>
-<style>
-
-div{display:inline;}
-
-</style>
-
-<script>
-window.onload =function(){
-        var  oUl = document.getElementById('list');
-        var  aLi = oUl.getElementsByTagName('li');
-        
-        var maxPer = 0;
-        var sumN=0;
-    var sumM=0;
-        
-        for(var i=0; i<aLi.length; i++){
-                fn1(aLi[i]);
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>无标题文档</title>
+        <style>
+                div {
+                        display: inline;
                 }
+        </style>
 
-        function fn1(oLi){
-                var aBtn = oLi.getElementsByTagName('input');
-                var oStrong= oLi.getElementsByTagName('strong')[0];
-                var oEm = oLi.getElementsByTagName('em')[0];
-                var oSpan = oLi.getElementsByTagName('span')[0];
-                var n1=Number(oStrong.innerHTML);
-                var n2=parseFloat(oEm.innerHTML);
-                
-                
-                aBtn[1].onclick = function(){
-                        n1++;
-                        oStrong.innerHTML = n1;        
-                        oEm.innerHTML = n2;
-                        oSpan.innerHTML = n2*n1 + '元';        
-                        
-                        sumM = sumM + n2;        
-                        sumN++;
-                        
-                        osum.innerHTML = sumN;
-                        osumMoney.innerHTML = sumM;        
-                        };
-                aBtn[0].onclick = function(){
-                        if(n1<1){n1=0;}
-                        else{n1--;}
-                                
-                                
-                        oStrong.innerHTML = n1;        
-                        
-                        oSpan.innerHTML = n2*n1 + '元';        
-                        
-                        sumM = sumM - n2;
-                        sumN--;
-                                
-                        osum.innerHTML = sumN;
-                        osumMoney.innerHTML = sumM;        
-                        };
-                                                
-                
-                var osum = document.getElementById('sum');
-            var omax = document.getElementById('max');
-                var osumMoney = document.getElementById('sumMoney');        
+        <script>
+                window.onload = function () {
+                        var oUl = document.getElementById('list');
+                        var aLi = oUl.getElementsByTagName('li');
 
-                if(maxPer<n2){maxPer = n2;}
-                omax.innerHTML = n2;
-        
+                        var maxPer = 0;
+                        var sumN = 0;
+                        var sumM = 0;
+
+                        for (var i = 0; i < aLi.length; i++) {
+                                fn1(aLi[i]);
+                        }
+
+                        function fn1(oLi) {
+                                var aBtn = oLi.getElementsByTagName('input');
+                                var oStrong = oLi.getElementsByTagName('strong')[0];
+                                var oEm = oLi.getElementsByTagName('em')[0];
+                                var oSpan = oLi.getElementsByTagName('span')[0];
+                                var n1 = Number(oStrong.innerHTML);
+                                var n2 = parseFloat(oEm.innerHTML);
+
+
+                                aBtn[1].onclick = function () {
+                                        n1++;
+                                        oStrong.innerHTML = n1;
+                                        oEm.innerHTML = n2;
+                                        oSpan.innerHTML = n2 * n1 + '元';
+
+                                        sumM = sumM + n2;
+                                        sumN++;
+
+                                        osum.innerHTML = sumN;
+                                        osumMoney.innerHTML = sumM;
+                                };
+                                aBtn[0].onclick = function () {
+                                        if (n1 < 1) { n1 = 0; }
+                                        else { n1--; }
+
+
+                                        oStrong.innerHTML = n1;
+
+                                        oSpan.innerHTML = n2 * n1 + '元';
+
+                                        sumM = sumM - n2;
+                                        sumN--;
+
+                                        osum.innerHTML = sumN;
+                                        osumMoney.innerHTML = sumM;
+                                };
+
+
+                                var osum = document.getElementById('sum');
+                                var omax = document.getElementById('max');
+                                var osumMoney = document.getElementById('sumMoney');
+
+                                if (maxPer < n2) { maxPer = n2; }
+                                omax.innerHTML = n2;
+
+                        };
+
                 };
-        
-        };
 
 
-</script>            
+        </script>
 
 </head>
+
 <body>
-<ul id="list">
-<li>
-<input type="button" value="-" />
-<strong>0</strong>
-<input type="button" value="+" />
-单价：<em>1元</em>
-小计：<span></span>
-</li>
+        <ul id="list">
+                <li>
+                        <input type="button" value="-" />
+                        <strong>0</strong>
+                        <input type="button" value="+" /> 单价：
+                        <em>1元</em>
+                        小计：
+                        <span></span>
+                </li>
 
 
-<li>
-<input type="button" value="-" />
-<strong>0</strong>
-<input type="button" value="+" />
-单价：<em>2元</em>
-小计：<span></span>
-</li>
+                <li>
+                        <input type="button" value="-" />
+                        <strong>0</strong>
+                        <input type="button" value="+" /> 单价：
+                        <em>2元</em>
+                        小计：
+                        <span></span>
+                </li>
 
 
-<li>
-<input type="button" value="-" />
-<strong>0</strong>
-<input type="button" value="+" />
-单价：<em>3元</em>
-小计：<span></span>
-</li>
+                <li>
+                        <input type="button" value="-" />
+                        <strong>0</strong>
+                        <input type="button" value="+" /> 单价：
+                        <em>3元</em>
+                        小计：
+                        <span></span>
+                </li>
 
 
-<li>
-<input type="button" value="-" />
-<strong>0</strong>
-<input type="button" value="+" />
-单价：<em>4元</em>
-小计：<span></span>
-</li>
+                <li>
+                        <input type="button" value="-" />
+                        <strong>0</strong>
+                        <input type="button" value="+" /> 单价：
+                        <em>4元</em>
+                        小计：
+                        <span></span>
+                </li>
 
 
 
-<li>
-<input type="button" value="-" />
-<strong>0</strong>
-<input type="button" value="+" />
-单价：<em>5元</em>
-小计：<span></span>
-</li>
+                <li>
+                        <input type="button" value="-" />
+                        <strong>0</strong>
+                        <input type="button" value="+" /> 单价：
+                        <em>5元</em>
+                        小计：
+                        <span></span>
+                </li>
 
 
-<li>
-<input type="button" value="-" />
-<strong>0</strong>
-<input type="button" value="+" />
-单价：<em>6元</em>
-小计：<span></span>
-</li>
+                <li>
+                        <input type="button" value="-" />
+                        <strong>0</strong>
+                        <input type="button" value="+" /> 单价：
+                        <em>6元</em>
+                        小计：
+                        <span></span>
+                </li>
 
-</ul>
+        </ul>
 
-商品合计共:<div id="sum"></div>件    <br />
-共花费:<div id="sumMoney"></div>元   <br />    
-最贵商品单价:<div id="max"></div>元 
+        商品合计共:
+        <div id="sum"></div>件
+        <br /> 共花费:
+        <div id="sumMoney"></div>元
+        <br /> 最贵商品单价:
+        <div id="max"></div>元
 
 </body>
+
 </html>

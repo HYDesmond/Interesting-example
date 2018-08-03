@@ -1,40 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
 
 </head>
+
 <body>
 	<input type="text">
 	<input type="button" value="请输入数字">
 </body>
 <script>
 
-var aInput=document.getElementsByTagName('input');
-/*模拟indexOf*/
-var arr=[1,2,3,4,5,6,7,8];
-var onoff=false;
-//indexOf(4)
-function iO(num){
-	for(var i=0;i<arr.length;i++)
-	{
-		if(num==arr[i])
-		{
-			alert(i);
+	var aInput = document.getElementsByTagName('input');
+	/*模拟indexOf*/
+	var arr = [1, 2, 3, 4, 5, 6, 7, 8];
+	var onoff = false;
+	//indexOf(4)
+	function iO(num) {
+		for (var i = 0; i < arr.length; i++) {
+			if (num == arr[i]) {
+				alert(i);
+			}
+			else { onoff = true; }//这里会多次弹出-1
 		}
-		else{onoff=true;}//这里会多次弹出-1
+		if (onoff) {
+			alert(-1);
+			onoff = false;
+		}
 	}
-	if(onoff)
-	{
-		alert(-1);
-		onoff=false;
+	aInput[1].onclick = function () {
+		iO(aInput[0].value);
 	}
-}
-aInput[1].onclick=function()
-{
-	iO(aInput[0].value);
-}
 
 </script>
+
 </html>

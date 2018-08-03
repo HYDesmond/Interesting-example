@@ -1,126 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-<style>
-body{margin:0;padding:0;background:black;}
-#content{width:400px;height:500px;position:relative;margin:30px auto;}
-#content a{position:absolute;text-decoration:none;top:180px;background: #ccc;width:30px;height:30px;line-height:30px;text-align:center;border-radius:15px;}
-#content a:hover{filter:alpha(opacity=50);opacity:0.5;}
-.prev{left:10px;}
-.next{right:10px;}
-#content p{position:absolute;color:#fff;top:-18px;margin:0;}
-#content div{position:absolute;width:100px;height:10px;bottom:70px;}
-#content span{position:absolute;top:10px;width:10px;height:10px;background: #333;border-radius:6px;}
-#content span:nth-child(1){left:150px;}
-#content span:nth-child(2){left:170px;}
-#content span:nth-child(3){left:190px;}
-#content span:nth-child(4){left:210px;}
-.active{border:1px solid blue;background: blue;}
-#content img{width:400px;height:400px;border:none;vertical-align:center;}
-#content ul{width:160px;position:absolute;bottom:70px;margin:0;}
-#content li{width:40px;height:40px;position:absolute;bottom:0px;display: none;}
-#content li:nth-child(1){left:110px;}
-#content li:nth-child(2){left:150px;}
-#content li:nth-child(3){left:190px;}
-#content li:nth-child(4){left:230px;}
-#content li img{width:40px;height:40px;}
-</style>
-<script>
-window.onload=function()
-{
-	var oPre=document.getElementById('prev');
-	var oNex=document.getElementById('next');
-	var oImg=document.getElementById('img1');
-	var aSpan=document.getElementsByTagName('span');
-	var arrImg=['1.jpg','2.jpg','3.jpg','4.jpg'];
-	var aLi=document.getElementsByTagName('li');
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			background: black;
+		}
 
-	var num=0;
+		#content {
+			width: 400px;
+			height: 500px;
+			position: relative;
+			margin: 30px auto;
+		}
 
-	function Tab()
-	{
-		for(var i=0;i<arrImg.length;i++)
-			{
-				aSpan[i].className='';
+		#content a {
+			position: absolute;
+			text-decoration: none;
+			top: 180px;
+			background: #ccc;
+			width: 30px;
+			height: 30px;
+			line-height: 30px;
+			text-align: center;
+			border-radius: 15px;
+		}
+
+		#content a:hover {
+			filter: alpha(opacity=50);
+			opacity: 0.5;
+		}
+
+		.prev {
+			left: 10px;
+		}
+
+		.next {
+			right: 10px;
+		}
+
+		#content p {
+			position: absolute;
+			color: #fff;
+			top: -18px;
+			margin: 0;
+		}
+
+		#content div {
+			position: absolute;
+			width: 100px;
+			height: 10px;
+			bottom: 70px;
+		}
+
+		#content span {
+			position: absolute;
+			top: 10px;
+			width: 10px;
+			height: 10px;
+			background: #333;
+			border-radius: 6px;
+		}
+
+		#content span:nth-child(1) {
+			left: 150px;
+		}
+
+		#content span:nth-child(2) {
+			left: 170px;
+		}
+
+		#content span:nth-child(3) {
+			left: 190px;
+		}
+
+		#content span:nth-child(4) {
+			left: 210px;
+		}
+
+		.active {
+			border: 1px solid blue;
+			background: blue;
+		}
+
+		#content img {
+			width: 400px;
+			height: 400px;
+			border: none;
+			vertical-align: center;
+		}
+
+		#content ul {
+			width: 160px;
+			position: absolute;
+			bottom: 70px;
+			margin: 0;
+		}
+
+		#content li {
+			width: 40px;
+			height: 40px;
+			position: absolute;
+			bottom: 0px;
+			display: none;
+		}
+
+		#content li:nth-child(1) {
+			left: 110px;
+		}
+
+		#content li:nth-child(2) {
+			left: 150px;
+		}
+
+		#content li:nth-child(3) {
+			left: 190px;
+		}
+
+		#content li:nth-child(4) {
+			left: 230px;
+		}
+
+		#content li img {
+			width: 40px;
+			height: 40px;
+		}
+	</style>
+	<script>
+		window.onload = function () {
+			var oPre = document.getElementById('prev');
+			var oNex = document.getElementById('next');
+			var oImg = document.getElementById('img1');
+			var aSpan = document.getElementsByTagName('span');
+			var arrImg = ['1.jpg', '2.jpg', '3.jpg', '4.jpg'];
+			var aLi = document.getElementsByTagName('li');
+
+			var num = 0;
+
+			function Tab() {
+				for (var i = 0; i < arrImg.length; i++) {
+					aSpan[i].className = '';
+				}
+				aSpan[num].className = 'active';
+
+				oImg.src = arrImg[num];
 			}
-		aSpan[num].className='active';
 
-		oImg.src=arrImg[num];
-	}
-
-	Tab();
-
-	oNex.onclick=function()
-	{
-		if(num==aLi.length)num=0;
-		num++;
-		
-		Tab();
-	}
-
-	oPre.onclick=function()
-	{
-		if(num==0)num=aLi.length;
-		num--;
-		
-		Tab();
-	}
-
-	for(var i=0;i<arrImg.length;i++)
-	{
-		aSpan[i].index=i;
-		aSpan[i].onclick=function()
-		{
-			num=this.index;
 			Tab();
-		}
-		aSpan[i].onmouseover=function()
-		{
-			num=this.index;
-			for(var i=0;i<aLi.length;i++)
-			{
-				aLi[i].style.display='none';
+
+			oNex.onclick = function () {
+				if (num == aLi.length) num = 0;
+				num++;
+
+				Tab();
 			}
-			aLi[num].style.display='block';
-		}
-		aSpan[i].onmouseout=function()
-		{
-			//num=this.index;
-			for(var i=0;i<aLi.length;i++)
-			{
-				aLi[i].style.display='none';
+
+			oPre.onclick = function () {
+				if (num == 0) num = aLi.length;
+				num--;
+
+				Tab();
 			}
-			//aLi[num].style.display='block';
-		}
-	}
+
+			for (var i = 0; i < arrImg.length; i++) {
+				aSpan[i].index = i;
+				aSpan[i].onclick = function () {
+					num = this.index;
+					Tab();
+				}
+				aSpan[i].onmouseover = function () {
+					num = this.index;
+					for (var i = 0; i < aLi.length; i++) {
+						aLi[i].style.display = 'none';
+					}
+					aLi[num].style.display = 'block';
+				}
+				aSpan[i].onmouseout = function () {
+					//num=this.index;
+					for (var i = 0; i < aLi.length; i++) {
+						aLi[i].style.display = 'none';
+					}
+					//aLi[num].style.display='block';
+				}
+			}
 
 
-}
-</script>
+		}
+	</script>
 </head>
+
 <body>
 	<div id="content">
-		<a href="#" id="prev" class="prev"><</a>
-		<a href="#" id="next" class="next">></a>
-		<p>带缩略图的图片</p>
-		<div>
-			
-			<span class="active"></span>
-			<span></span>
-			<span></span>
-			<span></span>
-		</div>
-			
-		<ul>
-			<li><img src="1.jpg" alt=""></li>
-			<li><img src="2.jpg" alt=""></li>
-			<li><img src="3.jpg" alt=""></li>
-			<li><img src="4.jpg" alt=""></li>
-		</ul>
-		
-		<img src="" alt="#" id="img1">
+		<a href="#" id="prev" class="prev">
+			<</a>
+				<a href="#" id="next" class="next">></a>
+				<p>带缩略图的图片</p>
+				<div>
+
+					<span class="active"></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+
+				<ul>
+					<li>
+						<img src="1.jpg" alt="">
+					</li>
+					<li>
+						<img src="2.jpg" alt="">
+					</li>
+					<li>
+						<img src="3.jpg" alt="">
+					</li>
+					<li>
+						<img src="4.jpg" alt="">
+					</li>
+				</ul>
+
+				<img src="" alt="#" id="img1">
 	</div>
 </body>
+
 </html>

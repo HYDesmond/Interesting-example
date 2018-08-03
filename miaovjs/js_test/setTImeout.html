@@ -1,25 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-<style>
-#div1{width:100px;height:100px;background:red;margin:10px auto;display: none;}
-</style>
-<script>
-window.onload=function()
-{
-	var oDiv=document.getElementById('div1');
+	<style>
+		#div1 {
+			width: 100px;
+			height: 100px;
+			background: red;
+			margin: 10px auto;
+			display: none;
+		}
+	</style>
+	<script>
+		window.onload = function () {
+			var oDiv = document.getElementById('div1');
 
-	setTimeout(function(){
-		oDiv.style.display='block';
-		setTimeout(function(){oDiv.style.display='none';},3000);
-		
-	},1000)
-}
-</script>
+			setTimeout(function () {
+				oDiv.style.display = 'block';
+				setTimeout(function () { oDiv.style.display = 'none'; }, 3000);
+
+			}, 1000)
+		}
+	</script>
 </head>
+
 <body>
 	<div id="div1">joyce,i want to fuck you</div>
 </body>
+
 </html>
