@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<style>
+div{width:50px;
+	height:200px;
+	top:50%;
+	position:absolute;
+	background:red;}
+#div1{
+	
+	
+	left:0;
+}
+#div2{
+
+	right:0;
+}
+</style>
+<script>
+window.onload=window.onresize=window.onscroll=function()
+{
+	var aDiv=document.getElementsByTagName('div');
+	var vscroll=document.body.scrollTop||document.documentElement.scrollTop;
+	var timer=null;
+	var clientx=document.documentElement.clientHeight||document.body.clientHeight;
+	
+		//alert(vscroll)
+		//alert(document.documentElement.clientHeight)
+
+			for(var i=0;i<aDiv.length;i++)
+			{
+				
+				aDiv[i].style.top=(clientx-aDiv[i].offsetHeight)/2+vscroll+'px';
+		
+			}
+		
+	
+
+	
+}
+</script>
+</head>
+<body style="height:2000px">
+	<div id="div1"></div>
+	<div id="div2"></div>
+</body>
+</html>

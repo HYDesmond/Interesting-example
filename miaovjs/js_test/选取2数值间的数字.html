@@ -1,0 +1,23 @@
+<script>
+
+
+function fn2(n,m)
+{
+	var arr=[];
+	var tmp=0;
+	if(n>m)
+	{
+		tmp=n;
+		n=m;
+		m=tmp;
+	}
+	for(var i=1;i<=m;i++)
+	{
+		arr.push(i);
+	}
+	
+	return arr.splice(n-1,m);
+
+}
+alert(fn2(8,6));
+</script>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<style>
+body,ul{margin:0;padding:0;}
+li{list-style:none;float:left;}
+ul{margin-top:30px;}
+#content{width:800px;}
+#content li{width:20px;height:20px;background:lightblue;margin-left:6px;}
+#right{float:left;width:200px;height:200px;border:1px dashed #333;}
+#left{float:left;}
+#main{float:left;}
+#content .active{background:orange;}
+textarea{width:200px;height:200px;resize: none}
+</style>
+<script>
+window.onload=function()
+{	
+	var aLi=document.getElementsByTagName('li');
+	var oBtn=document.getElementById('btn1');
+	var oLE=document.getElementById('left');
+	var oRi=document.getElementById('right');
+	var aSpan=document.getElementsByTagName('span');
+	var num=0;
+	var timer=null;
+	var sorce=0;
+	
+
+	oLE.value='这句话已经被我换了'
+	//var str1=oLE.innerHTML;
+	//alert(str1.substring(0,1));
+	
+
+
+	oBtn.onclick=function()
+	{
+		if(oLE.value=='')
+		{
+			alert('不能为空');
+			return
+		}
+		oRi.innerHTML='';
+		
+		clearInterval(timer);
+	
+		var str1=oLE.value;
+			sorce=aSpan[1].innerHTML=str1.length;
+
+		timer=setInterval(function(){
+
+			var str2=oLE.value; 
+
+			sorce--;
+			
+			aSpan[0].innerHTML=sorce;
+			if(sorce==0)
+			{
+				clearInterval(timer);
+			}
+			oRi.innerHTML+=oLE.value.charAt();
+			oLE.value=str2.substring(1)
+		
+			//oRi.innerHTML+=str1.substring(num,num+1);
+			
+			//num++;
+			tab();
+
+		},100);
+		
+	}
+
+	function tab()
+	{
+		num++;
+		for(var i=0;i<aLi.length;i++)
+		{
+			aLi[i].className='';
+		}
+		aLi[num%aLi.length].className='active';
+		
+	}
+	
+}
+</script>
+</head>
+<body>
+	<div id="content">
+		<textarea name="" id="left" cols="30" rows="10" ></textarea>
+		
+		<div id="main">
+			<input type="button" value="把文字右移" id="btn1"><br>
+			<span></span>/<span></span>
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		
+		<div id="right" cols="30" rows="10"></div>
+	</div>
+</body>
+</html>

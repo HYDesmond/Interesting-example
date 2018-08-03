@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<style>
+body{margin:0;}
+#div1{
+	width:100px;height:100px;background:red;position:fixed;bottom:0;right:0;
+}
+</style>	
+<script>
+window.onload=function()
+{
+	var timer=null;
+	var speed=90;
+	var oDiv=document.getElementById('div1');
+	oDiv.onclick=function()
+	{
+		clearInterval(timer);
+
+		timer=setInterval(function(){
+			if(oDiv.offsetTop>=0){
+				oDiv.style.top=oDiv.offsetTop-speed+'px';
+			}
+			if(oDiv.offsetTop<0)
+			{
+				oDiv.style.top='0px';
+			}
+		},50)
+		
+	}
+}
+</script>
+</head>
+<body style="height:2000px">
+	<div id="div1"></div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<style>
+body,div{margin:0;padding:0; }
+body{background: -black}
+a{text-decoration:none;}
+#nav{width:300px;margin:40px auto;background:lightblue;height:30px;line-height:30px;border-radius:6px;}
+#nav a{color:#fff;padding:6px 10px;}
+.list{display:none;background:#CCC;height:22px;line-height:22px;width:200px;text-align: center;}
+.list span{font-size:12px;color:red;}
+#nav .active{background:lightgray;}
+</style>
+<script>
+window.onload=function()
+{
+	//var oCon=document.getElementById('content');
+	var oNav=document.getElementById('nav');
+	var aA=oNav.getElementsByTagName('a');
+	var aDiv=oNav.getElementsByTagName('div');
+	var num=0;
+	aDiv[0].style.display='block';
+
+
+	function fn1()
+	{
+		for(var i=0;i<aA.length;i++)
+		{
+			aA[i].index=i;
+			aA[i].onmouseover=function()
+			{
+				num=this.index;
+				for(var i=0;i<aA.length;i++)
+				{
+					aA[i].className='';
+					//aDiv[i].style.display='none';
+				}
+				aA[num].className='active';
+				aDiv[num].style.display='block';
+			}
+		
+			aA[i].onmouseout=function()
+			{
+				for(var i=0;i<aA.length;i++)
+				{
+					aA[i].className='';
+					aDiv[i].style.display='none';
+				}
+			}
+		}
+
+	}
+	fn1()
+}
+</script>
+</head>
+<body>
+
+<div id="nav">
+	<a href="#">首页</a>|
+	<a href="#">关于我们</a>|
+	<a href="#">作品</a>|
+	<a href="#">博客</a>
+	
+	<div id="list1" class="list">
+		<span href="#">首页1</span>|
+		<span href="#">首页1</span>|
+		<span href="#">首页1</span>|
+	</div>
+	<div id="list2" class="list">
+		<span href="#">首页2</span>|
+		<span href="#">首页2</span>|
+		<span href="#">首页2</span>|
+	</div>
+	<div id="list3" class="list">
+		<span href="#">首页3</span>|
+		<span href="#">首页3</span>|
+		<span href="#">首页3</span>|
+	</div>
+	<div id="list4" class="list">
+		<span href="#">首页4</span>|
+		<span href="#">首页4</span>|
+		<span href="#">首页4</span>|
+	</div>
+</div>
+		
+	
+	
+</body>
+</html>

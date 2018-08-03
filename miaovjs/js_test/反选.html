@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<script>
+window.onload=function()
+{
+	var oBtn=document.getElementById('btn');
+	var aInput=document.getElementsByTagName('input');
+
+	oBtn.onclick=function()
+	{
+		for(var i=0;i<aInput.length-1;i++)
+		{
+			aInput[i].checked=!aInput[i].checked
+		}
+	}
+}
+</script>
+</head>
+<body>
+	<div>
+		<input type="checkbox" checked=""><input type="checkbox"><input type="checkbox"><input type="checkbox"><input type="checkbox"><input type="checkbox"><input type="checkbox"><input type="checkbox"><input type="checkbox"><input type="checkbox"><input type="checkbox">
+		<input type="button" id="btn" value="反选">
+	</div>
+</body>
+</html>

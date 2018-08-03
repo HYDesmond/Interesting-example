@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>作业1</title>
+<style>
+a{text-decoration:none;font-size:18px;color:black;}
+#set{background:red;}
+input{width:60px;}
+#div2 div{margin:6px;}
+#div1{width:200px;height:200px;background:yellow;}
+#div2{margin:20px auto;border:10px solid #ccc;text-align:center;width:350px;display:none;}
+</style>
+<script>
+window.onload=function()
+{
+	var oSet=document.getElementById('set');
+	var oDiv1=document.getElementById('div1');
+	var oDiv2=document.getElementById('div2');
+	var oBr=document.getElementById('bg_r');
+	var oBy=document.getElementById('bg_y');
+	var oBb=document.getElementById('bg_b');
+	var oW1=document.getElementById('W_1');
+	var oW2=document.getElementById('W_2');
+	var oW3=document.getElementById('W_3');
+	var oH1=document.getElementById('H_1');
+	var oH2=document.getElementById('H_2');
+	var oH3=document.getElementById('H_3');
+	var oSu=document.getElementById('sure');
+	var oRe=document.getElementById('res')
+
+	var aPos=[];
+
+	oSet.onclick=function()
+	{
+		oDiv2.style.display='block';
+	}
+	
+	oBr.onclick=function()
+	{
+		oDiv1.style.background='red';
+	}
+	oBy.onclick=function()
+	{
+		oDiv1.style.background='yellow';
+	}
+	oBb.onclick=function()
+	{
+		oDiv1.style.background='blue';
+	}
+
+	oW1.onclick=function()
+	{
+		oDiv1.style.width=200+'px';
+	}
+	oW2.onclick=function()
+	{
+		oDiv1.style.width=300+'px';
+	}
+	oW3.onclick=function()
+	{
+		oDiv1.style.width=400+'px';
+	}
+
+	oH1.onclick=function()
+	{
+		oDiv1.style.height=200+'px';
+	}
+	oH2.onclick=function()
+	{
+		oDiv1.style.height=300+'px';
+	}
+	oH3.onclick=function()
+	{
+		oDiv1.style.height=400+'px';
+	}
+
+
+	oSu.onclick=function()
+	{
+		oDiv2.style.display='none';
+	}
+	oRe.onclick=function()
+	{
+		oDiv1.style.background='yellow';
+		oDiv1.style.width=200+'px';
+		oDiv1.style.height=200+'px'
+	}
+}
+</script>
+</head>
+<body>
+	<a href="#" id="oa">请为下面的DIV设置样式：</a>
+	<input type="button" id="set" value="设置样式">
+	<div id="div1"></div>
+	<div id="div2">
+		<div class="bg">
+			请选择背景色：&nbsp<input type="button" id="bg_r" value="红" style="background:red">
+			<input type="button" id="bg_y" value="黄" style="background:yellow">
+			<input type="button" id="bg_b" value="蓝" style="background:blue">
+		</div>
+		
+		<div class="set_width">
+			请选择宽高(px)：<input type="button" id="W_1" value="200">
+			<input type="button" id="W_2" value="300">
+			<input type="button" id="W_3" value="400">
+		
+		</div>
+		
+		<div class="set_height">
+			请选择行高(px)：<input type="button" id="H_1" value="200">
+			<input type="button" id="H_2" value="300">
+			<input type="button" id="H_3" value="400">
+		</div>
+		<input type="button" id="res" value="恢复">
+		<input type="button" id="sure" value="确定">
+		
+		
+	</div>
+</body>
+</html>

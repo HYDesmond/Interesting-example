@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<script>
+/*var str='';
+for(var i=0;i<100;i++){
+	str+=(Math.round( Math.random()*1000 )+'\n' );
+
+}
+document.documentElement.innerHTML=str;*/
+
+var str='';
+var arr=[];
+var sum=0;
+
+for(var i=0;i<500;i++)
+{	
+	str=( Math.round ( Math.random()*1000 ) );
+
+	if(i==0)
+	{
+		arr.push(str);
+	}else{
+
+	
+		if(str!=arr[i])
+		{
+			//alert(i)
+			arr.push(str);
+			sum++;
+			//if(i==499)alert(arr.length);
+		}
+	
+	}
+	
+	
+}
+/*引入去重函数，检验是否有重复的值*/
+  function unique(arr){
+        var ret = [];
+        var hash = {};
+        for(var i = 0; i < arr.length; i++){
+            var item = arr[i];
+            var key = typeof(item) + item;
+            //alert(key);
+            if(hash[key] !== 1){
+                ret.push(item);
+                hash[key] = 1;
+            }
+        }
+        return ret;
+    }
+
+alert(unique(arr))
+alert(arr.length)
+/*var obj = {}
+for(var j=0;j<arr.length;j++)
+{
+var item = arr[j];
+if(obj[item]==null)obj[item] = 1;
+else obj[item] = obj[item]+1;
+}
+
+for(a in obj)
+{
+var item = obj[a];
+if(item>1)alert("重复元素"+a)
+}*/
+</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<style>
+.content{margin:20px auto;width:300px;}
+img{border:none;vertical-align:bottom;}
+</style>
+<script>
+window.onload=function()
+{
+	var arrImg=['images/1.png','images/2.png','images/3.png'];
+	var arrSpan=['很差','较差','还行','推荐','力荐'];
+	var onoff=true;
+	var num=0;
+	function scoce(id)
+	{
+		var oCen=document.getElementById(id);
+		var aImg=oCen.getElementsByTagName('img');
+		var oSpan=oCen.getElementsByTagName('span')[0];
+		for(var i=0;i<aImg.length;i++)
+		{
+			aImg[i].index=i;
+			aImg[i].src=arrImg[0];
+			aImg[i].onmouseover=function()
+			{
+				num=this.index;
+				if(num<2)
+				{
+						
+					for(var j=0;j<=num;j++)
+					{
+						
+						aImg[j].src=arrImg[1];
+						
+					}
+					/*this.src=arrImg[1];*/
+					oSpan.innerHTML=arrSpan[num]
+				}
+				else
+				{
+				
+					for(var i=0;i<=num;i++)
+					{
+						
+						aImg[i].src=arrImg[2];
+					
+					}
+					/*this.src=arrImg[2]*/
+					oSpan.innerHTML=arrSpan[num];
+				}
+			}
+
+
+			aImg[i].onclick=function()
+			{
+				num=this.index;
+				onoff=false;
+				for(var i=0;i<=num;i++)
+				{
+					/*if(num<2)
+					{
+						aImg[i].src=arrImg[1];
+					}
+					else{
+						aImg[i].src=arrImg[2];
+					}*/
+					num<2?aImg[i].src=arrImg[1]:aImg[i].src=arrImg[2];
+				}
+			}
+			aImg[i].onmouseout=function()
+			{
+				if(onoff)
+				{
+					for(var i=0;i<aImg.length;i++)
+					{
+						aImg[i].src=arrImg[0];
+					}
+				}
+				else{onoff=true;}
+				
+			}
+
+			
+		}
+
+	}
+	
+	scoce('content1');
+	scoce('content2');
+	scoce('content3');
+
+	
+	
+}
+</script>
+</head>
+<body>
+<div id="content1" class="content">
+	<img >
+	<img >
+	<img >
+	<img >
+	<img>
+	<span>请评分</span>
+</div>
+<div id="content2" class="content">
+	<img >
+	<img >
+	<img >
+	<img >
+	<img>
+	<span>请评分</span>
+</div>
+<div id="content3" class="content">
+	<img >
+	<img >
+	<img >
+	<img >
+	<img>
+	<span>请评分</span>
+</div>
+</body>
+</html>
